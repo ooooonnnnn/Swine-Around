@@ -13,18 +13,17 @@ public class CharacterFall : CharacterControllerBase
     private void FixedUpdate()
     {
         var prevVelocity = characterController.velocity.y;
-        print(prevVelocity);
         var newVelocity = prevVelocity;
         
         if (characterController.isGrounded)
         {
-            newVelocity = 0;
+            newVelocity = -2f;
         }
         else
         {
             newVelocity += _gravity * Time.fixedDeltaTime;
         }
         
-        characterController.Move(newVelocity * Time.fixedDeltaTime * Vector3.up);
+        moveMaster.Move(newVelocity * Time.fixedDeltaTime * Vector3.up);
     }
 }
