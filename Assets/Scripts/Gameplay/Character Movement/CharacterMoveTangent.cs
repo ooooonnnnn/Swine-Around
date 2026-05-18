@@ -31,7 +31,6 @@ public class CharacterMoveTangent : CharacterControllerBase
         }
 
         var digInAmount = characterController.isGrounded ? digInPerMove : 0;
-        print(characterController.isGrounded);
         
         moveMaster.Move(speed * Time.fixedDeltaTime * rawMoveDirection.normalized - digInAmount * Vector3.up);
     }
