@@ -8,6 +8,14 @@ public class CharacterMoveTangent : CharacterControllerBase
     private Vector2 _moveInput;
     [SerializeField] private float speed;
     [SerializeField, Tooltip("This moves the character down to keep contact with the ground.")] private float digInPerMove;
+    [SerializeField] private Transform moveRelativeToTransform;
+
+    protected override void OnValidate()
+    {
+        base.OnValidate();
+        
+        if (!moveRelativeToTransform) moveRelativeToTransform = transform;
+    }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -24,7 +32,7 @@ public class CharacterMoveTangent : CharacterControllerBase
 
     private void FixedUpdate()
     {
-        var rawMoveDirection = transform.TransformDirection(_moveInput.x, 0, _moveInput.y);
+        var rawMoveDirection = moveRelativeToTransform.TransformDirection(_moveInput.x, 0, _moveInput.y);
         if (characterController.isGrounded)
         {
             rawMoveDirection = Vector3.ProjectOnPlane(rawMoveDirection, _groundNormal);

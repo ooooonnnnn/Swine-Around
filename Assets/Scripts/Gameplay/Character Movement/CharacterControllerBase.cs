@@ -11,7 +11,7 @@ public abstract class CharacterControllerBase : MonoBehaviour
     [SerializeField] protected CharacterController characterController;
     [SerializeField] protected CharacterControllerMoveMaster moveMaster;
 
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         characterController = GetComponent<CharacterController>();
         moveMaster = GetComponent<CharacterControllerMoveMaster>();

@@ -15,7 +15,6 @@ public class Pulser : MonoBehaviour
     public void Pulse()
     {
         OnPulseStart.Invoke();
-        print("Pulsing");
         _pulseActive = true;
         _timer = 0;
     }
