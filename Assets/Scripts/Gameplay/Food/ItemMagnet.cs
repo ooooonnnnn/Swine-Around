@@ -7,9 +7,9 @@ public class ItemMagnet : MonoBehaviour
     {
         if (other.CompareTag("Food"))
         {
-            FoodScript fsOther = other.GetComponent<FoodScript>();
+            MagnetizableFood fsOther = other.GetComponent<MagnetizableFood>();
             if(!fsOther.magnetTarget)
-                other.GetComponent<FoodScript>().SetMagnetTarget(Player);
+                other.GetComponent<MagnetizableFood>().SetMagnetTarget(Player);
         }
     }
 }

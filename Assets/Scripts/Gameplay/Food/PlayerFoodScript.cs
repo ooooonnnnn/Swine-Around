@@ -5,24 +5,33 @@ using UnityEngine;
 public class PlayerFoodScript : MonoBehaviour
 {
     public int fatnessLevel = 0;
+    [SerializeField] private int foodEaten = 0;
+    [SerializeField] private int foodRequiredForFatness = 5;
+    [SerializeField] private float fatnessToScaleModifier = 0.1f;
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))
         {
-            IncreaseFatness();
+            ConsumeFood(other.GetComponent<MagnetizableFood>().foodValue);
             Destroy(other.gameObject);
         }
     }
-
+    private void ConsumeFood(int foodValue)
+    {
+        foodEaten+= foodValue;
+        if(foodEaten >= foodRequiredForFatness) // should i add check for multiple levels per one consumption? (beeg food consumed) 
+        {
+            foodEaten -= foodRequiredForFatness;
+            IncreaseFatness();
+        }
+    }
     private void IncreaseFatness()
     {
-        if(fatnessLevel == 0)
-            _ = StartFatTimer();
         fatnessLevel++;
         UpdateScale();
     }
-
+    
     private void DecreaseFatness()
     {
         if(fatnessLevel > 0)
@@ -32,14 +41,7 @@ public class PlayerFoodScript : MonoBehaviour
 
     private void UpdateScale()
     {
-        gameObject.transform.localScale = Vector3.one * (1 + fatnessLevel * 0.1f);
+        gameObject.transform.localScale = Vector3.one * (1 + fatnessLevel * fatnessToScaleModifier);
     }
     
-    private async Task StartFatTimer()
-    {
-        await Task.Delay((int)((fatnessLevel + 1) * 1000f));
-        DecreaseFatness();
-        if(fatnessLevel > 0)
-            await StartFatTimer();
-    }
 }
