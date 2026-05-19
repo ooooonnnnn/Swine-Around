@@ -23,8 +23,10 @@ public class MagnetizableFood : MonoBehaviour
         if (magnetTarget)
         {
             Vector3 direction = (magnetTarget.transform.position - transform.position).normalized;
-            velocity += direction * (acceleration * Time.deltaTime);
-            velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+            float currentSpeed = velocity.magnitude;
+            currentSpeed += acceleration * Time.deltaTime;
+            currentSpeed = Mathf.Min(currentSpeed, maxSpeed);
+            velocity = direction * currentSpeed;
             transform.position += velocity * Time.deltaTime;
         }
     }
