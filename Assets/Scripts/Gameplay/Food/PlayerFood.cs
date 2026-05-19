@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class PlayerFoodScript : MonoBehaviour
+public class PlayerFood : MonoBehaviour
 {
     public int fatnessLevel = 0;
     [SerializeField] private int foodEaten = 0;

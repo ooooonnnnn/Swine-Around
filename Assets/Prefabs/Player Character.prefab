@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 6877108479150391849}
   - component: {fileID: 7204388442795286694}
   - component: {fileID: 1747352836110616129}
+  - component: {fileID: 1133824973948726043}
   m_Layer: 0
   m_Name: Player Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,6 +40,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7852738402746110760}
+  - {fileID: 8571893468023713927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8924057238293364500
@@ -219,6 +221,22 @@ MonoBehaviour:
   characterController: {fileID: 2361364426161461628}
   moveMaster: {fileID: 3643295071389564728}
   groundNormalDetector: {fileID: 1747352836110616129}
+--- !u!114 &1133824973948726043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300710381209797829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d332a68043101142be06c72464fca12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFoodScript
+  fatnessLevel: 0
+  foodEaten: 0
+  foodRequiredForFatness: 5
+  fatnessToScaleModifier: 0.1
 --- !u!1 &4570085145761187937
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,3 +305,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GizmoWaypoint
   color: {r: 1, g: 1, b: 1, a: 1}
   radius: 0.5
+--- !u!1 &8192016420869614891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8571893468023713927}
+  - component: {fileID: 8121801494720930981}
+  - component: {fileID: 8711698106112861078}
+  m_Layer: 0
+  m_Name: Magnet Range
+  m_TagString: FoodMagnet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8571893468023713927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192016420869614891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3154602644301687381}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &8121801494720930981
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192016420869614891}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8711698106112861078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192016420869614891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f2ec4c06684690bae6489e1fc80cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemMagnet
+  Player: {fileID: 3300710381209797829}
