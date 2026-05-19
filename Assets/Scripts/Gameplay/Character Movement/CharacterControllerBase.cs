@@ -5,15 +5,18 @@ using UnityEngine;
 /// Base class for scripts that control a character controller
 /// </summary>
 [RequireComponent(typeof(CharacterController)),
-RequireComponent(typeof(CharacterControllerMoveMaster))]
+RequireComponent(typeof(CharacterMoveMaster)),
+RequireComponent(typeof(CharacterGroundNormalDetector))]
 public abstract class CharacterControllerBase : MonoBehaviour
 {
-    [SerializeField] protected CharacterController characterController;
-    [SerializeField] protected CharacterControllerMoveMaster moveMaster;
+    [SerializeField, HideInInspector] protected CharacterController characterController;
+    [SerializeField, HideInInspector] protected CharacterMoveMaster moveMaster;
+    [SerializeField, HideInInspector] protected CharacterGroundNormalDetector groundNormalDetector;
 
     protected virtual void OnValidate()
     {
         characterController = GetComponent<CharacterController>();
-        moveMaster = GetComponent<CharacterControllerMoveMaster>();
+        moveMaster = GetComponent<CharacterMoveMaster>();
+        groundNormalDetector = GetComponent<CharacterGroundNormalDetector>();
     }
 }

@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 40290596}
   - component: {fileID: 40290597}
   - component: {fileID: 40290599}
+  - component: {fileID: 40290601}
+  - component: {fileID: 40290600}
   m_Layer: 0
   m_Name: Player Character
   m_TagString: Untagged
@@ -254,6 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterFall
   characterController: {fileID: 40290591}
   moveMaster: {fileID: 40290597}
+  groundNormalDetector: {fileID: 40290600}
 --- !u!114 &40290596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   characterController: {fileID: 40290591}
   moveMaster: {fileID: 40290597}
+  groundNormalDetector: {fileID: 40290600}
   speed: 10
   digInPerMove: 0.5
   moveRelativeToTransform: {fileID: 713962661}
@@ -285,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   characterController: {fileID: 40290591}
   moveMaster: {fileID: 40290597}
+  groundNormalDetector: {fileID: 40290600}
 --- !u!114 &40290599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +304,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   characterController: {fileID: 40290591}
   moveMaster: {fileID: 40290597}
+  groundNormalDetector: {fileID: 40290600}
   turnRate: 360
+--- !u!114 &40290600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40290590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ba31af93047ed41b35ff5b63319ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  characterController: {fileID: 40290591}
+  moveMaster: {fileID: 40290597}
+  groundNormalDetector: {fileID: 40290600}
+--- !u!114 &40290601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40290590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1187d54f87ead8448a6478e47c0be553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  characterController: {fileID: 40290591}
+  moveMaster: {fileID: 40290597}
+  groundNormalDetector: {fileID: 40290600}
+  lungeDuration: 0.1
+  lungeSpeed: 20
 --- !u!1 &179422614
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +898,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.SphereCollider, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 40290601}
+        m_TargetAssemblyTypeName: CharacterLunge, Assembly-CSharp
+        m_MethodName: Lunge
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

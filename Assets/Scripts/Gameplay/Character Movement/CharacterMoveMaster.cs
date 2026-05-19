@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CharacterControllerMoveMaster : CharacterControllerBase
+public class CharacterMoveMaster : CharacterControllerBase
 {
     private Vector3 _totalMove;
     
