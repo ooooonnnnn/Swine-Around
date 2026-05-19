@@ -41,7 +41,8 @@ public class PlayerFoodScript : MonoBehaviour
 
     private void UpdateScale()
     {
-        gameObject.transform.localScale = Vector3.one * (1 + fatnessLevel * fatnessToScaleModifier);
+        if(playerGameObject)
+            playerGameObject.transform.localScale = Vector3.one * (1 + fatnessLevel * fatnessToScaleModifier);
     }
     
 }
