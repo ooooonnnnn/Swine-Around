@@ -4,17 +4,16 @@ using UnityEngine.InputSystem;
 
 public class CharacterMoveTangent : CharacterControllerBase
 {
-    private Vector3 _groundNormal;
     private Vector2 _moveInput;
     [SerializeField] private float speed;
     [SerializeField, Tooltip("This moves the character down to keep contact with the ground.")] private float digInPerMove;
+    [SerializeField] private Transform moveRelativeToTransform;
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    protected override void OnValidate()
     {
-        //Only consider ground hits
-        if (hit.point.y >= transform.position.y) return;
+        base.OnValidate();
         
-        _groundNormal = hit.normal;
+        if (!moveRelativeToTransform) moveRelativeToTransform = transform;
     }
 
     public void TakeMoveInput(InputAction.CallbackContext ctx)
@@ -24,14 +23,13 @@ public class CharacterMoveTangent : CharacterControllerBase
 
     private void FixedUpdate()
     {
-        var rawMoveDirection = transform.TransformDirection(_moveInput.x, 0, _moveInput.y);
+        var rawMoveDirection = moveRelativeToTransform.TransformDirection(_moveInput.x, 0, _moveInput.y);
         if (characterController.isGrounded)
         {
-            rawMoveDirection = Vector3.ProjectOnPlane(rawMoveDirection, _groundNormal);
+            rawMoveDirection = Vector3.ProjectOnPlane(rawMoveDirection, groundNormalDetector.GroundNormal);
         }
 
         var digInAmount = characterController.isGrounded ? digInPerMove : 0;
-        print(characterController.isGrounded);
         
         moveMaster.Move(speed * Time.fixedDeltaTime * rawMoveDirection.normalized - digInAmount * Vector3.up);
     }
