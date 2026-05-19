@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3906072139348981708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vision Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8540535473999408535}
   - component: {fileID: 6751347733242219018}
   - component: {fileID: 420120798036452187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Police Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2088766734818788416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,13 +162,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8540088424614855049}
-  - component: {fileID: 2937281124624394172}
   - component: {fileID: 255031015542472938}
+  - component: {fileID: 3178637646241330645}
   - component: {fileID: 3629970392659665057}
   - component: {fileID: 2637152088989992243}
   - component: {fileID: 8775426835187043462}
   - component: {fileID: 3740832675259798572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy Police
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,33 +192,6 @@ Transform:
   - {fileID: 3906072139348981708}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2937281124624394172
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5436997711170342022}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!136 &255031015542472938
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -242,6 +215,28 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &3178637646241330645
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5436997711170342022}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 20
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &3629970392659665057
 MonoBehaviour:
   m_ObjectHideFlags: 0

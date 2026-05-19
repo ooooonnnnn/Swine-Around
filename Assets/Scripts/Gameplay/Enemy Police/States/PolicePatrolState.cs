@@ -45,13 +45,19 @@ public class PolicePatrolState: IPoliceState
             _police.Config.PatrolSpeed
         );
 
-        if (!_police.Movement.HasReached(
-                targetPoint.position,
-                _police.Config.StopDistance))
+        if (_police.Movement.HasFailedToReachDestination())
         {
+            GoToNextPatrolPoint();
             return;
         }
 
+        if (!_police.Movement.HasReachedDestination(_police.Config.StopDistance)) return;
+
+        GoToNextPatrolPoint();
+    }
+    
+    private void GoToNextPatrolPoint()
+    {
         _currentPatrolIndex++;
         _currentPatrolIndex %= _police.PatrolPoints.Length;
     }

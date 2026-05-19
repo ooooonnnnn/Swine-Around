@@ -5,7 +5,7 @@ public class PoliceAIController : MonoBehaviour
     [Header("References")]
     [SerializeField] private PoliceAIConfig config;
     [SerializeField] private PoliceVision vision;
-    [SerializeField] private PoliceMovement movement;
+    [SerializeField] private PoliceNavMeshMovement movement;
     [SerializeField] private Transform[] patrolPoints;
 
     [Header("Debug")]
@@ -20,7 +20,7 @@ public class PoliceAIController : MonoBehaviour
 
     public PoliceAIConfig Config => config;
     public PoliceVision Vision => vision;
-    public PoliceMovement Movement => movement;
+    public PoliceNavMeshMovement Movement => movement;
     public Transform[] PatrolPoints => patrolPoints;
 
     public Transform Player { get; private set; }

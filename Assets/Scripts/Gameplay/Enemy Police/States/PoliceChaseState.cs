@@ -20,12 +20,13 @@ public class PoliceChaseState : IPoliceState
 
         if (_police.Player) return;
 
-        if (!_police.Movement.HasReached(
-                _police.LastKnownPlayerPosition,
-                _police.Config.StopDistance))
+        if (_police.Movement.HasFailedToReachDestination())
         {
+            _police.ChangeToSuspicionState();
             return;
         }
+
+        if (!_police.Movement.HasReachedDestination(_police.Config.StopDistance)) return;
 
         _police.ChangeToSuspicionState();
     }
