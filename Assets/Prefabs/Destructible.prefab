@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8046178693939615662}
   - component: {fileID: 3463666837811114494}
   - component: {fileID: 7036685299895587650}
+  - component: {fileID: 7055089385282700542}
   - component: {fileID: 3099171008343712963}
   m_Layer: 6
   m_Name: Destructible
@@ -72,7 +73,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   OnHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7055089385282700542}
+        m_TargetAssemblyTypeName: PrefabInstantiator, Assembly-CSharp
+        m_MethodName: Instantiate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7055089385282700542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233135872290487547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac356b6971ee174886010409f648a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  prefab: {fileID: 7400903587134082405, guid: 54f97ccb857ac2a4089a8936d71326b7, type: 3}
 --- !u!54 &3099171008343712963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,7 +137,6 @@ GameObject:
   - component: {fileID: 3709876059115993102}
   - component: {fileID: 8388170193306566630}
   - component: {fileID: 9017352531267047483}
-  - component: {fileID: 6547120579067506248}
   m_Layer: 6
   m_Name: Geeometry
   m_TagString: Untagged
@@ -191,26 +216,3 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6547120579067506248
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8207707823828244730}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

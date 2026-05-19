@@ -1,14 +1,14 @@
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
-
+[RequireComponent(typeof(Collider))]
 public class PlayerFoodScript : MonoBehaviour
 {
-    public int fatnessLevel = 0;
+    [SerializeField] private GameObject playerGameObject;
+    [SerializeField] private int fatnessLevel = 0;
     [SerializeField] private int foodEaten = 0;
     [SerializeField] private int foodRequiredForFatness = 5;
     [SerializeField] private float fatnessToScaleModifier = 0.1f;
-    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))
