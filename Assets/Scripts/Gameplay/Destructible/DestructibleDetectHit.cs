@@ -7,6 +7,7 @@ public class DestructibleDetectHit : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        print("HIT");
         OnHit.Invoke();
         Destroy(gameObject);
     }
