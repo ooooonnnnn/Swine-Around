@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 public class CharacterMoveTangent : CharacterControllerBase
 {
-    private Vector3 _groundNormal;
     private Vector2 _moveInput;
     [SerializeField] private float speed;
     [SerializeField, Tooltip("This moves the character down to keep contact with the ground.")] private float digInPerMove;
@@ -17,14 +16,6 @@ public class CharacterMoveTangent : CharacterControllerBase
         if (!moveRelativeToTransform) moveRelativeToTransform = transform;
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        //Only consider ground hits
-        if (hit.point.y >= transform.position.y) return;
-        
-        _groundNormal = hit.normal;
-    }
-
     public void TakeMoveInput(InputAction.CallbackContext ctx)
     {
         _moveInput = ctx.ReadValue<Vector2>();
@@ -35,7 +26,7 @@ public class CharacterMoveTangent : CharacterControllerBase
         var rawMoveDirection = moveRelativeToTransform.TransformDirection(_moveInput.x, 0, _moveInput.y);
         if (characterController.isGrounded)
         {
-            rawMoveDirection = Vector3.ProjectOnPlane(rawMoveDirection, _groundNormal);
+            rawMoveDirection = Vector3.ProjectOnPlane(rawMoveDirection, groundNormalDetector.GroundNormal);
         }
 
         var digInAmount = characterController.isGrounded ? digInPerMove : 0;
