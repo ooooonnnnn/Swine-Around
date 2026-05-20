@@ -22,7 +22,7 @@ MonoBehaviour:
     m_Bits: 64
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   suspicionIncreaseSpeed: 30
   suspicionDecreaseSpeed: 20
   maxSuspicion: 100
