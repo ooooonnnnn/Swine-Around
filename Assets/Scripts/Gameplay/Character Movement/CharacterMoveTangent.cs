@@ -48,7 +48,7 @@ public class CharacterMoveTangent : CharacterControllerBase
         var accDir = deltaVel.normalized;
         var accAmount = Mathf.Min(acceleration * Time.fixedDeltaTime, deltaVAmount);
         var acc = accDir * accAmount;
-        var moveAmount = (characterController.velocity + acc) * Time.fixedDeltaTime;
+        var moveAmount = (_currentVelInMovePlane + acc) * Time.fixedDeltaTime;
 
         var digInAmount = characterController.isGrounded ? digInPerMove : 0;
         moveMaster.Move(moveAmount - digInAmount * Vector3.up);
