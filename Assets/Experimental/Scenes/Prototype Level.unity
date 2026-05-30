@@ -128,6 +128,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2806014548003538950, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806014548003538950, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: acceleration
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806014548003538950, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: digInPerMove
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806014548003538950, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: moveRelativeToTransform
       value: 
       objectReference: {fileID: 713962661}
@@ -137,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3154602644301687381, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 28.36
       objectReference: {fileID: 0}
     - target: {fileID: 3154602644301687381, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -174,6 +186,14 @@ PrefabInstance:
     - target: {fileID: 3300710381209797829, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_Name
       value: Player Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148099306484211486, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204388442795286694, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: lungeSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

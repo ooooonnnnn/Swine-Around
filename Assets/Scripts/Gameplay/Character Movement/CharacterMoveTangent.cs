@@ -1,11 +1,14 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class CharacterMoveTangent : CharacterControllerBase
 {
     private Vector2 _moveInput;
-    [SerializeField] private float speed;
+    [FormerlySerializedAs("speed")] [SerializeField] private float maxSpeed;
+    [SerializeField] private float acceleration;
     [SerializeField, Tooltip("This moves the character down to keep contact with the ground.")] private float digInPerMove;
     [SerializeField] private Transform moveRelativeToTransform;
 
@@ -21,16 +24,44 @@ public class CharacterMoveTangent : CharacterControllerBase
         _moveInput = ctx.ReadValue<Vector2>();
     }
 
+    private Vector3 _desiredVelocity;
+    private Vector3 _currentVelInMovePlane;
+
     private void FixedUpdate()
     {
-        var rawMoveDirection = moveRelativeToTransform.TransformDirection(_moveInput.x, 0, _moveInput.y);
+        var desiredDirection = moveRelativeToTransform.TransformDirection(_moveInput.x, 0, _moveInput.y);
         if (characterController.isGrounded)
         {
-            rawMoveDirection = Vector3.ProjectOnPlane(rawMoveDirection, groundNormalDetector.GroundNormal);
+            desiredDirection = Vector3.ProjectOnPlane(
+                desiredDirection, groundNormalDetector.GroundNormal)
+                .normalized;
         }
 
-        var digInAmount = characterController.isGrounded ? digInPerMove : 0;
+        _desiredVelocity = maxSpeed * desiredDirection;
+        _currentVelInMovePlane = Vector3.ProjectOnPlane(
+            characterController.velocity, characterController.isGrounded ?
+            groundNormalDetector.GroundNormal:
+            Vector3.up);
         
-        moveMaster.Move(speed * Time.fixedDeltaTime * rawMoveDirection.normalized - digInAmount * Vector3.up);
+        var deltaVel = _desiredVelocity - _currentVelInMovePlane;
+        var deltaVAmount = deltaVel.magnitude;
+        var accDir = deltaVel.normalized;
+        var accAmount = Mathf.Min(acceleration * Time.fixedDeltaTime, deltaVAmount);
+        var acc = accDir * accAmount;
+        var moveAmount = (characterController.velocity + acc) * Time.fixedDeltaTime;
+
+        var digInAmount = characterController.isGrounded ? digInPerMove : 0;
+        moveMaster.Move(moveAmount - digInAmount * Vector3.up);
+    }
+    
+    private void OnDrawGizmos()
+    {
+        float factor = .5f;
+        Gizmos.color = Color.red;
+        GizmosExtension.DrawVector(transform.position, _desiredVelocity * factor);
+        Gizmos.color = Color.blue;
+        GizmosExtension.DrawVector(transform.position, characterController.velocity * factor);
+        Gizmos.color = Color.green;
+        GizmosExtension.DrawVector(transform.position, _currentVelInMovePlane * factor);
     }
 }
