@@ -7,6 +7,7 @@ public class PoliceAIController : MonoBehaviour
     [SerializeField] private PoliceVision vision;
     [SerializeField] private PoliceNavMeshMovement movement;
     [SerializeField] private Transform[] patrolPoints;
+    [SerializeField] private AIStateIconBillboard stateIconBillboard;
 
     [Header("Debug")]
     [SerializeField] private string currentStateName;
@@ -102,5 +103,10 @@ public class PoliceAIController : MonoBehaviour
         currentStateName = nextState.GetType().Name;
 
         _currentState.Enter();
+        
+        if (stateIconBillboard)
+        {
+            stateIconBillboard.ShowState(_currentState);
+        }
     }
 }

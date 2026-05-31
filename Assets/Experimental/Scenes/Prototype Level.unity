@@ -1227,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Police 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6737215260328358654, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8540088424614855049, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.41807
