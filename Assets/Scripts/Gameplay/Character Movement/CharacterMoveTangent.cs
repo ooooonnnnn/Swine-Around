@@ -9,7 +9,6 @@ public class CharacterMoveTangent : CharacterControllerBase
     private Vector2 _moveInput;
     [FormerlySerializedAs("speed")] [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
-    [SerializeField, Tooltip("This moves the character down to keep contact with the ground.")] private float digInPerMove;
     [SerializeField] private Transform moveRelativeToTransform;
 
     protected override void OnValidate()
@@ -50,8 +49,7 @@ public class CharacterMoveTangent : CharacterControllerBase
         var acc = accDir * accAmount;
         var moveAmount = (_currentVelInMovePlane + acc) * Time.fixedDeltaTime;
 
-        var digInAmount = characterController.isGrounded ? digInPerMove : 0;
-        moveMaster.Move(moveAmount - digInAmount * Vector3.up);
+        moveMaster.Move(moveAmount);
     }
     
     private void OnDrawGizmos()

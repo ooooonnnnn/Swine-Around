@@ -190,13 +190,14 @@ GameObject:
   - component: {fileID: 8924057238293364500}
   - component: {fileID: 6583721975201711101}
   - component: {fileID: 2361364426161461628}
-  - component: {fileID: 1535444841205079181}
   - component: {fileID: 2806014548003538950}
+  - component: {fileID: 1535444841205079181}
   - component: {fileID: 3643295071389564728}
   - component: {fileID: 6877108479150391849}
   - component: {fileID: 7204388442795286694}
   - component: {fileID: 1747352836110616129}
   - component: {fileID: 1133824973948726043}
+  - component: {fileID: 7681987309893572188}
   m_Layer: 0
   m_Name: Player Character
   m_TagString: Player
@@ -303,21 +304,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1535444841205079181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3300710381209797829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2711505601ce2ef4eab1a4d376009dd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterFall
-  characterController: {fileID: 2361364426161461628}
-  moveMaster: {fileID: 3643295071389564728}
-  groundNormalDetector: {fileID: 1747352836110616129}
 --- !u!114 &2806014548003538950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,9 +319,24 @@ MonoBehaviour:
   characterController: {fileID: 2361364426161461628}
   moveMaster: {fileID: 3643295071389564728}
   groundNormalDetector: {fileID: 1747352836110616129}
-  speed: 10
-  digInPerMove: 0.5
+  maxSpeed: 10
+  acceleration: 100
   moveRelativeToTransform: {fileID: 3154602644301687381}
+--- !u!114 &1535444841205079181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300710381209797829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2711505601ce2ef4eab1a4d376009dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterFall
+  characterController: {fileID: 2361364426161461628}
+  moveMaster: {fileID: 3643295071389564728}
+  groundNormalDetector: {fileID: 1747352836110616129}
 --- !u!114 &3643295071389564728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ MonoBehaviour:
   moveMaster: {fileID: 3643295071389564728}
   groundNormalDetector: {fileID: 1747352836110616129}
   lungeDuration: 0.1
-  lungeSpeed: 20
+  lungeSpeed: 5
 --- !u!114 &1747352836110616129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +417,18 @@ MonoBehaviour:
   foodEaten: 0
   foodRequiredForFatness: 5
   fatnessToScaleModifier: 0.1
+--- !u!114 &7681987309893572188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300710381209797829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db584bc890aed14bb6f5d7764e9ab15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSnapToGround
 --- !u!1 &4570085145761187937
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +490,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4570085145761187937}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48193db1776c08c438580c881fcc5418, type: 3}
   m_Name: 
