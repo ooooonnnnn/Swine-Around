@@ -34,12 +34,12 @@ public class CharacterMoveTangent : CharacterControllerBase
             Vector3.up;
         
         desiredDirection = Vector3.ProjectOnPlane(
-            desiredDirection, movementPlaneNormal)
+            desiredDirection, Vector3.up)
             .normalized;
 
         _desiredVelocity = maxSpeed * desiredDirection;
         _currentVelInMovePlane = Vector3.ProjectOnPlane(
-            characterController.velocity, movementPlaneNormal);
+            characterController.velocity, Vector3.up);
         
         var deltaVel = _desiredVelocity - _currentVelInMovePlane;
         var deltaVAmount = deltaVel.magnitude;
