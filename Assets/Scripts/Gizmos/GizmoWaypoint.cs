@@ -8,6 +8,8 @@ public class GizmoWaypoint : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (!enabled) return;
+        
         Gizmos.color = color;
         Gizmos.DrawSphere(transform.position, radius);
     }
