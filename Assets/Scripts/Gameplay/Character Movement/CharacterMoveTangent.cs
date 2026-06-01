@@ -29,18 +29,17 @@ public class CharacterMoveTangent : CharacterControllerBase
     private void FixedUpdate()
     {
         var desiredDirection = moveRelativeToTransform.TransformDirection(_moveInput.x, 0, _moveInput.y);
-        if (characterController.isGrounded)
-        {
-            desiredDirection = Vector3.ProjectOnPlane(
-                desiredDirection, groundNormalDetector.GroundNormal)
-                .normalized;
-        }
+        var movementPlaneNormal = characterController.isGrounded ?
+            groundNormalDetector.GroundNormal:
+            Vector3.up;
+        
+        desiredDirection = Vector3.ProjectOnPlane(
+            desiredDirection, movementPlaneNormal)
+            .normalized;
 
         _desiredVelocity = maxSpeed * desiredDirection;
         _currentVelInMovePlane = Vector3.ProjectOnPlane(
-            characterController.velocity, characterController.isGrounded ?
-            groundNormalDetector.GroundNormal:
-            Vector3.up);
+            characterController.velocity, movementPlaneNormal);
         
         var deltaVel = _desiredVelocity - _currentVelInMovePlane;
         var deltaVAmount = deltaVel.magnitude;
