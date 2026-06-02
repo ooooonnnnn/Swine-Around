@@ -145,19 +145,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3154602644301687381, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9960457
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3154602644301687381, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0882781
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3154602644301687381, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.009961636
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3154602644301687381, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0008839854
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3154602644301687381, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -174,6 +174,26 @@ PrefabInstance:
     - target: {fileID: 3300710381209797829, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: m_Name
       value: Player Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166419280811352760, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166419280811352760, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166419280811352760, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166419280811352760, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166419280811352760, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7681987309893572188, guid: 29a2970e37cc3374ea7bd8dce06c96c2, type: 3}
       propertyPath: maxSnapDistance
