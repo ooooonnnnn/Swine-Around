@@ -1,14 +1,21 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class PlayerFoodScript : MonoBehaviour
 {
-    [SerializeField] private GameObject playerGameObject;
+    [SerializeField] private GameObject gameObjectToScale;
     [SerializeField] private int fatnessLevel = 0;
     [SerializeField] private int foodEaten = 0;
     [SerializeField] private int foodRequiredForFatness = 5;
     [SerializeField] private float fatnessToScaleModifier = 0.1f;
+    
+    [SerializeField] private float fullnessDecayDelay = 5f;     
+    [SerializeField] private float fullnessDecayInterval = 2f;   
+    
+    private Coroutine fullnessDecayCoroutine;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))
@@ -19,12 +26,18 @@ public class PlayerFoodScript : MonoBehaviour
     }
     private void ConsumeFood(int foodValue)
     {
-        foodEaten+= foodValue;
-        if(foodEaten >= foodRequiredForFatness) // should i add check for multiple levels per one consumption? (beeg food consumed) 
+        foodEaten += foodValue;
+
+        while (foodEaten >= foodRequiredForFatness)
         {
             foodEaten -= foodRequiredForFatness;
             IncreaseFatness();
         }
+
+        if (fullnessDecayCoroutine != null)
+            StopCoroutine(fullnessDecayCoroutine);
+
+        fullnessDecayCoroutine = StartCoroutine(FullnessDecayRoutine());
     }
     private void IncreaseFatness()
     {
@@ -34,15 +47,28 @@ public class PlayerFoodScript : MonoBehaviour
     
     private void DecreaseFatness()
     {
-        if(fatnessLevel > 0)
+        if (fatnessLevel > 0)
             fatnessLevel--;
+
         UpdateScale();
     }
 
     private void UpdateScale()
     {
-        if(playerGameObject)
-            playerGameObject.transform.localScale = Vector3.one * (1 + fatnessLevel * fatnessToScaleModifier);
+        if(gameObjectToScale)
+            gameObjectToScale.transform.localScale = Vector3.one * (1 + fatnessLevel * fatnessToScaleModifier);
     }
     
+    private IEnumerator FullnessDecayRoutine()
+    {
+        yield return new WaitForSeconds(fullnessDecayDelay);
+
+        while (fatnessLevel > 0)
+        {
+            yield return new WaitForSeconds(fullnessDecayInterval);
+            DecreaseFatness();
+        }
+
+        fullnessDecayCoroutine = null;
+    }
 }
