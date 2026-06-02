@@ -26,7 +26,17 @@ namespace Gameplay.Food
         //     if (isEaten)
         //         Destroy(gameObject);
         // }
-
-     
+        
+        
+        //TODO
+        /*
+         * list doesnt work coz new scene = new objects
+         *  give food ids?
+         *  compare names?
+         *  if food is eaten, its removed from dnd list aswell -> needs fix aswell
+         * maybe best idea is actually keeping their ids... or make food spawner?
+         * like, not have pre-spawned food, but have spawn points and food manager, that trackes consumed/not and destroyed/not?
+         */
+        
     }
 }
