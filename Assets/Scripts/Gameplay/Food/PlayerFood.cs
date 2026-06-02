@@ -6,13 +6,15 @@ using UnityEngine;
 public class PlayerFoodScript : MonoBehaviour
 {
     [SerializeField] private GameObject gameObjectToScale;
-    [SerializeField] private int fatnessLevel = 0;
-    [SerializeField] private int foodEaten = 0;
+    
     [SerializeField] private int foodRequiredForFatness = 5;
     [SerializeField] private float fatnessToScaleModifier = 0.1f;
     
+    [SerializeField] private int fatnessLevel = 0;
+    [SerializeField] private int foodEaten = 0;
+    
     [SerializeField] private float fullnessDecayDelay = 5f;     
-    [SerializeField] private float fullnessDecayInterval = 2f;   
+    [SerializeField] private float fullnessDecayInterval = 1f;   
     
     private Coroutine fullnessDecayCoroutine;
     
@@ -28,29 +30,27 @@ public class PlayerFoodScript : MonoBehaviour
     {
         foodEaten += foodValue;
 
-        while (foodEaten >= foodRequiredForFatness)
-        {
-            foodEaten -= foodRequiredForFatness;
-            IncreaseFatness();
-        }
+        CheckFatnessThreshold();
 
         if (fullnessDecayCoroutine != null)
             StopCoroutine(fullnessDecayCoroutine);
 
         fullnessDecayCoroutine = StartCoroutine(FullnessDecayRoutine());
     }
-    private void IncreaseFatness()
+
+    private void CheckFatnessThreshold()
     {
-        fatnessLevel++;
+        fatnessLevel = foodEaten / foodRequiredForFatness;
         UpdateScale();
     }
     
     private void DecreaseFatness()
     {
-        if (fatnessLevel > 0)
-            fatnessLevel--;
-
-        UpdateScale();
+        if (foodEaten > 0)
+        {
+            foodEaten--;
+            CheckFatnessThreshold();
+        }
     }
 
     private void UpdateScale()
