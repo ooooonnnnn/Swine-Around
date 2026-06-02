@@ -308,7 +308,9 @@ MonoBehaviour:
   characterController: {fileID: 2361364426161461628}
   moveMaster: {fileID: 3643295071389564728}
   groundNormalDetector: {fileID: 1747352836110616129}
-  turnRate: 360
+  turnRate: 1000
+  pitchRate: 360
+  pitchRecipient: {fileID: 7166419280811352760}
 --- !u!114 &7204388442795286694
 MonoBehaviour:
   m_ObjectHideFlags: 0
