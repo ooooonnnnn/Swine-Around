@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4905065292097486662}
   - component: {fileID: 7191663057892359866}
   - component: {fileID: 7199584007323203574}
+  - component: {fileID: 5623430426863445864}
   - component: {fileID: 8867539414608193832}
   - component: {fileID: 5124289926228351880}
   m_Layer: 0
@@ -132,6 +133,18 @@ MonoBehaviour:
   maxSpeed: 20
   foodValue: 1
   magnetTarget: {fileID: 0}
+--- !u!114 &5623430426863445864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400903587134082405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723f2d5d98cb4024aebbc1ec28f62107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Food.FoodObject
 --- !u!54 &8867539414608193832
 Rigidbody:
   m_ObjectHideFlags: 0
