@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class AIStateIconBillboard : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private PoliceAIController policeAIController;
     [SerializeField] private Image stateIconImage;
 
     [Header("State Icons")]
@@ -16,23 +15,7 @@ public class AIStateIconBillboard : MonoBehaviour
         HideIcon();
     }
 
-    private void OnEnable()
-    {
-        if (policeAIController)
-        {
-            policeAIController.OnStateChanged += HandleStateChanged;
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (policeAIController)
-        {
-            policeAIController.OnStateChanged -= HandleStateChanged;
-        }
-    }
-
-    private void HandleStateChanged(IPoliceState state)
+    public void HandleStateChanged(IPoliceState state)
     {
         if (!stateIconImage || state == null)
         {

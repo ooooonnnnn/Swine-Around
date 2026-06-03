@@ -358,7 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a327676cd3f7384e9b9f803be4e71f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIStateIconBillboard
-  policeAIController: {fileID: 3629970392659665057}
   stateIconImage: {fileID: 3665098628425644867}
   suspicionIcon: {fileID: 21300000, guid: 00e39780d526e70418e63ce1493b0722, type: 3}
   chaseIcon: {fileID: 21300000, guid: a439f911ee50dae4fb23d93eb19c4a36, type: 3}
@@ -459,6 +458,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b96ae0ccbb9c44c86e09d4a3560301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoliceAIController
+  OnStateChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2487969340557759202}
+        m_TargetAssemblyTypeName: AIStateIconBillboard, Assembly-CSharp
+        m_MethodName: HandleStateChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   config: {fileID: 11400000, guid: 8890fc82a8fa7944ea030af37b0c814a, type: 2}
   vision: {fileID: 8775426835187043462}
   movement: {fileID: 2637152088989992243}

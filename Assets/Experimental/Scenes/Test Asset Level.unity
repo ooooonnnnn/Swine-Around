@@ -570,8 +570,8 @@ MonoBehaviour:
   characterController: {fileID: 40290591}
   moveMaster: {fileID: 40290597}
   groundNormalDetector: {fileID: 40290600}
-  speed: 10
-  digInPerMove: 0.5
+  maxSpeed: 10
+  acceleration: 50
   moveRelativeToTransform: {fileID: 713962661}
 --- !u!114 &40290597
 MonoBehaviour:
@@ -3516,8 +3516,8 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: df70fa95-8a34-4494-b137-73ab6b9c7d37
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1001 &611950904
