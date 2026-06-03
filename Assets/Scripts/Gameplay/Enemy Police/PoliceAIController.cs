@@ -1,9 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PoliceAIController : MonoBehaviour
 {
-    public event Action<IPoliceState> OnStateChanged;
+    [SerializeField] private UnityEvent<IPoliceState> OnStateChanged;
     
     [Header("References")]
     [SerializeField] private PoliceAIConfig config;
@@ -106,6 +107,6 @@ public class PoliceAIController : MonoBehaviour
 
         _currentState.Enter();
         
-        OnStateChanged?.Invoke(_currentState);
+        OnStateChanged.Invoke(_currentState);
     }
 }
