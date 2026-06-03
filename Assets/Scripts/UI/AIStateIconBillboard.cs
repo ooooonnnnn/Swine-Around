@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class AIStateIconBillboard : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private PoliceAIController policeAIController;
     [SerializeField] private Image stateIconImage;
 
     [Header("State Icons")]
@@ -11,10 +13,26 @@ public class AIStateIconBillboard : MonoBehaviour
 
     private void Awake()
     {
-        Hide();
+        HideIcon();
     }
 
-    public void ShowState(IPoliceState state)
+    private void OnEnable()
+    {
+        if (policeAIController)
+        {
+            policeAIController.OnStateChanged += HandleStateChanged;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (policeAIController)
+        {
+            policeAIController.OnStateChanged -= HandleStateChanged;
+        }
+    }
+
+    private void HandleStateChanged(IPoliceState state)
     {
         if (!stateIconImage || state == null)
         {
@@ -25,7 +43,7 @@ public class AIStateIconBillboard : MonoBehaviour
 
         if (!icon)
         {
-            Hide();
+            HideIcon();
             return;
         }
 
@@ -33,13 +51,15 @@ public class AIStateIconBillboard : MonoBehaviour
         stateIconImage.enabled = true;
     }
 
-    public void Hide()
+    private void HideIcon()
     {
-        if (stateIconImage)
+        if (!stateIconImage)
         {
-            stateIconImage.enabled = false;
-            stateIconImage.sprite = null;
+            return;
         }
+
+        stateIconImage.enabled = false;
+        stateIconImage.sprite = null;
     }
 
     private Sprite GetIconForState(IPoliceState state)
@@ -53,7 +73,7 @@ public class AIStateIconBillboard : MonoBehaviour
         {
             return chaseIcon;
         }
-
+        
         return null;
     }
 }

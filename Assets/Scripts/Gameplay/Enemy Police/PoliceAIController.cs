@@ -1,13 +1,15 @@
+using System;
 using UnityEngine;
 
 public class PoliceAIController : MonoBehaviour
 {
+    public event Action<IPoliceState> OnStateChanged;
+    
     [Header("References")]
     [SerializeField] private PoliceAIConfig config;
     [SerializeField] private PoliceVision vision;
     [SerializeField] private PoliceNavMeshMovement movement;
     [SerializeField] private Transform[] patrolPoints;
-    [SerializeField] private AIStateIconBillboard stateIconBillboard;
 
     [Header("Debug")]
     [SerializeField] private string currentStateName;
@@ -104,9 +106,6 @@ public class PoliceAIController : MonoBehaviour
 
         _currentState.Enter();
         
-        if (stateIconBillboard)
-        {
-            stateIconBillboard.ShowState(_currentState);
-        }
+        OnStateChanged?.Invoke(_currentState);
     }
 }

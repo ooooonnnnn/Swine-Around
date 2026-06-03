@@ -382,8 +382,8 @@ MonoBehaviour:
   characterController: {fileID: 40290591}
   moveMaster: {fileID: 40290597}
   groundNormalDetector: {fileID: 40290600}
-  speed: 10
-  digInPerMove: 0.5
+  maxSpeed: 10
+  acceleration: 0
   moveRelativeToTransform: {fileID: 713962661}
 --- !u!114 &40290597
 MonoBehaviour:

@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a327676cd3f7384e9b9f803be4e71f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIStateIconBillboard
+  policeAIController: {fileID: 3629970392659665057}
   stateIconImage: {fileID: 3665098628425644867}
   suspicionIcon: {fileID: 21300000, guid: 00e39780d526e70418e63ce1493b0722, type: 3}
   chaseIcon: {fileID: 21300000, guid: a439f911ee50dae4fb23d93eb19c4a36, type: 3}
@@ -464,7 +465,6 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
-  stateIconBillboard: {fileID: 2487969340557759202}
   currentStateName: 
   suspicion: 0
 --- !u!114 &2637152088989992243
