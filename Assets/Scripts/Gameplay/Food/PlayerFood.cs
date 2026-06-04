@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Gameplay;
 using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class PlayerFoodScript : MonoBehaviour
@@ -15,6 +16,8 @@ public class PlayerFoodScript : MonoBehaviour
         {
             ConsumeFood(other.GetComponent<MagnetizableFood>().foodValue);
             Destroy(other.gameObject);
+            other.gameObject.GetComponent<NonRespawnable>().DestroyObject();
+
         }
     }
     private void ConsumeFood(int foodValue)

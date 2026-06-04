@@ -1,3 +1,4 @@
+using Gameplay;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,5 +12,6 @@ public class DestructibleDetectHit : MonoBehaviour
         
         OnHit.Invoke();
         Destroy(gameObject);
+        gameObject.GetComponent<NonRespawnable>().DestroyObject();
     }
 }
