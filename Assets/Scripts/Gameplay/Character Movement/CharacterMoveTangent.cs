@@ -7,6 +7,8 @@ using UnityEngine.Serialization;
 public class CharacterMoveTangent : CharacterControllerBase
 {
     private Vector2 _moveInput;
+    private float maxSpeedPostFatness;
+    [SerializeField] private float fatnessSlowPerStage = 0.9f;
     [FormerlySerializedAs("speed")] [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
     [SerializeField] private Transform moveRelativeToTransform;
@@ -16,6 +18,7 @@ public class CharacterMoveTangent : CharacterControllerBase
         base.OnValidate();
         
         if (!moveRelativeToTransform) moveRelativeToTransform = transform;
+        ApplyFattnessSlow(0);
     }
 
     public void TakeMoveInput(InputAction.CallbackContext ctx)
@@ -37,7 +40,7 @@ public class CharacterMoveTangent : CharacterControllerBase
             desiredDirection, Vector3.up)
             .normalized;
 
-        _desiredVelocity = maxSpeed * desiredDirection;
+        _desiredVelocity = maxSpeedPostFatness * desiredDirection;
         _currentVelInMovePlane = Vector3.ProjectOnPlane(
             characterController.velocity, Vector3.up);
         
@@ -60,5 +63,10 @@ public class CharacterMoveTangent : CharacterControllerBase
         GizmosExtension.DrawVector(transform.position, characterController.velocity * factor);
         Gizmos.color = Color.green;
         GizmosExtension.DrawVector(transform.position, _currentVelInMovePlane * factor);
+    }
+
+    public void ApplyFattnessSlow(int fatnessLevel)
+    {
+        maxSpeedPostFatness = maxSpeed * MathF.Pow(fatnessSlowPerStage, fatnessLevel);
     }
 }

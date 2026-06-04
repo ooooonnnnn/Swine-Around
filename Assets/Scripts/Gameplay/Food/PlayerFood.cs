@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class PlayerFoodScript : MonoBehaviour
 {
-    [SerializeField] private GameObject gameObjectToScale;
+    [SerializeField] private GameObject playerGameObject;
     
     [SerializeField] private int foodRequiredForFatness = 5;
     [SerializeField] private float fatnessToScaleModifier = 0.1f;
@@ -55,8 +55,11 @@ public class PlayerFoodScript : MonoBehaviour
 
     private void UpdateScale()
     {
-        if(gameObjectToScale)
-            gameObjectToScale.transform.localScale = Vector3.one * (1 + fatnessLevel * fatnessToScaleModifier);
+        if(playerGameObject)
+        {
+            playerGameObject.transform.localScale = Vector3.one * (1 + fatnessLevel * fatnessToScaleModifier);
+            playerGameObject.GetComponent<CharacterMoveTangent>().ApplyFattnessSlow(fatnessLevel);
+        }
     }
     
     private IEnumerator FullnessDecayRoutine()
