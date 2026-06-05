@@ -355,11 +355,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d332a68043101142be06c72464fca12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFoodScript
-  playerGameObject: {fileID: 3300710381209797829}
-  fatnessLevel: 0
-  foodEaten: 0
+  gameObjectToScale: {fileID: 0}
   foodRequiredForFatness: 5
   fatnessToScaleModifier: 0.1
+  fatnessLevel: 0
+  foodEaten: 0
+  fullnessDecayDelay: 5
+  fullnessDecayInterval: 1
 --- !u!114 &7681987309893572188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +377,7 @@ MonoBehaviour:
   characterController: {fileID: 2361364426161461628}
   moveMaster: {fileID: 3643295071389564728}
   groundNormalDetector: {fileID: 1747352836110616129}
-  maxSnapDistance: 0
+  maxSnapDistance: 0.65
   walkableLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -603,11 +605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d332a68043101142be06c72464fca12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFoodScript
-  playerGameObject: {fileID: 0}
-  fatnessLevel: 0
-  foodEaten: 0
+  gameObjectToScale: {fileID: 0}
   foodRequiredForFatness: 5
   fatnessToScaleModifier: 0.1
+  fatnessLevel: 0
+  foodEaten: 0
+  fullnessDecayDelay: 5
+  fullnessDecayInterval: 1
 --- !u!1 &6075431110908253588
 GameObject:
   m_ObjectHideFlags: 0

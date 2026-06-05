@@ -17,10 +17,10 @@ public class CharacterSnapToGround : CharacterControllerBase
         {
             var dist = hitInfo.distance;
             moveMaster.Move(- Vector3.up * dist);
-        }
+        }/*
         else
         {
             print("No hit");
-        }
+        }*/
     }
 }
