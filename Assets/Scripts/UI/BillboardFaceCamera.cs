@@ -1,20 +1,43 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Canvas))]
 public class BillboardFaceCamera : MonoBehaviour
 {
     [SerializeField, HideInInspector] private Canvas canvas;
-    [SerializeField, HideInInspector] private Camera targetCamera;
+    [SerializeField] private Camera targetCamera;
 
     private void OnValidate()
     {
         canvas = GetComponent<Canvas>();
-        targetCamera = canvas.worldCamera;
+
+        if (canvas&& !targetCamera)
+        {
+            targetCamera = canvas.worldCamera;
+        }
     }
 
-    private void Update()
+    private void Awake()
     {
+        canvas = GetComponent<Canvas>();
+
+        if (!targetCamera && canvas)
+        {
+            targetCamera = canvas.worldCamera;
+        }
+
+        if (!targetCamera)
+        {
+            targetCamera = Camera.main;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (!targetCamera)
+        {
+            return;
+        }
+
         transform.rotation = Quaternion.LookRotation(targetCamera.transform.forward);
     }
 }
