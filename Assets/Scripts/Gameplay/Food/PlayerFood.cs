@@ -17,7 +17,12 @@ public class PlayerFoodScript : MonoBehaviour
     [SerializeField] private float fullnessDecayInterval = 1f;   
     
     private Coroutine fullnessDecayCoroutine;
-    
+
+    private void Update()
+    {
+        print(foodEaten);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))

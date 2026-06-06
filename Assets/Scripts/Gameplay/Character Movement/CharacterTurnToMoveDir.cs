@@ -32,8 +32,6 @@ public class CharacterTurnToMoveDir : CharacterControllerBase
         var pitchVector = isMoving ? lateralVelocity.magnitude * Vector3.forward + velocity.y * Vector3.up
             : Vector3.forward;
         
-        print(pitchVector);
-        
         var pitchRotation = Quaternion.LookRotation(pitchVector, Vector3.up);
         pitchRecipient.localRotation = Quaternion.RotateTowards(
             pitchRecipient.localRotation,
