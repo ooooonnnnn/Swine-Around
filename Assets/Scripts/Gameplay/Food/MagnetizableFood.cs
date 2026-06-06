@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MagnetizableFood : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 8f;
+    //[SerializeField] private float moveSpeed = 8f;
     [SerializeField] private float acceleration = 25f;
     [SerializeField] private float maxSpeed = 20f;
 
