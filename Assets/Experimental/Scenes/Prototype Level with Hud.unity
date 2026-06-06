@@ -604,6 +604,8 @@ MonoBehaviour:
   moveMaster: {fileID: 40290597}
   groundNormalDetector: {fileID: 40290600}
   turnRate: 360
+  pitchRate: 0
+  pitchRecipient: {fileID: 0}
 --- !u!114 &40290600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,11 +1533,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d332a68043101142be06c72464fca12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFoodScript
-  playerGameObject: {fileID: 40290590}
-  fatnessLevel: 0
-  foodEaten: 0
+  gameObjectToScale: {fileID: 0}
   foodRequiredForFatness: 5
   fatnessToScaleModifier: 0.1
+  fatnessLevel: 0
+  foodEaten: 0
+  fullnessDecayDelay: 5
+  fullnessDecayInterval: 1
 --- !u!1001 &248464306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3609,8 +3613,8 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1001 &611950904
