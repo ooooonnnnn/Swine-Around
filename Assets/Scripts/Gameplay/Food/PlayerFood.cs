@@ -18,11 +18,6 @@ public class PlayerFoodScript : MonoBehaviour
     
     private Coroutine fullnessDecayCoroutine;
 
-    private void Update()
-    {
-        print(foodEaten);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))
