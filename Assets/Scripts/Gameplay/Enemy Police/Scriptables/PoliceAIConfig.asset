@@ -23,7 +23,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
-  suspicionIncreaseSpeed: 30
+  suspicionIncreaseSpeed: 50
   suspicionDecreaseSpeed: 20
   maxSuspicion: 100
   catchDistance: 0.5
