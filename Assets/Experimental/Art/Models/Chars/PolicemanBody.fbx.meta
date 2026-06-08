@@ -3,11 +3,16 @@ guid: 1a4d606c5ccfa3c42a6edc170eeaabe9
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Policeman MAT
+    second: {fileID: 2100000, guid: 81f4a8c18e721cb40918d134fd27da25, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
