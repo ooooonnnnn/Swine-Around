@@ -5,9 +5,10 @@ using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private UnityEvent<Interactable> OnInteract;
+    public UnityEvent<Interactable> OnInteract;
     [SerializeField] private InputActionReference interactAction;
-    public bool isInteractable;
+    [field: SerializeField]
+    public bool isInteractable { get; set; }
 
     private void OnEnable()
     {
@@ -23,6 +24,10 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        if (isInteractable) OnInteract.Invoke(this);
+        if (isInteractable)
+        {
+            OnInteract.Invoke(this);
+            print("Interact");
+        }
     }
 }

@@ -17,4 +17,9 @@ public class TriggerDetector : MonoBehaviour
     {
         if (other.CompareTag(interactorTag)) OnInteractorExit.Invoke();
     }
+
+    private void OnDisable()
+    {
+        OnInteractorExit.Invoke();
+    }
 }
