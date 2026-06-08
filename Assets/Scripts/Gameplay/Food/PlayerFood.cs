@@ -16,7 +16,6 @@ public class PlayerFoodScript : MonoBehaviour
         {
             ConsumeFood(other.GetComponent<MagnetizableFood>().foodValue);
             Destroy(other.gameObject);
-            other.gameObject.GetComponent<NonRespawnable>().DestroyObject();
 
         }
     }

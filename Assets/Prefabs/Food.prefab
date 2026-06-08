@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7199584007323203574}
   - component: {fileID: 8867539414608193832}
   - component: {fileID: 5124289926228351880}
-  - component: {fileID: 5627831125190686051}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -180,16 +179,3 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
---- !u!114 &5627831125190686051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400903587134082405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff02d54958024146bbcccc4f4fbf648a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.NonRespawnable
-  id: 

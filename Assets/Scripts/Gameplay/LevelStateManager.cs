@@ -7,8 +7,6 @@ namespace Gameplay
 {
     public class LevelStateManager : MonoBehaviour
     {
-        public List<string> destroyed = new();
-        
         /* ### BLOCKED
          * [SerializeField] private MusicManager musicManager;
          * same for score
@@ -17,9 +15,6 @@ namespace Gameplay
         [SerializeField] private Transform currentCheckpoint;
 
         public static LevelStateManager Instance;
-
-        [SerializeField] public GameObject prefabFood;
-        [SerializeField] public GameObject prefabDestructable;
         
         protected virtual void Awake()
         {
@@ -32,6 +27,8 @@ namespace Gameplay
             {
                 Destroy(gameObject);
             }
+
+            SetCheckpoint(currentCheckpoint);
             // GameObject.DontDestroyOnLoad(musicManager);
             // score here
         }
@@ -44,7 +41,9 @@ namespace Gameplay
 
         public void SetCheckpoint(Transform newPos)
         {
+            currentCheckpoint.transform.SetParent(null);
             currentCheckpoint = newPos;
+            currentCheckpoint.transform.SetParent(gameObject.transform);
         }
 
         public Transform GetCheckpoint()

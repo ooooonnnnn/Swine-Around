@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7036685299895587650}
   - component: {fileID: 7055089385282700542}
   - component: {fileID: 3099171008343712963}
-  - component: {fileID: 282024512552277318}
   m_Layer: 6
   m_Name: Destructible
   m_TagString: Untagged
@@ -127,19 +126,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &282024512552277318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2233135872290487547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff02d54958024146bbcccc4f4fbf648a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.NonRespawnable
-  id: 
 --- !u!1 &8207707823828244730
 GameObject:
   m_ObjectHideFlags: 0
