@@ -27,7 +27,6 @@ public class Interactable : MonoBehaviour
         if (isInteractable)
         {
             OnInteract.Invoke(this);
-            print("Interact");
         }
     }
 }
