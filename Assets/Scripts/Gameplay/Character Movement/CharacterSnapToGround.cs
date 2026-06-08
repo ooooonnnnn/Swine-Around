@@ -15,13 +15,12 @@ public class CharacterSnapToGround : CharacterControllerBase
                 maxSnapDistance,
                 walkableLayers))
         {
-            print("Hit");
             var dist = hitInfo.distance;
             moveMaster.Move(- Vector3.up * dist);
-        }
+        }/*
         else
         {
             print("No hit");
-        }
+        }*/
     }
 }

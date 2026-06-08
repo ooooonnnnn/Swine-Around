@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7036685299895587650}
   - component: {fileID: 7055089385282700542}
   - component: {fileID: 3099171008343712963}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Destructible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 3709876059115993102}
   - component: {fileID: 8388170193306566630}
   - component: {fileID: 9017352531267047483}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Geeometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}

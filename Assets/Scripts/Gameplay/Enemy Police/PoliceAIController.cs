@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PoliceAIController : MonoBehaviour
 {
+    [SerializeField] private UnityEvent<IPoliceState> OnStateChanged;
+    
     [Header("References")]
     [SerializeField] private PoliceAIConfig config;
     [SerializeField] private PoliceVision vision;
@@ -102,5 +106,7 @@ public class PoliceAIController : MonoBehaviour
         currentStateName = nextState.GetType().Name;
 
         _currentState.Enter();
+        
+        OnStateChanged.Invoke(_currentState);
     }
 }
