@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.766, z: 5.93}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b392ecfba9d894bb1f7f1c139cb692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodScript
-  moveSpeed: 8
   acceleration: 25
   maxSpeed: 20
   foodValue: 1

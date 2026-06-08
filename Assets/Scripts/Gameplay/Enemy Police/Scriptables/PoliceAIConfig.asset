@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fb5a5f066526243a1544c401294058, type: 3}
   m_Name: PoliceAIConfig
   m_EditorClassIdentifier: Assembly-CSharp::PoliceAIConfig
-  patrolSpeed: 3
-  chaseSpeed: 5
+  patrolSpeed: 2
+  chaseSpeed: 4
   stopDistance: 0.2
   visionRadius: 10
-  visionAngle: 70
+  visionAngle: 90
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -24,6 +24,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   suspicionIncreaseSpeed: 50
-  suspicionDecreaseSpeed: 30
+  suspicionDecreaseSpeed: 20
   maxSuspicion: 100
   catchDistance: 0.5
