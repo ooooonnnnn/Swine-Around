@@ -13,6 +13,11 @@ public class BillboardFaceCamera : MonoBehaviour
         if (canvas&& !targetCamera)
         {
             targetCamera = canvas.worldCamera;
+            
+            if (!targetCamera)
+            {
+                targetCamera = Camera.main;
+            }
         }
     }
 

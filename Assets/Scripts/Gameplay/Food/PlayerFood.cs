@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Threading.Tasks;
+using Gameplay;
 using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class PlayerFoodScript : MonoBehaviour
@@ -18,17 +19,13 @@ public class PlayerFoodScript : MonoBehaviour
     
     private Coroutine fullnessDecayCoroutine;
 
-    private void Update()
-    {
-        print(foodEaten);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))
         {
             ConsumeFood(other.GetComponent<MagnetizableFood>().foodValue);
             Destroy(other.gameObject);
+
         }
     }
     private void ConsumeFood(int foodValue)
