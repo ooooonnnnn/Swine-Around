@@ -196,73 +196,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: image
-      value: 
-      objectReference: {fileID: 1528008869}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[0].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[0].b
-      value: 0.016596556
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[0].g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[0].r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[1].b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[1].g
-      value: 0.73931885
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[1].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[2].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[2].b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[2].g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 815953258612240383, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: colors.Array.data[2].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2275574612369100187, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2954187321328171921, guid: eea31e5843212104c8f10fb04531a151, type: 3}
       propertyPath: m_Name
       value: Player UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3776927292221331226, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-      propertyPath: fillTweenDuration
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746703046656898358, guid: eea31e5843212104c8f10fb04531a151, type: 3}
       propertyPath: m_Pivot.x
@@ -2568,17 +2504,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1528008869 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2275574612369100187, guid: eea31e5843212104c8f10fb04531a151, type: 3}
-  m_PrefabInstance: {fileID: 178755779}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1534423539
 GameObject:
   m_ObjectHideFlags: 0
