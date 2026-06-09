@@ -32,6 +32,8 @@ public class PlayerFoodScript : MonoBehaviour
 
     [SerializeField, Tooltip("Passed with the current food and \"max\" food")] 
     private UnityEvent<int, int> OnFullnessChanged;
+    [SerializeField, Tooltip("Passed with the current fatness level")] 
+    private UnityEvent<int> OnFatnessLevelChanged;
     
     private Coroutine fullnessDecayCoroutine;
 
@@ -61,6 +63,7 @@ public class PlayerFoodScript : MonoBehaviour
     private void CheckFatnessThreshold()
     {
         fatnessLevel = FoodEaten / foodRequiredForFatness;
+        OnFatnessLevelChanged.Invoke(fatnessLevel);
         UpdateScale();
     }
     

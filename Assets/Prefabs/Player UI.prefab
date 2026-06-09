@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: 4993680220677892207}
   - component: {fileID: 2275574612369100187}
   - component: {fileID: 3776927292221331226}
+  - component: {fileID: 815953258612240383}
   m_Layer: 5
   m_Name: Fullness Fill
   m_TagString: Untagged
@@ -813,6 +814,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   image: {fileID: 2275574612369100187}
+  fillTweenDuration: 0
+--- !u!114 &815953258612240383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392896043072684189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4f4d1e5fd2284687854bacf73e01c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &5528699738065413324
 GameObject:
   m_ObjectHideFlags: 0
