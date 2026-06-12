@@ -151,7 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab81d5edf593e07429cd0f95dcbb87c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineScript
-  outlineWidth: 0.1
+  outline: 1.1
+  offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!65 &143721994
 BoxCollider:
@@ -609,7 +610,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783800716}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 8611870786414168877, guid: 1c3187c63e996a54a956eceacfa66740, type: 3}
 --- !u!4 &783800720
 Transform:
   m_ObjectHideFlags: 0
@@ -637,7 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab81d5edf593e07429cd0f95dcbb87c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineScript
-  outlineWidth: 0.1
+  outline: 1.1
+  offset: {x: 0, y: 0.01, z: 0}
   color: {r: 1, g: 0.9654912, b: 0, a: 1}
 --- !u!1 &832575517
 GameObject:
