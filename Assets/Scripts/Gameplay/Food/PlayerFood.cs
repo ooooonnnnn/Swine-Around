@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Gameplay;
 using UnityEngine;
 using UnityEngine.Events;
+
 [RequireComponent(typeof(Collider))]
 public class PlayerFoodScript : MonoBehaviour
 {
@@ -13,10 +14,26 @@ public class PlayerFoodScript : MonoBehaviour
     [SerializeField] private float fatnessToScaleModifier = 0.1f;
     
     [SerializeField] private int fatnessLevel = 0;
+
+    private int FoodEaten
+    {
+        get => foodEaten;
+        set
+        {
+            foodEaten = value;
+            OnFullnessChanged?.Invoke(foodEaten, foodRequiredForFatness * 2);
+            CheckFatnessThreshold();
+        }
+    }
     [SerializeField] private int foodEaten = 0;
-    
+
     [SerializeField] private float fullnessDecayDelay = 5f;     
-    [SerializeField] private float fullnessDecayInterval = 1f;   
+    [SerializeField] private float fullnessDecayInterval = 1f;
+
+    [SerializeField, Tooltip("Passed with the current food and \"max\" food")] 
+    private UnityEvent<int, int> OnFullnessChanged;
+    [SerializeField, Tooltip("Passed with the current fatness level")] 
+    private UnityEvent<int> OnFatnessLevelChanged;
     
     private Coroutine fullnessDecayCoroutine;
     public FullnessChangedEvent onFullnessChanged;
@@ -26,20 +43,22 @@ public class PlayerFoodScript : MonoBehaviour
     {
     }
     
+    private void Awake()
+    {
+        FoodEaten = foodEaten;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))
         {
             ConsumeFood(other.GetComponent<MagnetizableFood>().foodValue);
             Destroy(other.gameObject);
-
         }
     }
     private void ConsumeFood(int foodValue)
     {
-        foodEaten += foodValue;
-
-        CheckFatnessThreshold();
+        FoodEaten += foodValue;
 
         if (fullnessDecayCoroutine != null)
             StopCoroutine(fullnessDecayCoroutine);
@@ -63,10 +82,9 @@ public class PlayerFoodScript : MonoBehaviour
     
     private void DecreaseFatness()
     {
-        if (foodEaten > 0)
+        if (FoodEaten > 0)
         {
-            foodEaten--;
-            CheckFatnessThreshold();
+            FoodEaten--;
         }
     }
 
