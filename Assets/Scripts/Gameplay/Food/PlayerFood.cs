@@ -3,6 +3,7 @@ using System.Collections;
 using System.Threading.Tasks;
 using Gameplay;
 using UnityEngine;
+using UnityEngine.Events;
 [RequireComponent(typeof(Collider))]
 public class PlayerFoodScript : MonoBehaviour
 {
@@ -18,7 +19,13 @@ public class PlayerFoodScript : MonoBehaviour
     [SerializeField] private float fullnessDecayInterval = 1f;   
     
     private Coroutine fullnessDecayCoroutine;
+    public FullnessChangedEvent onFullnessChanged;
 
+    [System.Serializable]
+    public class FullnessChangedEvent : UnityEvent<int>
+    {
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))
@@ -42,7 +49,15 @@ public class PlayerFoodScript : MonoBehaviour
 
     private void CheckFatnessThreshold()
     {
+        int previousFatness = fatnessLevel;
+
         fatnessLevel = foodEaten / foodRequiredForFatness;
+
+        if (previousFatness != fatnessLevel)
+        {
+            onFullnessChanged?.Invoke(fatnessLevel);
+        }
+
         UpdateScale();
     }
     
