@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Threading.Tasks;
 using Gameplay;
+using Gameplay.Effects;
 using UnityEngine;
 using UnityEngine.Events;
 
