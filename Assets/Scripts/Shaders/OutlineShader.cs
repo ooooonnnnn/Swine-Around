@@ -5,6 +5,7 @@ using UnityEngine;
 public class OutlineScript : MonoBehaviour
 {
     public float outline = 1.1f;
+    public Vector3 offset = Vector3.zero;
     public Color color = Color.red;
 
     private Renderer _renderer;
@@ -38,6 +39,7 @@ public class OutlineScript : MonoBehaviour
 
         _mpb.SetFloat("_Outline_Scale", outline);
         _mpb.SetColor("_Outline_Color", color);
+        _mpb.SetVector("_Offset", offset);
 
         _renderer.SetPropertyBlock(_mpb);
     }
