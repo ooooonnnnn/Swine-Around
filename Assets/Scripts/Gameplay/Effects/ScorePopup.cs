@@ -15,7 +15,12 @@ namespace Gameplay.Effects
         public int score = 999;
         public float popUpDuration = 2.0f;
         public float upMovementDistance = 3.0f;
-        
+
+        private void OnValidate()
+        {
+            tmpAsset = GetComponentInChildren<TextMeshProUGUI>();
+        }
+
         private void Awake()
         {
             tmpAsset.text = $"+{score}";
