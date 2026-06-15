@@ -7,6 +7,8 @@ public class ScorePopupSpawner : MonoBehaviour
 
     public void Spawn(int score)
     {
+        if (score == 0) return;
+        
         ScorePopup newPopup = Instantiate(scorePopupPrefab, transform);
         newPopup.score = score;
     }
