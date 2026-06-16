@@ -11,14 +11,20 @@ namespace Gameplay.Effects
     public class ScorePopup : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI tmpAsset;
-        
-        public int score = 999;
-        public float popUpDuration = 2.0f;
-        public float upMovementDistance = 3.0f;
+
+        [SerializeField] private int score = 999;
+        [SerializeField] private float popUpDuration = 2.0f;
+        [SerializeField] private float upMovementDistance = 3.0f;
 
         private void OnValidate()
         {
             tmpAsset = GetComponentInChildren<TextMeshProUGUI>();
+        }
+
+        public void SetScore(int score)
+        {
+            this.score = score;
+            tmpAsset.text = $"+{score}";
         }
 
         private void Awake()

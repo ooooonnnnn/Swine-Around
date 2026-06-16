@@ -1,4 +1,5 @@
 using Gameplay.Effects;
+using Gameplay.Food;
 using UnityEngine;
 
 public class ScorePopupSpawner : MonoBehaviour
@@ -7,11 +8,11 @@ public class ScorePopupSpawner : MonoBehaviour
 
     public void Spawn(int score)
     {
-        if (score == 0) return;
+        if (score <= 0) return;
         
         ScorePopup newPopup = Instantiate(scorePopupPrefab, transform);
-        newPopup.score = score;
+        newPopup.SetScore(score);
     }
     
-    public void Spawn(int score, int _) => Spawn(score);
+    public void Spawn(FullnessParameters p) => Spawn(p.fullnessGained * 10);
 }
