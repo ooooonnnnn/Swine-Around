@@ -1,54 +1,64 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Gameplay
 {
     public class LevelStateManager : MonoBehaviour
     {
-        /* ### BLOCKED
-         * [SerializeField] private MusicManager musicManager;
-         * same for score
-         */
-        
-        [SerializeField] private Transform currentCheckpoint;
+        [SerializeField] private Transform startingCheckpoint;
 
-        public static LevelStateManager Instance;
-        
-        protected virtual void Awake()
+        public static LevelStateManager Instance { get; private set; }
+
+        private Vector3 currentCheckpointPosition;
+        private Quaternion currentCheckpointRotation;
+        private bool hasCheckpoint;
+
+        private void Awake()
         {
-            if (Instance == null)
+            if (!Instance)
             {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
+
+                if (startingCheckpoint)
+                {
+                    SetCheckpoint(startingCheckpoint);
+                }
             }
             else if (Instance != this)
             {
                 Destroy(gameObject);
             }
-
-            SetCheckpoint(currentCheckpoint);
-            // GameObject.DontDestroyOnLoad(musicManager);
-            // score here
         }
-        
+
         [ContextMenu("Restart Level")]
         public void ResetLevel()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        public void SetCheckpoint(Transform newPos)
+        public void SetCheckpoint(Transform checkpointTransform)
         {
-            currentCheckpoint.transform.SetParent(null);
-            currentCheckpoint = newPos;
-            currentCheckpoint.transform.SetParent(gameObject.transform);
+            if (!checkpointTransform) return;
+
+            currentCheckpointPosition = checkpointTransform.position;
+            currentCheckpointRotation = checkpointTransform.rotation;
+            hasCheckpoint = true;
         }
 
-        public Transform GetCheckpoint()
+        public Vector3 GetCheckpointPosition()
         {
-            return currentCheckpoint;
+            return currentCheckpointPosition;
+        }
+
+        public Quaternion GetCheckpointRotation()
+        {
+            return currentCheckpointRotation;
+        }
+
+        public bool HasCheckpoint()
+        {
+            return hasCheckpoint;
         }
     }
 }

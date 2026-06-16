@@ -1,20 +1,23 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Gameplay
 {
     public class PlayerRespawn : MonoBehaviour
     {
-        private LevelStateManager levelStateManager;
-        private void Awake()
+        private void Start()
         {
-            levelStateManager = LevelStateManager.Instance;
             Respawn();
         }
 
         public void Respawn()
         {
-            gameObject.transform.position = LevelStateManager.Instance.GetCheckpoint().position;
+            if (!LevelStateManager.Instance) return;
+            if (!LevelStateManager.Instance.HasCheckpoint()) return;
+
+            transform.SetPositionAndRotation(
+                LevelStateManager.Instance.GetCheckpointPosition(),
+                LevelStateManager.Instance.GetCheckpointRotation()
+            );
         }
     }
 }
