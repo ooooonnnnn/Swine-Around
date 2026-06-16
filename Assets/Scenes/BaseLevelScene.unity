@@ -169,7 +169,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.033333335
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: cdf18e5082430ff449402164f6a48e9b, type: 2}
   m_BuildHeightMesh: 0
@@ -1525,17 +1525,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049263863}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1059071863 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5967380850953257142, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-  m_PrefabInstance: {fileID: 8167978967440196967}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4978ba9f1bb9e8445b7553ee1b34b854, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1001 &1068194003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3659,84 +3648,20 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 178755780}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1059071863}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 178755781}
     - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 8167978967440196975}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetFillAmount
       objectReference: {fileID: 0}
     - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Spawn
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetColor
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: HandleFullnessChanged
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ImageFillFromValue, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ScorePopupSpawner, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ImageColorFromInt, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SpeedModifier, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-      propertyPath: OnFatnessLevelChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3759,17 +3684,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 193719314296681112, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
   m_PrefabInstance: {fileID: 8167978967440196967}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8167978967440196975 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4569014134581661075, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
-  m_PrefabInstance: {fileID: 8167978967440196967}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4f1f5ee94f4bb7bb8de48b97a40427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpeedModifier
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

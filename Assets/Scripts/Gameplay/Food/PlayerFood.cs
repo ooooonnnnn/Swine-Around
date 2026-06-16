@@ -25,13 +25,20 @@ public class PlayerFoodScript : MonoBehaviour
             var oldValue = foodEaten;
             foodEaten = value;
             CheckFatnessThreshold();
-            
-            OnFullnessChanged.Invoke(new FullnessParameters
+
+            var fullnessGained = value - oldValue;
+
+            var fullnessParameters = new FullnessParameters
             {
                 currentFullness = foodEaten,
                 maxFullness = foodRequiredForFatness * 2,
-                fullnessGained = value - oldValue,
-            });
+                fullnessGained = fullnessGained,
+            };
+            OnFullnessChanged.Invoke(fullnessParameters);
+            
+            if (fullnessGained > 0) 
+                OnFullnessIncreased.Invoke(fullnessParameters);
+                
         }
     }
     [SerializeField] private int foodEaten = 0;
@@ -41,6 +48,8 @@ public class PlayerFoodScript : MonoBehaviour
 
     [SerializeField, Tooltip("Passed with the current food and \"max\" food")] 
     private UnityEvent<FullnessParameters> OnFullnessChanged;
+    [SerializeField, Tooltip("Only when fullness increases")] 
+    private UnityEvent<FullnessParameters> OnFullnessIncreased;
     [SerializeField, Tooltip("Passed with the current fatness level")] 
     private UnityEvent<int> OnFatnessLevelChanged;
     
