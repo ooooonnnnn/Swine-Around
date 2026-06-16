@@ -54,16 +54,11 @@ public class PlayerFoodScript : MonoBehaviour
     private UnityEvent<int> OnFatnessLevelChanged;
     
     private Coroutine fullnessDecayCoroutine;
-    public FullnessChangedEvent onFullnessChanged;
-
-    [System.Serializable]
-    public class FullnessChangedEvent : UnityEvent<int>
-    {
-    }
     
     private void Awake()
     {
         FoodEaten = foodEaten;
+        OnFatnessLevelChanged.Invoke(fatnessLevel);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -92,8 +87,7 @@ public class PlayerFoodScript : MonoBehaviour
 
         if (previousFatness != fatnessLevel)
         {
-            OnFatnessLevelChanged?.Invoke(fatnessLevel);
-            onFullnessChanged?.Invoke(fatnessLevel);
+            OnFatnessLevelChanged.Invoke(fatnessLevel);
         }
 
         UpdateScale();
