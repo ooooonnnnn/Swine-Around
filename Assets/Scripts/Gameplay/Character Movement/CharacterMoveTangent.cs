@@ -8,6 +8,7 @@ public class CharacterMoveTangent : CharacterControllerBase
 {
     private Vector2 _moveInput;
     [FormerlySerializedAs("speed")] [SerializeField] private float maxSpeed;
+    private float originalSpeed;
     [SerializeField] private float acceleration;
     [SerializeField] private Transform moveRelativeToTransform;
 
@@ -18,6 +19,15 @@ public class CharacterMoveTangent : CharacterControllerBase
         if (!moveRelativeToTransform) moveRelativeToTransform = transform;
     }
 
+    private void Awake()
+    {
+        originalSpeed = maxSpeed;
+    }
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        maxSpeed = originalSpeed * multiplier;
+    }
+    
     public void TakeMoveInput(InputAction.CallbackContext ctx)
     {
         _moveInput = ctx.ReadValue<Vector2>();

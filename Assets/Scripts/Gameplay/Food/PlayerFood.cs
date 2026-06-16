@@ -36,7 +36,13 @@ public class PlayerFoodScript : MonoBehaviour
     private UnityEvent<int> OnFatnessLevelChanged;
     
     private Coroutine fullnessDecayCoroutine;
+    public FullnessChangedEvent onFullnessChanged;
 
+    [System.Serializable]
+    public class FullnessChangedEvent : UnityEvent<int>
+    {
+    }
+    
     private void Awake()
     {
         FoodEaten = foodEaten;
@@ -62,8 +68,16 @@ public class PlayerFoodScript : MonoBehaviour
 
     private void CheckFatnessThreshold()
     {
-        fatnessLevel = FoodEaten / foodRequiredForFatness;
-        OnFatnessLevelChanged.Invoke(fatnessLevel);
+        int previousFatness = fatnessLevel;
+
+        fatnessLevel = foodEaten / foodRequiredForFatness;
+
+        if (previousFatness != fatnessLevel)
+        {
+            OnFatnessLevelChanged?.Invoke(fatnessLevel);
+            onFullnessChanged?.Invoke(fatnessLevel);
+        }
+
         UpdateScale();
     }
     
