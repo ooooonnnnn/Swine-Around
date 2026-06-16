@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gameplay.Food;
+using UnityEngine;
 
 public class SpeedModifier : MonoBehaviour
 {

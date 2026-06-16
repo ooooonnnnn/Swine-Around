@@ -58,6 +58,10 @@ public class PlayerFoodScript : MonoBehaviour
     private void Awake()
     {
         FoodEaten = foodEaten;
+    }
+
+    private void Start()
+    {
         OnFatnessLevelChanged.Invoke(fatnessLevel);
     }
 
