@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Threading.Tasks;
 using Gameplay;
+using Gameplay.Effects;
+using Gameplay.Food;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,9 +22,16 @@ public class PlayerFoodScript : MonoBehaviour
         get => foodEaten;
         set
         {
+            var oldValue = foodEaten;
             foodEaten = value;
-            OnFullnessChanged?.Invoke(foodEaten, foodRequiredForFatness * 2);
             CheckFatnessThreshold();
+            
+            OnFullnessChanged.Invoke(new FullnessParameters
+            {
+                currentFullness = foodEaten,
+                maxFullness = foodRequiredForFatness * 2,
+                fullnessGained = value - oldValue,
+            });
         }
     }
     [SerializeField] private int foodEaten = 0;
@@ -31,7 +40,7 @@ public class PlayerFoodScript : MonoBehaviour
     [SerializeField] private float fullnessDecayInterval = 1f;
 
     [SerializeField, Tooltip("Passed with the current food and \"max\" food")] 
-    private UnityEvent<int, int> OnFullnessChanged;
+    private UnityEvent<FullnessParameters> OnFullnessChanged;
     [SerializeField, Tooltip("Passed with the current fatness level")] 
     private UnityEvent<int> OnFatnessLevelChanged;
     
