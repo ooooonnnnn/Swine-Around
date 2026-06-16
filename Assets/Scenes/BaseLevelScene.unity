@@ -2993,6 +2993,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 129712698291497, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 255031015542472938, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Height
       value: 2.7
@@ -3004,6 +3008,14 @@ PrefabInstance:
     - target: {fileID: 255031015542472938, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Center.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944381773543249726, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048972269436688897, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3178637646241330645, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Speed
@@ -3017,9 +3029,17 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1851562414}
+    - target: {fileID: 4304286779060325001, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5436997711170342022, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Name
       value: Enemy Police
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436997711170342022, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5590388069931503149, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Camera
