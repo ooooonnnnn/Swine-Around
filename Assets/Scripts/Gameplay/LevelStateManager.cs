@@ -1,33 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Gameplay
 {
-    public class LevelStateManager : MonoBehaviour
+    public class LevelStateManager : PersistentSingleton<LevelStateManager>
     {
         [SerializeField] private Transform startingCheckpoint;
+        public Transform currentCheckpoint;
 
-        public static LevelStateManager Instance { get; private set; }
-
-        private Vector3 currentCheckpointPosition;
-        private Quaternion currentCheckpointRotation;
         private bool hasCheckpoint;
+        
+        [SerializeField] UnityEvent OnLevelReset;
 
-        private void Awake()
+
+        protected override void Awake()
         {
-            if (!Instance)
+            base.Awake();
+            if (startingCheckpoint)
             {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-
-                if (startingCheckpoint)
-                {
-                    SetCheckpoint(startingCheckpoint);
-                }
-            }
-            else if (Instance != this)
-            {
-                Destroy(gameObject);
+                SetCheckpoint(startingCheckpoint);
             }
         }
 
@@ -35,30 +27,21 @@ namespace Gameplay
         public void ResetLevel()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            OnLevelReset.Invoke();
         }
 
         public void SetCheckpoint(Transform checkpointTransform)
         {
             if (!checkpointTransform) return;
 
-            currentCheckpointPosition = checkpointTransform.position;
-            currentCheckpointRotation = checkpointTransform.rotation;
+            currentCheckpoint = checkpointTransform;
             hasCheckpoint = true;
         }
 
-        public Vector3 GetCheckpointPosition()
-        {
-            return currentCheckpointPosition;
-        }
+        public Vector3 GetCheckpointPosition() => currentCheckpoint.position;
 
-        public Quaternion GetCheckpointRotation()
-        {
-            return currentCheckpointRotation;
-        }
+        public Quaternion GetCheckpointRotation() => currentCheckpoint.rotation;
 
-        public bool HasCheckpoint()
-        {
-            return hasCheckpoint;
-        }
+        public bool HasCheckpoint() => hasCheckpoint;
     }
 }
