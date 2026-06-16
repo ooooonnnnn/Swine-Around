@@ -43428,6 +43428,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2536755926510808727, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: parentOptional
+      value: 
+      objectReference: {fileID: 8167978967440196969}
     - target: {fileID: 2795463349582377942, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: gameObjectToScale
       value: 
