@@ -1,3 +1,4 @@
+using Gameplay;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -30,7 +31,7 @@ public class PoliceCatchPlayer : MonoBehaviour
         police.Movement.Stop();
 
         OnPlayerCaught?.Invoke();
-
-        Debug.Log("Game Over");
+        
+        if (LevelStateManager.Instance) LevelStateManager.Instance.ResetLevel();
     }
 }

@@ -1,6 +1,6 @@
-using System;
 using System.Linq;
 using UnityEngine;
+using Gameplay;
 
 public class CheckpointManager : PersistentSingleton<CheckpointManager>
 {
@@ -25,8 +25,16 @@ public class CheckpointManager : PersistentSingleton<CheckpointManager>
     private void HandleCheckpointActivated(Checkpoint checkpoint)
     {
         print($"Checkpoint {checkpoint.name} activated");
+
         activeCheckpoint = checkpoint;
+
+        if (LevelStateManager.Instance != null)
+        {
+            LevelStateManager.Instance.SetCheckpoint(activeCheckpoint.SleepPos);
+        }
+
         activeCheckpoint.enabled = false;
+
         foreach (var otherCheckpoint in checkpoints.Where(c => c != activeCheckpoint))
         {
             otherCheckpoint.enabled = true;
