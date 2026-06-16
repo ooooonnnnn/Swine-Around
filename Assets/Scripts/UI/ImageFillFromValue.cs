@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Gameplay.Food;
 
 public class ImageFillFromValue : MonoBehaviour
 {
@@ -16,4 +17,6 @@ public class ImageFillFromValue : MonoBehaviour
     }
 
     public void SetFillAmount(int value, int maxValue) => SetFillAmount(value / (float)maxValue);
+
+    public void SetFillAmount(FullnessParameters parameters) => SetFillAmount(parameters.Fill);
 }

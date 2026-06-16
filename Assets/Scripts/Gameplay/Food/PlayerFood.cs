@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Threading.Tasks;
 using Gameplay;
+using Gameplay.Effects;
+using Gameplay.Food;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,9 +22,16 @@ public class PlayerFoodScript : MonoBehaviour
         get => foodEaten;
         set
         {
+            var oldValue = foodEaten;
             foodEaten = value;
-            OnFullnessChanged?.Invoke(foodEaten, foodRequiredForFatness * 2);
             CheckFatnessThreshold();
+            
+            OnFullnessChanged.Invoke(new FullnessParameters
+            {
+                currentFullness = foodEaten,
+                maxFullness = foodRequiredForFatness * 2,
+                fullnessGained = value - oldValue,
+            });
         }
     }
     [SerializeField] private int foodEaten = 0;
@@ -31,12 +40,18 @@ public class PlayerFoodScript : MonoBehaviour
     [SerializeField] private float fullnessDecayInterval = 1f;
 
     [SerializeField, Tooltip("Passed with the current food and \"max\" food")] 
-    private UnityEvent<int, int> OnFullnessChanged;
+    private UnityEvent<FullnessParameters> OnFullnessChanged;
     [SerializeField, Tooltip("Passed with the current fatness level")] 
     private UnityEvent<int> OnFatnessLevelChanged;
     
     private Coroutine fullnessDecayCoroutine;
+    public FullnessChangedEvent onFullnessChanged;
 
+    [System.Serializable]
+    public class FullnessChangedEvent : UnityEvent<int>
+    {
+    }
+    
     private void Awake()
     {
         FoodEaten = foodEaten;
@@ -62,8 +77,16 @@ public class PlayerFoodScript : MonoBehaviour
 
     private void CheckFatnessThreshold()
     {
-        fatnessLevel = FoodEaten / foodRequiredForFatness;
-        OnFatnessLevelChanged.Invoke(fatnessLevel);
+        int previousFatness = fatnessLevel;
+
+        fatnessLevel = foodEaten / foodRequiredForFatness;
+
+        if (previousFatness != fatnessLevel)
+        {
+            OnFatnessLevelChanged?.Invoke(fatnessLevel);
+            onFullnessChanged?.Invoke(fatnessLevel);
+        }
+
         UpdateScale();
     }
     
