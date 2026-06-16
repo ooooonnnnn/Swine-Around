@@ -117,7 +117,7 @@ public class PlayerFoodScript : MonoBehaviour
     {
         yield return new WaitForSeconds(fullnessDecayDelay);
 
-        while (fatnessLevel > 0)
+        while (fatnessLevel >= 0)
         {
             yield return new WaitForSeconds(fullnessDecayInterval);
             DecreaseFatness();
