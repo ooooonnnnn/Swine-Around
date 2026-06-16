@@ -74,6 +74,7 @@ public class PlayerFoodScript : MonoBehaviour
 
         if (previousFatness != fatnessLevel)
         {
+            OnFatnessLevelChanged?.Invoke(fatnessLevel);
             onFullnessChanged?.Invoke(fatnessLevel);
         }
 
