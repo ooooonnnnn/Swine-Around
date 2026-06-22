@@ -32,16 +32,6 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
         ResetScore();
     }
 
-    public void AddScoreChangedListener(UnityAction<int> listener)
-    {
-        scoreChanged.AddListener(listener);
-    }
-
-    public void RemoveScoreChangedListener(UnityAction<int> listener)
-    {
-        scoreChanged.RemoveListener(listener);
-    }
-
     public void ResetScore()
     {
         CurrentScore = 0;
