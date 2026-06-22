@@ -14,5 +14,8 @@ public class ScorePopupSpawner : MonoBehaviour
         newPopup.SetScore(score);
     }
     
-    public void Spawn(FullnessParameters p) => Spawn(p.fullnessGained * 10);
-}
+    public void Spawn(FullnessParameters p)
+    {
+        int gainedScore = ScoreManager.Instance.AddFood(p);
+        Spawn(gainedScore);
+    }}
