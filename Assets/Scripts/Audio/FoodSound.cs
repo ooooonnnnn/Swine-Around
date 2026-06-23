@@ -2,11 +2,9 @@
 using UnityEngine;
 public class FoodSound : MonoBehaviour
 {
-    [SerializeField] private EventReference FoodEatingSound;
-    [SerializeField] private EventReference FoodCollectionSoundSound;
+    [SerializeField] private EventReference foodEatingSound;
     public void PlayFoodSound()
     {
-        AudioManager.Instance.PlayOneShot(FoodCollectionSoundSound, transform.position);
-        AudioManager.Instance.PlayOneShot(FoodEatingSound, transform.position);
+        AudioManager.Instance.PlayOneShot(foodEatingSound, transform.position);
     }
 }

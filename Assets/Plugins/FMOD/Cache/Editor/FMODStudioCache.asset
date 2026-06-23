@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9073642701849404877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guard Give Up
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guard Give Up
+  Guid:
+    Data1: 495762099
+    Data2: 1330124572
+    Data3: -52615291
+    Data4: 774971753
+  Banks:
+  - {fileID: -6450437404721238773}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8419335408936842451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,38 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639177397837877767
+  lastModified: 639178006036874269
   FileSizes:
   - Name: Desktop
     Value: 1524
   Exists: 1
+--- !u!114 &-6475567687236737504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guard Notice
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guard Notice
+  Guid:
+    Data1: -1183326496
+    Data2: 1139439040
+    Data3: 2133345949
+    Data4: 1717459629
+  Banks:
+  - {fileID: -6450437404721238773}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6450437404721238773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,10 +89,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Guard.bank
   Name: Guard
   StudioPath: bank:/Guard
-  lastModified: 639177397837816973
+  lastModified: 639178008876697044
   FileSizes:
   - Name: Desktop
-    Value: 58336
+    Value: 99168
   Exists: 1
 --- !u!114 &-3904373659579657957
 MonoBehaviour:
@@ -55,10 +109,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639177397837969815
+  lastModified: 639178008876855327
   FileSizes:
   - Name: Desktop
-    Value: 13184
+    Value: 13632
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -82,13 +136,16 @@ MonoBehaviour:
   - {fileID: 7579191472650817637}
   - {fileID: 4610908342561064251}
   - {fileID: 4779088263838005451}
+  - {fileID: 5922796788963756476}
+  - {fileID: -9073642701849404877}
+  - {fileID: -6475567687236737504}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8419335408936842451}
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639177397837969815
+  cacheTime: 639178008876855327
   SerializableEventsDict:
   - key: event:/Guard Idle
     index: 0
@@ -96,6 +153,12 @@ MonoBehaviour:
     index: 1
   - key: event:/ScorePop
     index: 2
+  - key: event:/Guard Chase
+    index: 3
+  - key: event:/Guard Give Up
+    index: 4
+  - key: event:/Guard Notice
+    index: 5
 --- !u!114 &4610908342561064251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,10 +173,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/FoodMunch
   Guid:
-    Data1: 1820834674
-    Data2: 1173453065
-    Data3: -727383935
-    Data4: 1941895951
+    Data1: -777969493
+    Data2: 1076083554
+    Data3: -1828623471
+    Data4: -1327975030
   Banks:
   - {fileID: 7108919754149687725}
   IsStream: 0
@@ -150,6 +213,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5922796788963756476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guard Chase
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guard Chase
+  Guid:
+    Data1: -599452308
+    Data2: 1329414775
+    Data3: -1812450422
+    Data4: 808004939
+  Banks:
+  - {fileID: -6450437404721238773}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7108919754149687725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,10 +255,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Boar.bank
   Name: Boar
   StudioPath: bank:/Boar
-  lastModified: 639177397837735231
+  lastModified: 639178006036075339
   FileSizes:
   - Name: Desktop
-    Value: 1058
+    Value: 14272
   Exists: 1
 --- !u!114 &7139416210000240261
 MonoBehaviour:
@@ -185,10 +275,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639177397837929099
+  lastModified: 639178006036879365
   FileSizes:
   - Name: Desktop
-    Value: 1084
+    Value: 1208
   Exists: 1
 --- !u!114 &7579191472650817637
 MonoBehaviour:
@@ -216,4 +306,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 18000
+  Length: 2300
