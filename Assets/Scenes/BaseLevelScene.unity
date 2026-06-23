@@ -1264,6 +1264,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3670252951659593260, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
   m_PrefabInstance: {fileID: 696148554}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &696148556 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+  m_PrefabInstance: {fileID: 696148554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53e94f9e1eb4e37990b159ecbd91cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.LevelStateManager
 --- !u!1 &724695298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,6 +2931,34 @@ PrefabInstance:
     - target: {fileID: 2424962107913205130, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
       propertyPath: m_Name
       value: Checkpoint Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395382182078504433, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
+      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395382182078504433, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
+      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395382182078504433, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
+      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 696148556}
+    - target: {fileID: 5395382182078504433, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
+      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395382182078504433, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
+      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395382182078504433, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
+      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Gameplay.LevelStateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395382182078504433, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
+      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5416456336026108701, guid: 2dc6392714580de4c8cd5b98883b8716, type: 3}
       propertyPath: m_LocalPosition.x
