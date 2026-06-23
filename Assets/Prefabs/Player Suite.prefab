@@ -89,6 +89,7 @@ Transform:
   - {fileID: 4792411798971091639}
   - {fileID: 8844177722099591778}
   - {fileID: 3449438327412062520}
+  - {fileID: 139656577333535151}
   m_Father: {fileID: 7405240689493936942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &698652484789076401
@@ -20271,6 +20272,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 618670064532302059}
+        m_TargetAssemblyTypeName: BoarSounds, Assembly-CSharp
+        m_MethodName: PlayRamSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 618670064532302059}
+        m_TargetAssemblyTypeName: BoarSounds, Assembly-CSharp
+        m_MethodName: PlayOinkSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnPulseEnd:
     m_PersistentCalls:
       m_Calls:
@@ -25429,6 +25454,125 @@ Transform:
   - {fileID: 4799685401425040945}
   m_Father: {fileID: 193719314296681112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7228960084301152370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139656577333535151}
+  - component: {fileID: 4449918575454548612}
+  - component: {fileID: 2402311111921335014}
+  - component: {fileID: 4987532357052987696}
+  m_Layer: 0
+  m_Name: Player Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139656577333535151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7228960084301152370}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 193719314296681112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4449918575454548612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7228960084301152370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b5da1acdfa4f0583f4414cbef1a31f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoarSounds
+  footstepsSound:
+    Guid:
+      Data1: 687408881
+      Data2: 1172311101
+      Data3: 1323728018
+      Data4: -2108712123
+    Path: event:/SFX/Footsteps Grass
+  oinkSound:
+    Guid:
+      Data1: 1290363844
+      Data2: 1274884500
+      Data3: 1850702976
+      Data4: 1167012241
+    Path: event:/Boar/Oink
+  ramSound:
+    Guid:
+      Data1: -2032313325
+      Data2: 1286324584
+      Data3: -323417192
+      Data4: 201908200
+    Path: event:/Boar/Boar Ram
+--- !u!114 &2402311111921335014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7228960084301152370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff3378e19e346518b1453f7743f0e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FoodSound
+  foodEatingSound:
+    Guid:
+      Data1: -777969493
+      Data2: 1076083554
+      Data3: -1828623471
+      Data4: -1327975030
+    Path: event:/Food/FoodMunch
+--- !u!114 &4987532357052987696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7228960084301152370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3afbeff7b04ce98766ee508bedd6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXSounds
+  foodCollectionSound:
+    Guid:
+      Data1: 637309940
+      Data2: 1264064403
+      Data3: 1867705986
+      Data4: 985781931
+    Path: event:/SFX/ScorePop
+  defeatSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  levelCompleteSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &7239342217620082002
 GameObject:
   m_ObjectHideFlags: 0
@@ -25529,12 +25673,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeFullnessVariable
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFullnessIncreased:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6347543298918197336}
         m_TargetAssemblyTypeName: PrefabInstantiator, Assembly-CSharp
         m_MethodName: Instantiate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2402311111921335014}
+        m_TargetAssemblyTypeName: FoodSound, Assembly-CSharp
+        m_MethodName: PlayFoodSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4987532357052987696}
+        m_TargetAssemblyTypeName: SFXSounds, Assembly-CSharp
+        m_MethodName: PlayFoodCollectionSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25603,6 +25783,7 @@ Transform:
   m_Children:
   - {fileID: 193719314296681112}
   - {fileID: 2887573972142762964}
+  - {fileID: 3309233174506475518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &171560279310331342
@@ -30588,6 +30769,125 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!1 &8890970562706709342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3309233174506475518}
+  - component: {fileID: 7381850788749615573}
+  - component: {fileID: 5434964343720489898}
+  - component: {fileID: 618670064532302059}
+  m_Layer: 6
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3309233174506475518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8890970562706709342}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7405240689493936942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7381850788749615573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8890970562706709342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3afbeff7b04ce98766ee508bedd6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXSounds
+  foodCollectionSound:
+    Guid:
+      Data1: -777969493
+      Data2: 1076083554
+      Data3: -1828623471
+      Data4: -1327975030
+    Path: event:/Food/FoodMunch
+  defeatSound:
+    Guid:
+      Data1: -1402970013
+      Data2: 1129678902
+      Data3: 5305993
+      Data4: 1468011414
+    Path: event:/SFX/Level Failed
+  levelCompleteSound:
+    Guid:
+      Data1: -1033084580
+      Data2: 1301177963
+      Data3: -81807224
+      Data4: -450642306
+    Path: event:/SFX/Level Completed
+--- !u!114 &5434964343720489898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8890970562706709342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff3378e19e346518b1453f7743f0e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FoodSound
+  foodEatingSound:
+    Guid:
+      Data1: -777969493
+      Data2: 1076083554
+      Data3: -1828623471
+      Data4: -1327975030
+    Path: event:/Food/FoodMunch
+--- !u!114 &618670064532302059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8890970562706709342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b5da1acdfa4f0583f4414cbef1a31f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoarSounds
+  footstepsSound:
+    Guid:
+      Data1: 687408881
+      Data2: 1172311101
+      Data3: 1323728018
+      Data4: -2108712123
+    Path: event:/SFX/Footsteps Grass
+  oinkSound:
+    Guid:
+      Data1: 1290363844
+      Data2: 1274884500
+      Data3: 1850702976
+      Data4: 1167012241
+    Path: event:/Boar/Oink
+  ramSound:
+    Guid:
+      Data1: -2032313325
+      Data2: 1286324584
+      Data3: -323417192
+      Data4: 201908200
+    Path: event:/Boar/Boar Ram
 --- !u!1 &8951729358751452652
 GameObject:
   m_ObjectHideFlags: 0
