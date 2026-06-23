@@ -157,7 +157,7 @@ MonoBehaviour:
       Data2: 1247508800
       Data3: -537572934
       Data4: -1845789459
-    Path: event:/Object Break
+    Path: event:/Breakable/Object Break
 --- !u!1 &8207707823828244730
 GameObject:
   m_ObjectHideFlags: 0
