@@ -138,6 +138,85 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4145430786275686528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4413716049398723779}
+  - component: {fileID: 7550238781358639851}
+  m_Layer: 8
+  m_Name: PoliceSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4413716049398723779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145430786275686528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8540088424614855049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7550238781358639851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145430786275686528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d51a5cad4b474f8b4125eb6e77ed39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuardSound
+  footstepsSound:
+    Guid:
+      Data1: 687408881
+      Data2: 1172311101
+      Data3: 1323728018
+      Data4: -2108712123
+    Path: event:/Footsteps Grass
+  idleSound:
+    Guid:
+      Data1: 647610614
+      Data2: 1140116338
+      Data3: 942875583
+      Data4: -1167266584
+    Path: event:/Guard Idle
+  noticeSound:
+    Guid:
+      Data1: -1183326496
+      Data2: 1139439040
+      Data3: 2133345949
+      Data4: 1717459629
+    Path: event:/Guard Notice
+  chaseSound:
+    Guid:
+      Data1: -599452308
+      Data2: 1329414775
+      Data3: -1812450422
+      Data4: 808004939
+    Path: event:/Guard Chase
+  forgetSound:
+    Guid:
+      Data1: 495762099
+      Data2: 1330124572
+      Data3: -52615291
+      Data4: 774971753
+    Path: event:/Guard Give Up
 --- !u!1 &4304286779060325001
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +388,7 @@ Transform:
   - {fileID: 2088766734818788416}
   - {fileID: 3906072139348981708}
   - {fileID: 8813968427690118304}
+  - {fileID: 4413716049398723779}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &255031015542472938

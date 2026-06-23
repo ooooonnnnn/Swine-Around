@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7036685299895587650}
   - component: {fileID: 7055089385282700542}
   - component: {fileID: 3099171008343712963}
+  - component: {fileID: 6391910399892737497}
   m_Layer: 7
   m_Name: Destructible
   m_TagString: Untagged
@@ -86,6 +87,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6391910399892737497}
+        m_TargetAssemblyTypeName: DestructableSounds, Assembly-CSharp
+        m_MethodName: PlayBreakSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7055089385282700542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +139,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6391910399892737497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233135872290487547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b06d9b636d47b78ca0f3815fb139b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestructableSounds
+  breakSound:
+    Guid:
+      Data1: 628637153
+      Data2: 1247508800
+      Data3: -537572934
+      Data4: -1845789459
+    Path: event:/Object Break
 --- !u!1 &8207707823828244730
 GameObject:
   m_ObjectHideFlags: 0

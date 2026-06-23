@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8732113522337135701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fullnes
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Fullnes
+  StudioPath: parameter:/Fullnes
+  Min: 0
+  Max: 20
+  Default: 0
+  ID:
+    data1: 813069002
+    data2: 2447374074
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-8419335408936842451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,11 +66,38 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639178006036874269
+  lastModified: 639178062121446977
   FileSizes:
   - Name: Desktop
-    Value: 1524
+    Value: 1700
   Exists: 1
+--- !u!114 &-7574617330852845802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sleep
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Sleep
+  Guid:
+    Data1: -430643255
+    Data2: 1256086336
+    Data3: -888094574
+    Data4: -772255807
+  Banks:
+  - {fileID: 7108919754149687725}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6475567687236737504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +140,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Guard.bank
   Name: Guard
   StudioPath: bank:/Guard
-  lastModified: 639178008876697044
+  lastModified: 639178050481134021
   FileSizes:
   - Name: Desktop
     Value: 99168
@@ -109,11 +160,120 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639178008876855327
+  lastModified: 639178056056545356
   FileSizes:
   - Name: Desktop
-    Value: 13632
+    Value: 90656
   Exists: 1
+--- !u!114 &-2946162017223636492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sleep Haha
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Sleep Haha
+  Guid:
+    Data1: 483454748
+    Data2: 1190503171
+    Data3: -1430030146
+    Data4: 1218033856
+  Banks:
+  - {fileID: 7108919754149687725}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2798331457922750786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Object Break
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Object Break
+  Guid:
+    Data1: 628637153
+    Data2: 1247508800
+    Data3: -537572934
+    Data4: -1845789459
+  Banks:
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-275584082031785216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level Completed
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Level Completed
+  Guid:
+    Data1: -1033084580
+    Data2: 1301177963
+    Data3: -81807224
+    Data4: -450642306
+  Banks:
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-181808133983921576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Oink
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Oink
+  Guid:
+    Data1: 1290363844
+    Data2: 1274884500
+    Data3: 1850702976
+    Data4: 1167012241
+  Banks:
+  - {fileID: 7108919754149687725}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 694333719161538683}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,13 +299,22 @@ MonoBehaviour:
   - {fileID: 5922796788963756476}
   - {fileID: -9073642701849404877}
   - {fileID: -6475567687236737504}
-  EditorParameters: []
+  - {fileID: -181808133983921576}
+  - {fileID: 8394940720605442480}
+  - {fileID: 3158740652555079970}
+  - {fileID: -2798331457922750786}
+  - {fileID: -275584082031785216}
+  - {fileID: 8128302050281387019}
+  - {fileID: -2946162017223636492}
+  - {fileID: -7574617330852845802}
+  EditorParameters:
+  - {fileID: -8732113522337135701}
   MasterBanks:
   - {fileID: -8419335408936842451}
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639178008876855327
+  cacheTime: 639178062121446977
   SerializableEventsDict:
   - key: event:/Guard Idle
     index: 0
@@ -159,6 +328,73 @@ MonoBehaviour:
     index: 4
   - key: event:/Guard Notice
     index: 5
+  - key: event:/Oink
+    index: 6
+  - key: event:/Footsteps Grass
+    index: 7
+  - key: event:/Boar Ram
+    index: 8
+  - key: event:/Object Break
+    index: 9
+  - key: event:/Level Completed
+    index: 10
+  - key: event:/Level Failed
+    index: 11
+  - key: event:/Sleep Haha
+    index: 12
+  - key: event:/Sleep
+    index: 13
+--- !u!114 &694333719161538683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Oink/Fullnes
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Fullnes
+  StudioPath: 
+  Min: 0
+  Max: 20
+  Default: 0
+  ID:
+    data1: 813069002
+    data2: 2447374074
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &3158740652555079970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Boar Ram
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Boar Ram
+  Guid:
+    Data1: -2032313325
+    Data2: 1286324584
+    Data3: -323417192
+    Data4: 201908200
+  Banks:
+  - {fileID: 7108919754149687725}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4610908342561064251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,10 +491,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Boar.bank
   Name: Boar
   StudioPath: bank:/Boar
-  lastModified: 639178006036075339
+  lastModified: 639178062121416787
   FileSizes:
   - Name: Desktop
-    Value: 14272
+    Value: 123904
   Exists: 1
 --- !u!114 &7139416210000240261
 MonoBehaviour:
@@ -275,10 +511,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639178006036879365
+  lastModified: 639178062121446977
   FileSizes:
   - Name: Desktop
-    Value: 1208
+    Value: 1628
   Exists: 1
 --- !u!114 &7579191472650817637
 MonoBehaviour:
@@ -307,3 +543,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2300
+--- !u!114 &8128302050281387019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level Failed
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Level Failed
+  Guid:
+    Data1: -1402970013
+    Data2: 1129678902
+    Data3: 5305993
+    Data4: 1468011414
+  Banks:
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8394940720605442480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps Grass
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Footsteps Grass
+  Guid:
+    Data1: 687408881
+    Data2: 1172311101
+    Data3: 1323728018
+    Data4: -2108712123
+  Banks:
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
