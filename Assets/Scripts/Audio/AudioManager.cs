@@ -18,4 +18,11 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
     
+    
+
+    public void ChangeFullnessVariable(int fullnessValue)
+    {
+        RuntimeManager.StudioSystem.setParameterByName("fullness", fullnessValue);
+    }
+    
 }
