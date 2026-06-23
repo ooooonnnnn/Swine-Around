@@ -1,11 +1,13 @@
 using System.Linq;
 using UnityEngine;
 using Gameplay;
+using UnityEngine.Events;
 
 public class CheckpointManager : PersistentSingleton<CheckpointManager>
 {
     [SerializeField] private Checkpoint[] checkpoints;
     [SerializeField] private Checkpoint activeCheckpoint;
+    public UnityEvent<Checkpoint> OnCheckpointActivated;
     
     private void OnValidate()
     {
@@ -39,5 +41,7 @@ public class CheckpointManager : PersistentSingleton<CheckpointManager>
         {
             otherCheckpoint.enabled = true;
         }
+        
+        OnCheckpointActivated.Invoke(activeCheckpoint);
     }
 }
