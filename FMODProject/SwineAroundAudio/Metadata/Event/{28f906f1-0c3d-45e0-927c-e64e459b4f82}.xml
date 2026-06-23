@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{28f906f1-0c3d-45e0-927c-e64e459b4f82}">
 		<property name="name">
-			<value>Footsteps Boar</value>
+			<value>Footsteps Grass</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -101,6 +101,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{f3fd7ec8-767d-40ac-9fef-8a9aeb9e5b8f}" />
 	<object class="MultiSound" id="{5fa5b3c2-f41e-493e-b365-be6cd1e757f8}">
+		<property name="looping">
+			<value>true</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{b13fb955-5c1d-488c-afde-de22ed7eb003}</destination>
 			<destination>{02c11cb1-1982-406e-8fcc-915f762ab1db}</destination>

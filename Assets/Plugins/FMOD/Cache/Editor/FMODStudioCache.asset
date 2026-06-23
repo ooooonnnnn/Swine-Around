@@ -24,33 +24,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-8620822580948293218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Footsteps Boar
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX/Footsteps Boar
-  Guid:
-    Data1: 687408881
-    Data2: 1172311101
-    Data3: 1323728018
-    Data4: -2108712123
-  Banks:
-  - {fileID: -3904373659579657957}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8419335408936842451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +39,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639178331716901542
+  lastModified: 639178366927998532
   FileSizes:
   - Name: Desktop
     Value: 1700
@@ -142,8 +115,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 50
   Length: 0
 --- !u!114 &-4457950236928329961
 MonoBehaviour:
@@ -187,10 +160,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639178331717103939
+  lastModified: 639178369893713898
   FileSizes:
   - Name: Desktop
-    Value: 103360
+    Value: 102976
   Exists: 1
 --- !u!114 &-2007790871819872529
 MonoBehaviour:
@@ -302,7 +275,7 @@ MonoBehaviour:
   - {fileID: 7398680038130792279}
   - {fileID: -5609029096714085737}
   - {fileID: -4457950236928329961}
-  - {fileID: -8620822580948293218}
+  - {fileID: 7656081921967035846}
   EditorParameters:
   - {fileID: -8732113522337135701}
   MasterBanks:
@@ -310,7 +283,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639178331717103939
+  cacheTime: 639178369893713898
   SerializableEventsDict:
   - key: event:/Boar/Boar Ram
     index: 0
@@ -538,10 +511,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639178331716901542
+  lastModified: 639178366928008549
   FileSizes:
   - Name: Desktop
-    Value: 1662
+    Value: 1664
   Exists: 1
 --- !u!114 &7384754856144498054
 MonoBehaviour:
@@ -593,6 +566,33 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7656081921967035846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Footsteps Grass
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/Footsteps Grass
+  Guid:
+    Data1: 687408881
+    Data2: 1172311101
+    Data3: 1323728018
+    Data4: -2108712123
+  Banks:
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
