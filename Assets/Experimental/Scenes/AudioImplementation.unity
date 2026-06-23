@@ -3560,11 +3560,11 @@ MonoBehaviour:
     Path: event:/Boar/Oink
   ramSound:
     Guid:
-      Data1: 1290363844
-      Data2: 1274884500
-      Data3: 1850702976
-      Data4: 1167012241
-    Path: event:/Boar/Oink
+      Data1: -2032313325
+      Data2: 1286324584
+      Data3: -323417192
+      Data4: 201908200
+    Path: event:/Boar/Boar Ram
 --- !u!114 &1886769244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4103,10 +4103,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
@@ -4114,7 +4118,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1886769243}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1886769243}
+    - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
@@ -4122,7 +4134,15 @@ PrefabInstance:
       value: PlayRamSound
       objectReference: {fileID: 0}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: PlayOinkSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: BoarSounds, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: BoarSounds, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
@@ -4130,7 +4150,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860980684719365498, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: OnPulseStart.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8004549856579334275, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
