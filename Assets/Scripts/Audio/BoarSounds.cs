@@ -6,7 +6,6 @@ public class BoarSounds : MonoBehaviour
 
     [SerializeField] private EventReference oinkSound;
     [SerializeField] private EventReference ramSound;
-    [SerializeField] private EventReference sleepSound;
 
     public void PlayFootstepsSound()
     {
@@ -22,11 +21,4 @@ public class BoarSounds : MonoBehaviour
     {
         AudioManager.Instance.PlayOneShot(ramSound, transform.position);
     }
-    
-    public void PlaySleepSound()
-    {
-        AudioManager.Instance.PlayOneShot(sleepSound, transform.position);
-    }
-    
-    
 }

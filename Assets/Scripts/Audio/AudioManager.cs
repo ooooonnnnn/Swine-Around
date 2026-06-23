@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using FMODUnity;
+using Gameplay.Food;
 
 public class AudioManager : MonoBehaviour
 {
@@ -20,9 +21,9 @@ public class AudioManager : MonoBehaviour
     
     
 
-    public void ChangeFullnessVariable(int fullnessValue)
+    public void ChangeFullnessVariable(FullnessParameters fullnessParameters)
     {
-        RuntimeManager.StudioSystem.setParameterByName("fullness", fullnessValue);
+        RuntimeManager.StudioSystem.setParameterByName("fullness", fullnessParameters.currentFullness);
     }
     
 }
