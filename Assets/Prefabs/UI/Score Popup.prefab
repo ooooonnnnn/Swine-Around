@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4877213279409319332}
   - component: {fileID: 6016899914768170980}
   - component: {fileID: 5620207092449216260}
-  - component: {fileID: 2041503694748866106}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -138,22 +137,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2041503694748866106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2958276900387992966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a53c654e821410a8cac2f976b987f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Effects.ScorePopup
-  tmpAsset: {fileID: 5620207092449216260}
-  score: 999
-  popUpDuration: 2
-  upMovementDistance: 3
 --- !u!1 &6953109358112604885
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +150,7 @@ GameObject:
   - component: {fileID: 4087837674248876906}
   - component: {fileID: 5077789310080745836}
   - component: {fileID: 622385595556090235}
+  - component: {fileID: 7370616192321745138}
   m_Layer: 5
   m_Name: Score Popup
   m_TagString: Untagged
@@ -239,7 +223,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &5077789310080745836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,3 +255,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BillboardFaceCamera
   canvas: {fileID: 8740579297508707033}
   targetCamera: {fileID: 0}
+--- !u!114 &7370616192321745138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953109358112604885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a53c654e821410a8cac2f976b987f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Effects.ScorePopup
+  tmpAsset: {fileID: 5620207092449216260}
+  score: 999
+  popUpDuration: 2
+  upMovementDistance: 3

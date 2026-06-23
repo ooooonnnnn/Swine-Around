@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Threading.Tasks;
 using Gameplay;
+using Gameplay.Effects;
+using Gameplay.Food;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,9 +22,23 @@ public class PlayerFoodScript : MonoBehaviour
         get => foodEaten;
         set
         {
+            var oldValue = foodEaten;
             foodEaten = value;
-            OnFullnessChanged?.Invoke(foodEaten, foodRequiredForFatness * 2);
             CheckFatnessThreshold();
+
+            var fullnessGained = value - oldValue;
+
+            var fullnessParameters = new FullnessParameters
+            {
+                currentFullness = foodEaten,
+                maxFullness = foodRequiredForFatness * 2,
+                fullnessGained = fullnessGained,
+            };
+            OnFullnessChanged.Invoke(fullnessParameters);
+            
+            if (fullnessGained > 0) 
+                OnFullnessIncreased.Invoke(fullnessParameters);
+                
         }
     }
     [SerializeField] private int foodEaten = 0;
@@ -31,15 +47,22 @@ public class PlayerFoodScript : MonoBehaviour
     [SerializeField] private float fullnessDecayInterval = 1f;
 
     [SerializeField, Tooltip("Passed with the current food and \"max\" food")] 
-    private UnityEvent<int, int> OnFullnessChanged;
+    private UnityEvent<FullnessParameters> OnFullnessChanged;
+    [SerializeField, Tooltip("Only when fullness increases")] 
+    private UnityEvent<FullnessParameters> OnFullnessIncreased;
     [SerializeField, Tooltip("Passed with the current fatness level")] 
     private UnityEvent<int> OnFatnessLevelChanged;
     
     private Coroutine fullnessDecayCoroutine;
-
+    
     private void Awake()
     {
         FoodEaten = foodEaten;
+    }
+
+    private void Start()
+    {
+        OnFatnessLevelChanged.Invoke(fatnessLevel);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,8 +85,15 @@ public class PlayerFoodScript : MonoBehaviour
 
     private void CheckFatnessThreshold()
     {
-        fatnessLevel = FoodEaten / foodRequiredForFatness;
-        OnFatnessLevelChanged.Invoke(fatnessLevel);
+        int previousFatness = fatnessLevel;
+
+        fatnessLevel = foodEaten / foodRequiredForFatness;
+
+        if (previousFatness != fatnessLevel)
+        {
+            OnFatnessLevelChanged.Invoke(fatnessLevel);
+        }
+
         UpdateScale();
     }
     
@@ -85,7 +115,7 @@ public class PlayerFoodScript : MonoBehaviour
     {
         yield return new WaitForSeconds(fullnessDecayDelay);
 
-        while (fatnessLevel > 0)
+        while (fatnessLevel >= 0)
         {
             yield return new WaitForSeconds(fullnessDecayInterval);
             DecreaseFatness();
