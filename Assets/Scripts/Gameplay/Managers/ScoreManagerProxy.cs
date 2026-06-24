@@ -8,13 +8,7 @@ public class ScoreManagerProxy : Singleton<ScoreManagerProxy>, IScoreManager
     public int LivesLeft => ScoreManager.Instance.LivesLeft;
     public int LivesLost => ScoreManager.Instance.LivesLost;
     
-    public int AddFood(FullnessParameters fullnessParameters)
-    {
-        throw new System.NotImplementedException();
-    }
+    public void AddFood(FullnessParameters fullnessParameters) => ScoreManager.Instance.AddFood(fullnessParameters);
 
-    public void LoseLife()
-    {
-        throw new System.NotImplementedException();
-    }
+    public void LoseLife() => ScoreManager.Instance.LoseLife();
 }

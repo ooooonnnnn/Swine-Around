@@ -9,7 +9,7 @@ public interface IScoreManager
     public int LivesLeft { get; }
     public int LivesLost { get; }
 
-    public int AddFood(FullnessParameters fullnessParameters);
+    public void AddFood(FullnessParameters fullnessParameters);
 
     public void LoseLife();
 }

@@ -43,23 +43,14 @@ public class ScoreManager : PersistentSingleton<ScoreManager>, IScoreManager
         scoreChanged.Invoke(CurrentScore);
     }
 
-    public int AddFood(FullnessParameters fullnessParameters)
+    public void AddFood(FullnessParameters fullnessParameters)
     {
-        return AddFood(fullnessParameters.fullnessGained);
-    }
+        FoodEaten += fullnessParameters.fullnessGained;
 
-    public int AddFood(int fullnessAmount)
-    {
-        if (fullnessAmount <= 0) return 0;
-
-        FoodEaten += fullnessAmount;
-
-        int gainedScore = fullnessAmount * scorePerFullnessPoint;
+        int gainedScore = GetScoreFromFood(fullnessParameters);
         CurrentScore += gainedScore;
 
         scoreChanged.Invoke(CurrentScore);
-
-        return gainedScore;
     }
 
     public void LoseLife()
