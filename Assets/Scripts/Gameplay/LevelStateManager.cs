@@ -14,7 +14,6 @@ namespace Gameplay
         [Header("Level Resetting")]
         [SerializeField] private UnityEvent OnLevelResetCalled;
         [SerializeField] private UnityEvent OnLevelReset;
-        [SerializeField] private float resetDelay = 5f;
 
 
         protected override void Awake()
@@ -27,15 +26,15 @@ namespace Gameplay
         }
 
         [ContextMenu("Restart Level")]
-        public void ResetLevel()
+        public void ResetLevel(float delay = 0f)
         {
             OnLevelResetCalled.Invoke();
-            StartCoroutine(DelayAndResetLevel());
+            StartCoroutine(DelayAndResetLevel(delay));
         }
 
-        private IEnumerator DelayAndResetLevel()
+        private IEnumerator DelayAndResetLevel(float delay = 0f)
         {
-            yield return new WaitForSeconds(resetDelay);
+            yield return new WaitForSeconds(delay);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             OnLevelReset.Invoke();
         }

@@ -30,8 +30,9 @@ public class PoliceCatchPlayer : MonoBehaviour
 
         police.Movement.Stop();
 
-        OnPlayerCaught?.Invoke();
+        OnPlayerCaught.Invoke();
         
-        if (LevelStateManager.Instance) LevelStateManager.Instance.ResetLevel();
+        // if (LevelStateManager.Instance) LevelStateManager.Instance.ResetLevel();
+        GameManager.Instance.LoseMatch();
     }
 }
