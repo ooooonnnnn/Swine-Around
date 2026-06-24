@@ -3,7 +3,7 @@ using Gameplay.Food;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ScoreManager : PersistentSingleton<ScoreManager>
+public class ScoreManager : PersistentSingleton<ScoreManager>, IScoreManager
 {
     [Serializable]
     public class IntEvent : UnityEvent<int> { }
@@ -32,7 +32,7 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
         ResetScore();
     }
 
-    public void ResetScore()
+    private void ResetScore()
     {
         CurrentScore = 0;
         FoodEaten = 0;
