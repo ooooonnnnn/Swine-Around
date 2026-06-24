@@ -69,4 +69,10 @@ public class ScoreManager : PersistentSingleton<ScoreManager>
         LivesLeft--;
         LivesLost++;
     }
+
+    public int GetScoreFromFood(FullnessParameters parameters)
+    {
+        var score = parameters.fullnessGained > 0 ? parameters.fullnessGained * scorePerFullnessPoint : 0;
+        return score;
+    }
 }

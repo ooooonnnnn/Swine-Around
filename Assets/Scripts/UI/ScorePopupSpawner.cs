@@ -5,6 +5,8 @@ using UnityEngine;
 public class ScorePopupSpawner : MonoBehaviour
 {
     [SerializeField] private ScorePopup scorePopupPrefab;
+    
+    public void Spawn(FullnessParameters p) => Spawn(p.ScoreValue);
 
     public void Spawn(int score)
     {
@@ -13,9 +15,4 @@ public class ScorePopupSpawner : MonoBehaviour
         ScorePopup newPopup = Instantiate(scorePopupPrefab, transform);
         newPopup.SetScore(score);
     }
-    
-    public void Spawn(FullnessParameters p)
-    {
-        int gainedScore = ScoreManager.Instance.AddFood(p);
-        Spawn(gainedScore);
-    }}
+}
