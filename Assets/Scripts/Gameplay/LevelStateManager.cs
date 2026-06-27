@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +11,9 @@ namespace Gameplay
         public Transform currentCheckpoint;
 
         private bool hasCheckpoint;
-        
-        [SerializeField] UnityEvent OnLevelReset;
+        [Header("Level Resetting")]
+        [SerializeField] private UnityEvent OnLevelResetCalled;
+        [SerializeField] private UnityEvent OnLevelReset;
 
 
         protected override void Awake()
@@ -24,8 +26,15 @@ namespace Gameplay
         }
 
         [ContextMenu("Restart Level")]
-        public void ResetLevel()
+        public void ResetLevel(float delay = 0f)
         {
+            OnLevelResetCalled.Invoke();
+            StartCoroutine(DelayAndResetLevel(delay));
+        }
+
+        private IEnumerator DelayAndResetLevel(float delay = 0f)
+        {
+            yield return new WaitForSeconds(delay);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             OnLevelReset.Invoke();
         }
