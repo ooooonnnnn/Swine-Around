@@ -637,6 +637,7 @@ MonoBehaviour:
   Banks:
   - Boar
   - Guard
+  - misc
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264

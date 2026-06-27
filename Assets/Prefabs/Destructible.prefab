@@ -135,6 +135,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5505704397640615362}
+        m_TargetAssemblyTypeName: PrefabInstantiator, Assembly-CSharp
+        m_MethodName: Instantiate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1733845431499175301}
         m_TargetAssemblyTypeName: DestructableSounds, Assembly-CSharp
         m_MethodName: PlayBreakSound
@@ -419,6 +431,13 @@ MonoBehaviour:
       Data3: -537572934
       Data4: -1845789459
     Path: event:/Breakable/Object Break
+  breakSoundSecondary:
+    Guid:
+      Data1: -1731652788
+      Data2: 1311570190
+      Data3: -873600843
+      Data4: -295308387
+    Path: event:/Breakable/Break Secondary
 --- !u!1 &8207707823828244730
 GameObject:
   m_ObjectHideFlags: 0

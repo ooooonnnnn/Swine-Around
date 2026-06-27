@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EventFolder" id="{4666b5eb-888f-4f7c-b023-2cc77af5e11c}">
+		<property name="name">
+			<value>BreakSecondary</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7984b1a0-4660-4ac6-bc7f-b0f916fc941f}</destination>
+		</relationship>
+	</object>
+</objects>

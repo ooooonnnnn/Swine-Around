@@ -105,6 +105,7 @@
 	<object class="MixerBusPanner" id="{048f86cc-ce04-455f-bb58-04d5b57c82aa}" />
 	<object class="MixerBusEffectChain" id="{df4cf47d-ed8d-45d6-95d9-8995578a7efa}">
 		<relationship name="effects">
+			<destination>{f6dcb28f-ba0d-44d2-ae31-f1bf30eb0504}</destination>
 			<destination>{7322fe99-838e-4eb1-b83b-3e85cd1cab2c}</destination>
 			<destination>{dc41caf7-f772-4f3f-b61e-9fc1b2b15dab}</destination>
 		</relationship>
@@ -123,6 +124,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{67463f83-1c1b-46ce-a6ad-54866f5c6cb7}" />
+	<object class="DelayEffect" id="{f6dcb28f-ba0d-44d2-ae31-f1bf30eb0504}">
+		<property name="delay">
+			<value>96</value>
+		</property>
+		<property name="feedback">
+			<value>0</value>
+		</property>
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{7322fe99-838e-4eb1-b83b-3e85cd1cab2c}" />
 	<object class="SpatialiserEffect" id="{dc41caf7-f772-4f3f-b61e-9fc1b2b15dab}" />
 	<object class="RandomizerModulator" id="{ce250b29-0faf-40fe-9d31-b990139b0d60}">

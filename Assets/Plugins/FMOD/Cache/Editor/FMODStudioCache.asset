@@ -39,7 +39,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639178378628087144
+  lastModified: 639181838840372417
   FileSizes:
   - Name: Desktop
     Value: 1700
@@ -71,6 +71,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2300
+--- !u!114 &-6738482011551185313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Breakable/BreakSecondary/Plastic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Breakable/BreakSecondary/Plastic
+  Guid:
+    Data1: 1517674213
+    Data2: 1157014582
+    Data3: 1382994851
+    Data4: -1147164982
+  Banks:
+  - {fileID: -140080011168029900}
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6450437404721238773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +114,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Guard.bank
   Name: Guard
   StudioPath: bank:/Guard
-  lastModified: 639178378628062039
+  lastModified: 639181813107967703
   FileSizes:
   - Name: Desktop
     Value: 99168
@@ -160,11 +188,66 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639178378628796916
+  lastModified: 639181838840736949
   FileSizes:
   - Name: Desktop
-    Value: 102976
+    Value: 215488
   Exists: 1
+--- !u!114 &-3821356605105166063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Breakable/BreakSecondary/GlassBreak
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Breakable/BreakSecondary/GlassBreak
+  Guid:
+    Data1: -1673819585
+    Data2: 1226682769
+    Data3: 1953680279
+    Data4: 254390678
+  Banks:
+  - {fileID: -140080011168029900}
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2330399588136432854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Breakable/Break Secondary
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Breakable/Break Secondary
+  Guid:
+    Data1: -1731652788
+    Data2: 1311570190
+    Data3: -873600843
+    Data4: -295308387
+  Banks:
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-2007790871819872529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +302,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-693524937053511251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Breakable/BreakSecondary/Drums
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Breakable/BreakSecondary/Drums
+  Guid:
+    Data1: 956752600
+    Data2: 1230609491
+    Data3: 447399309
+    Data4: -1362957489
+  Banks:
+  - {fileID: -140080011168029900}
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &-177956491157505662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +354,26 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-140080011168029900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/misc.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMODProject/SwineAroundAudio/Build/Desktop/misc.bank
+  Name: misc
+  StudioPath: bank:/misc
+  lastModified: 639181836158319740
+  FileSizes:
+  - Name: Desktop
+    Value: 110304
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +392,7 @@ MonoBehaviour:
   - {fileID: -8419335408936842451}
   - {fileID: 7108919754149687725}
   - {fileID: -3904373659579657957}
+  - {fileID: -140080011168029900}
   EditorEvents:
   - {fileID: 3847000644477418639}
   - {fileID: -2007790871819872529}
@@ -276,6 +408,10 @@ MonoBehaviour:
   - {fileID: -5609029096714085737}
   - {fileID: -4457950236928329961}
   - {fileID: 7656081921967035846}
+  - {fileID: -2330399588136432854}
+  - {fileID: -3821356605105166063}
+  - {fileID: -693524937053511251}
+  - {fileID: -6738482011551185313}
   EditorParameters:
   - {fileID: -8732113522337135701}
   MasterBanks:
@@ -283,7 +419,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639178378932828090
+  cacheTime: 639181839913895779
   SerializableEventsDict:
   - key: event:/Boar/Boar Ram
     index: 0
@@ -313,6 +449,14 @@ MonoBehaviour:
     index: 12
   - key: event:/SFX/Footsteps Grass
     index: 13
+  - key: event:/Breakable/Break Secondary
+    index: 14
+  - key: event:/Breakable/BreakSecondary/GlassBreak
+    index: 15
+  - key: event:/Breakable/BreakSecondary/Drums
+    index: 16
+  - key: event:/Breakable/BreakSecondary/Plastic
+    index: 17
 --- !u!114 &1647840785371276723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +635,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Boar.bank
   Name: Boar
   StudioPath: bank:/Boar
-  lastModified: 639178378932828090
+  lastModified: 639181839913895779
   FileSizes:
   - Name: Desktop
     Value: 99776
@@ -511,10 +655,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639178378628087144
+  lastModified: 639181838840377711
   FileSizes:
   - Name: Desktop
-    Value: 1664
+    Value: 1916
   Exists: 1
 --- !u!114 &7384754856144498054
 MonoBehaviour:
