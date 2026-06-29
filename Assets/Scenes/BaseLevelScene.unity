@@ -1206,6 +1206,10 @@ PrefabInstance:
       propertyPath: m_UseSpriteMesh
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4288027227106643668, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: sceneTransitionPropertyName
+      value: CheckpointTransition
+      objectReference: {fileID: 0}
     - target: {fileID: 6234065355085639363, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
