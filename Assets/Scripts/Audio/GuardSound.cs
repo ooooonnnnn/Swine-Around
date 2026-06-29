@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GuardSound : MonoBehaviour
 {
+    private const float IdleSoundInterval = 4f;
+
     [SerializeField] private EventReference footstepsSound;
 
     [SerializeField] private EventReference idleSound;
@@ -10,12 +12,54 @@ public class GuardSound : MonoBehaviour
     [SerializeField] private EventReference chaseSound;
     [SerializeField] private EventReference forgetSound;
 
-    public void PlayFootstepsSound()
+    private bool hasChasedSinceLastPatrol;
+    private bool isIdle;
+    private float idleSoundTimer;
+
+    private void Update()
+    {
+        if (!isIdle)
+            return;
+
+        idleSoundTimer += Time.deltaTime;
+        if (idleSoundTimer < IdleSoundInterval)
+            return;
+
+        PlayIdleSound();
+        idleSoundTimer -= IdleSoundInterval;
+    }
+
+    public void PlaySoundOnStateChange(IPoliceState state)
+    {
+        string newStateName = state.GetType().Name;
+        isIdle = newStateName == "PolicePatrolState";
+        idleSoundTimer = 0f;
+
+        switch (newStateName)
+        {
+            case ("PoliceChaseState"):
+                hasChasedSinceLastPatrol = true;
+                PlayChaseSound();
+                break;
+            case ("PolicePatrolState"):
+                if (hasChasedSinceLastPatrol)
+                {
+                    PlayForgetSound();
+                    hasChasedSinceLastPatrol = false;
+                }
+                PlayIdleSound();
+                break;
+            case ("PoliceSuspicionState"):
+                PlayNoticeSound();
+                break;
+        }
+    }
+    public void PlayFootstepSound()
     {
         AudioManager.Instance.PlayOneShot(footstepsSound, transform.position);
     }
 
-    public void PlayIdleSound()
+    public void PlayIdleSound() // START TIMELINE
     {
         AudioManager.Instance.PlayOneShot(idleSound, transform.position);
     }

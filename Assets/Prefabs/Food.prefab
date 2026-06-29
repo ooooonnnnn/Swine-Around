@@ -50,7 +50,14 @@ MonoBehaviour:
       Data2: 1076083554
       Data3: -1828623471
       Data4: -1327975030
-    Path: event:/Food/FoodMunch
+    Path: event:/Boar/FoodMunch
+  foodChewSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &7400903587134082405
 GameObject:
   m_ObjectHideFlags: 0

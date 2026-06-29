@@ -612,7 +612,7 @@ MonoBehaviour:
   sourceProjectPath: FMODProject/SwineAroundAudio/SwineAroundAudio.fspro
   sourceBankPath: FMODProject/SwineAroundAudio/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -635,6 +635,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - BGM
   - Boar
   - Guard
   - misc

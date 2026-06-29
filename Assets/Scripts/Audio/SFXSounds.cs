@@ -6,6 +6,7 @@ public class SFXSounds : MonoBehaviour
     [SerializeField] private EventReference foodCollectionSound;
     [SerializeField] private EventReference defeatSound;
     [SerializeField] private EventReference levelCompleteSound;
+    [SerializeField] private EventReference wakeUpOinkSound;
 
     public void PlayFoodCollectionSound()
     {
@@ -20,5 +21,10 @@ public class SFXSounds : MonoBehaviour
     public void PlayLevelCompleteSound()
     {
         AudioManager.Instance.PlayOneShot(levelCompleteSound, transform.position);
+    }
+    
+    public void PlayWakeUpOinkSound()
+    {
+        AudioManager.Instance.PlayOneShot(wakeUpOinkSound, transform.position);
     }
 }

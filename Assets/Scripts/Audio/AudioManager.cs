@@ -1,25 +1,65 @@
 ﻿using System;
 using UnityEngine;
 using FMODUnity;
+using FMOD.Studio;
 using Gameplay.Food;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : PersistentSingleton<AudioManager>
 {
-    public static AudioManager Instance { get; private set; }
+    private const string BGMStartModeParameter = "BGM Start Mode";
 
-    private void Awake()
+    [SerializeField] private EventReference bgmSound;
+
+    private EventInstance bgmInstance;
+
+    protected override void Awake()
     {
-        if(Instance != null)
-            Debug.LogError("More than one audioManager");
-        Instance = this;
+        base.Awake();
+
+        if (Instance != this)
+            return;
+
+        PlayBGMFirstTimeSound();
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
-    
-    
+
+    public void PlayBGMSound()
+    {
+        PlayBGMFirstTimeSound();
+    }
+
+    public void PlayBGMFirstTimeSound()
+    {
+        if (bgmInstance.isValid())
+            return;
+
+        bgmInstance = RuntimeManager.CreateInstance(bgmSound);
+        bgmInstance.setParameterByName(BGMStartModeParameter, 0);
+        bgmInstance.start();
+    }
+
+    public void PlayBGMRestartSound()
+    {
+        StopBGMSound();
+
+        bgmInstance = RuntimeManager.CreateInstance(bgmSound);
+        bgmInstance.setParameterByName(BGMStartModeParameter, 1);
+        bgmInstance.start();
+    }
+
+    public void StopBGMSound()
+    {
+        if (!bgmInstance.isValid())
+            return;
+
+        bgmInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        bgmInstance.release();
+        bgmInstance.clearHandle();
+    }
 
     public void ChangeFullnessVariable(FullnessParameters fullnessParameters)
     {
