@@ -1077,7 +1077,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4288027227106643668}
         m_TargetAssemblyTypeName: PersistentUIAnimator, Assembly-CSharp
-        m_MethodName: SetSceneTransition
+        m_MethodName: SetCheckpointTransition
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

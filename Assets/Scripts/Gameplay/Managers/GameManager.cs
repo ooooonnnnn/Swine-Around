@@ -2,10 +2,12 @@ using Gameplay;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class GameManager : PersistentSingleton<GameManager>
 {
-    [SerializeField] private float delayBeforeCheckpointRestart;
+    [FormerlySerializedAs("delayBeforeCheckpointRestart")] 
+    [SerializeField] private float delayBeforeRestart;
     [SerializeField] private UnityEvent OnLoseMatch;
     [SerializeField] private UnityEvent OnRestartMatch;
     private bool _canRestart = true;
@@ -18,7 +20,7 @@ public class GameManager : PersistentSingleton<GameManager>
         if (!_canRestart) return;
         
         OnLoseMatch.Invoke();
-        LevelStateManager.Instance.ResetLevel();
+        LevelStateManager.Instance.ResetLevel(delayBeforeRestart);
         print("LOSE MATCH");
     }
 
@@ -42,7 +44,7 @@ public class GameManager : PersistentSingleton<GameManager>
         SceneManager.sceneLoaded += EnableRestarts;
         
         OnRestartMatch.Invoke();
-        LevelStateManager.Instance.ResetLevel(delayBeforeCheckpointRestart);
+        LevelStateManager.Instance.ResetLevel(delayBeforeRestart);
     }
 
     private void EnableRestarts(Scene _, LoadSceneMode __)
