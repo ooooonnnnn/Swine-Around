@@ -1230,7 +1230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSceneTransition
+      value: SetCheckpointTransition
       objectReference: {fileID: 0}
     - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: OnLevelResetCalled.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1246,7 +1246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: OnLevelResetCalled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetSceneTransition
+      value: SetCheckpointTransition
       objectReference: {fileID: 0}
     - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
