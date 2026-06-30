@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5227857408857679881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8118865852212429926}
+  - component: {fileID: 4333046143363542639}
+  m_Layer: 6
+  m_Name: SFX Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8118865852212429926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227857408857679881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4333046143363542639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5227857408857679881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3afbeff7b04ce98766ee508bedd6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXSounds
+  foodCollectionSound:
+    Guid:
+      Data1: 637309940
+      Data2: 1264064403
+      Data3: 1867705986
+      Data4: 985781931
+    Path: event:/SFX/ScorePop
+  defeatSound:
+    Guid:
+      Data1: -1402970013
+      Data2: 1129678902
+      Data3: 5305993
+      Data4: 1468011414
+    Path: event:/SFX/Level Failed
+  levelCompleteSound:
+    Guid:
+      Data1: -1033084580
+      Data2: 1301177963
+      Data3: -81807224
+      Data4: -450642306
+    Path: event:/SFX/Level Completed
+  wakeUpOinkSound:
+    Guid:
+      Data1: -130386063
+      Data2: 1252942473
+      Data3: 1135044245
+      Data4: -335650375
+    Path: event:/Boar/Wake Up

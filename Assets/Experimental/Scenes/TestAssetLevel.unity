@@ -604,6 +604,8 @@ MonoBehaviour:
   moveMaster: {fileID: 40290597}
   groundNormalDetector: {fileID: 40290600}
   turnRate: 360
+  pitchRate: 0
+  pitchRecipient: {fileID: 0}
 --- !u!114 &40290600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,11 +1533,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d332a68043101142be06c72464fca12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFoodScript
-  playerGameObject: {fileID: 40290590}
-  fatnessLevel: 0
-  foodEaten: 0
+  gameObjectToScale: {fileID: 0}
   foodRequiredForFatness: 5
   fatnessToScaleModifier: 0.1
+  fatnessLevel: 0
+  foodEaten: 0
+  fullnessDecayDelay: 5
+  fullnessDecayInterval: 1
+  OnFullnessChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFatnessLevelChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &248464306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4266,9 +4276,9 @@ GameObject:
   m_Component:
   - component: {fileID: 713962661}
   - component: {fileID: 713962660}
-  - component: {fileID: 713962659}
   - component: {fileID: 713962658}
   - component: {fileID: 713962662}
+  - component: {fileID: 713962663}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4320,14 +4330,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &713962659
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713962657}
-  m_Enabled: 1
 --- !u!20 &713962660
 Camera:
   m_ObjectHideFlags: 0
@@ -4409,6 +4411,20 @@ MonoBehaviour:
   player: {fileID: 40290594}
   followY: 1
   smoothTime: 0.2
+--- !u!114 &713962663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713962657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 40290590}
 --- !u!1001 &719185113
 PrefabInstance:
   m_ObjectHideFlags: 0
