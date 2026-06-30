@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{6e76a629-7615-4418-8988-63fea82da387}">
+		<property name="assetPath">
+			<value>Food Pickup/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b39721e7-c587-4fa9-8131-35bc4f5d9594}</destination>
+		</relationship>
+	</object>
+</objects>
