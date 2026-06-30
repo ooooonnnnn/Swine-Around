@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{0d4fabfe-3558-463f-adde-295691dddab2}">
+		<property name="assetPath">
+			<value>Object Break/Additional/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b39721e7-c587-4fa9-8131-35bc4f5d9594}</destination>
+		</relationship>
+	</object>
+</objects>
