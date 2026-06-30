@@ -7,18 +7,16 @@ public class CheckpointSound : MonoBehaviour
     [SerializeField] private EventReference dropOnMattressSound;
     [SerializeField] private EventReference wakeUpSound;
     
-    public void PlaySleepSound()
-    {
-        AudioManager.Instance.PlayOneShot(sleepSound, transform.position);
-    }
+    public void PlaySleepSound() => PlaySound(sleepSound);
 
-    public void PlayDropOnMattressSound()
-    {
-        AudioManager.Instance.PlayOneShot(dropOnMattressSound, transform.position);
-    }
+    public void PlayDropOnMattressSound() => PlaySound(dropOnMattressSound);
 
-    public void PlayWakeUpSound()
+    public void PlayWakeUpSound() => PlaySound(wakeUpSound);
+
+    private void PlaySound(EventReference sound)
     {
-        AudioManager.Instance.PlayOneShot(wakeUpSound, transform.position);
+        if (!AudioManager.Instance)
+            return;
+        AudioManager.Instance.PlayOneShot(sound, transform.position);
     }
 }
