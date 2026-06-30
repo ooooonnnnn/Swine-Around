@@ -1,12 +1,12 @@
 ﻿using FMODUnity;
 using UnityEngine;
-public class FoodSound : MonoBehaviour
+public class FoodSound : BaseSoundPlayer
 {
     [SerializeField] private EventReference foodEatingSound;
     [SerializeField] private EventReference foodChewSound;
     public void PlayFoodSound()
     {
-        AudioManager.Instance.PlayOneShot(foodEatingSound, transform.position);
-        AudioManager.Instance.PlayOneShot(foodChewSound, transform.position);
+        PlayOneShot(foodEatingSound);
+        PlayOneShot(foodChewSound);
     }
 }

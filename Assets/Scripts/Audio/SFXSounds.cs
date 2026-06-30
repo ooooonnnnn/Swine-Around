@@ -1,30 +1,18 @@
 ﻿using FMODUnity;
 using UnityEngine;
 
-public class SFXSounds : MonoBehaviour
+public class SFXSounds : BaseSoundPlayer
 {
     [SerializeField] private EventReference foodCollectionSound;
     [SerializeField] private EventReference defeatSound;
     [SerializeField] private EventReference levelCompleteSound;
     [SerializeField] private EventReference wakeUpOinkSound;
 
-    public void PlayFoodCollectionSound()
-    {
-        AudioManager.Instance.PlayOneShot(foodCollectionSound, transform.position);
-    }
+    public void PlayFoodCollectionSound() => PlayOneShot(foodCollectionSound);
 
-    public void PlayDefeatSound()
-    {
-        AudioManager.Instance.PlayOneShot(defeatSound, transform.position);
-    }
+    public void PlayDefeatSound() => PlayOneShot(defeatSound);
 
-    public void PlayLevelCompleteSound()
-    {
-        AudioManager.Instance.PlayOneShot(levelCompleteSound, transform.position);
-    }
+    public void PlayLevelCompleteSound() => PlayOneShot(levelCompleteSound);
     
-    public void PlayWakeUpOinkSound()
-    {
-        AudioManager.Instance.PlayOneShot(wakeUpOinkSound, transform.position);
-    }
+    public void PlayWakeUpOinkSound() => PlayOneShot(wakeUpOinkSound);
 }

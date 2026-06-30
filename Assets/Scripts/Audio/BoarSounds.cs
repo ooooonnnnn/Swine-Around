@@ -1,6 +1,6 @@
 ﻿using FMODUnity;
 using UnityEngine;
-public class BoarSounds : MonoBehaviour
+public class BoarSounds : BaseSoundPlayer
 {
     // [SerializeField] private EventReference footstepsSound;
 
@@ -12,13 +12,7 @@ public class BoarSounds : MonoBehaviour
     //     AudioManager.Instance.PlayOneShot(footstepsSound, transform.position);
     // }
 
-    public void PlayOinkSound()
-    {
-        AudioManager.Instance.PlayOneShot(oinkSound, transform.position);
-    }
+    public void PlayOinkSound() => PlayOneShot(oinkSound);
 
-    public void PlayRamSound()
-    {
-        AudioManager.Instance.PlayOneShot(ramSound, transform.position);
-    }
+    public void PlayRamSound() => PlayOneShot(ramSound);
 }

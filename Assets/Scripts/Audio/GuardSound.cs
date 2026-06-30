@@ -1,7 +1,7 @@
 ﻿using FMODUnity;
 using UnityEngine;
 
-public class GuardSound : MonoBehaviour
+public class GuardSound : BaseSoundPlayer
 {
     private const float IdleSoundInterval = 4f;
 
@@ -54,28 +54,13 @@ public class GuardSound : MonoBehaviour
                 break;
         }
     }
-    public void PlayFootstepSound()
-    {
-        AudioManager.Instance.PlayOneShot(footstepsSound, transform.position);
-    }
+    public void PlayFootstepSound() => PlayOneShot(footstepsSound);
 
-    public void PlayIdleSound() // START TIMELINE
-    {
-        AudioManager.Instance.PlayOneShot(idleSound, transform.position);
-    }
+    public void PlayIdleSound() => PlayOneShot(idleSound);// START TIMELINE
 
-    public void PlayNoticeSound()
-    {
-        AudioManager.Instance.PlayOneShot(noticeSound, transform.position);
-    }
+    public void PlayNoticeSound() => PlayOneShot(noticeSound);
 
-    public void PlayChaseSound()
-    {
-        AudioManager.Instance.PlayOneShot(chaseSound, transform.position);
-    }
+    public void PlayChaseSound() => PlayOneShot(chaseSound);
 
-    public void PlayForgetSound()
-    {
-        AudioManager.Instance.PlayOneShot(forgetSound, transform.position);
-    }
+    public void PlayForgetSound() => PlayOneShot(forgetSound);
 }

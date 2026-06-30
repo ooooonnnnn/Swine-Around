@@ -1,14 +1,14 @@
 ﻿using FMODUnity;
 using UnityEngine;
 
-public class DestructableSounds : MonoBehaviour
+public class DestructableSounds : BaseSoundPlayer
 {
     [SerializeField] private EventReference breakSound;
     [SerializeField] private EventReference breakSoundSecondary;
     public void PlayBreakSound()
     {
-        AudioManager.Instance.PlayOneShot(breakSound, transform.position);
-        AudioManager.Instance.PlayOneShot(breakSoundSecondary, transform.position);
+        PlayOneShot(breakSound);
+        PlayOneShot(breakSoundSecondary);
     }
     
 }
