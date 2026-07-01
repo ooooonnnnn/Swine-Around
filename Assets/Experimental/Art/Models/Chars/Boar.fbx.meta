@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 608a43737f79bf94ebd7b8910cbee90c
+guid: fb872921a111d3c469c96bb729c3690a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Boar_TXT
+      name: MAT_Boar
     second: {fileID: 2100000, guid: 8d1de299303f6c34da9c26f11f4dc113, type: 2}
   materials:
     materialImportMode: 2
@@ -46,8 +46,8 @@ ModelImporter:
     importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
