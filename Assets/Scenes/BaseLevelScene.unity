@@ -194,6 +194,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &170438586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7197162881247070224, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+  m_PrefabInstance: {fileID: 696148554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &170438587 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 805951338095298128, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+  m_PrefabInstance: {fileID: 696148554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &170438591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170438586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ba3a72c75c9ef4fb6cca229d1a7ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  parentCanvasRectTransform: {fileID: 1125836485}
+  rectTransform: {fileID: 170438587}
+  size: 0
 --- !u!1001 &178755779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -966,13 +991,77 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1482175789046268442, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnCheckpointActivated.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+    - target: {fileID: 805951338095298128, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 805951338095298128, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2500
       objectReference: {fileID: 0}
     - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnLevelResetCalled.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 757054613}
+    - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetLoseLifeTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PersistentUIAnimator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089367380079213094, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: OnLevelReset.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349940945345391356, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288027227106643668, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: loseLifeTransitionPropertyName
+      value: LoseLifeTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330158041991699516, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375928705212054071, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375928705212054071, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375928705212054071, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375928705212054071, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375928705212054071, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2560
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375928705212054071, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2560
       objectReference: {fileID: 0}
     - target: {fileID: 8189255167611881977, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1014,6 +1103,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8443116452112758737, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443116452112758737, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9140988954968774999, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: m_Name
       value: Level State Manager
@@ -1021,7 +1118,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7197162881247070224, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 170438591}
   m_SourcePrefab: {fileID: 100100000, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
 --- !u!1 &724695298
 GameObject:
@@ -1515,6 +1615,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092395338}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!224 &1125836485 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4648347682642689167, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
+  m_PrefabInstance: {fileID: 696148554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1245285159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2091,16 +2196,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994758ee862ee234eaad8d0bdbd15e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  delayBeforeCheckpointRestart: 2
+  delayBeforeRestart: 2
   OnLoseMatch:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 757054613}
+        m_TargetAssemblyTypeName: PersistentUIAnimator, Assembly-CSharp
+        m_MethodName: SetLoseLifeTransition
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnRestartMatch:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 757054613}
         m_TargetAssemblyTypeName: PersistentUIAnimator, Assembly-CSharp
-        m_MethodName: SetSceneTransition
+        m_MethodName: SetCheckpointTransition
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

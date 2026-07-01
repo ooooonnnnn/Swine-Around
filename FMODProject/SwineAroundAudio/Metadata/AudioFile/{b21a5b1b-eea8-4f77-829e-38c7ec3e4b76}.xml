@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{b21a5b1b-eea8-4f77-829e-38c7ec3e4b76}">
+		<property name="assetPath">
+			<value>Boar/mimimimimim cut.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8772335600907029</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b39721e7-c587-4fa9-8131-35bc4f5d9594}</destination>
+		</relationship>
+	</object>
+</objects>

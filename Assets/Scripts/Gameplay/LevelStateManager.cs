@@ -35,7 +35,7 @@ namespace Gameplay
         private IEnumerator DelayAndResetLevel(float delay = 0f)
         {
             yield return new WaitForSeconds(delay);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             OnLevelReset.Invoke();
         }
 

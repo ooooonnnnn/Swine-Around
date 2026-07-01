@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{49698b25-b332-41bc-b3d0-2b49ce64ec16}">
+		<property name="assetPath">
+			<value>Guard/Hums_3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.94620833333333332</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b39721e7-c587-4fa9-8131-35bc4f5d9594}</destination>
+		</relationship>
+	</object>
+</objects>

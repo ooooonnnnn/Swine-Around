@@ -85,6 +85,7 @@ Transform:
   - {fileID: 4209691541921185664}
   - {fileID: 7835574608266929937}
   - {fileID: 1655169691406975822}
+  - {fileID: 8659824770011774092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7031996267316794288
@@ -138,6 +139,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5505704397640615362}
         m_TargetAssemblyTypeName: PrefabInstantiator, Assembly-CSharp
         m_MethodName: Instantiate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1733845431499175301}
+        m_TargetAssemblyTypeName: DestructableSounds, Assembly-CSharp
+        m_MethodName: PlayBreakSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -368,6 +381,64 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7624458017041032077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8659824770011774092}
+  - component: {fileID: 1733845431499175301}
+  m_Layer: 7
+  m_Name: Destructable Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8659824770011774092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624458017041032077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8046178693939615662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733845431499175301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624458017041032077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b06d9b636d47b78ca0f3815fb139b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestructableSounds
+  breakSound:
+    Guid:
+      Data1: 628637153
+      Data2: 1247508800
+      Data3: -537572934
+      Data4: -1845789459
+    Path: event:/Breakable/Object Break
+  breakSoundSecondary:
+    Guid:
+      Data1: -1731652788
+      Data2: 1311570190
+      Data3: -873600843
+      Data4: -295308387
+    Path: event:/Breakable/Break Secondary
 --- !u!1 &8207707823828244730
 GameObject:
   m_ObjectHideFlags: 0

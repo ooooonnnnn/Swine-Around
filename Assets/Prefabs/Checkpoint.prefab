@@ -278,6 +278,7 @@ Transform:
   - {fileID: 159570063580911367}
   - {fileID: 3065277605128168426}
   - {fileID: 2684213536262159758}
+  - {fileID: 7961525357012556511}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3064257331187801210
@@ -294,7 +295,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   OnCheckpointActivated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7635894035167735338}
+        m_TargetAssemblyTypeName: CheckpointSound, Assembly-CSharp
+        m_MethodName: PlaySleepSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   interactable: {fileID: 1901961814326643156}
   triggerDetector: {fileID: 6337083081954335049}
   sleepPos: {fileID: 2684213536262159758}

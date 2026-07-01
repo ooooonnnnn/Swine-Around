@@ -1,18 +1,26 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PersistentUIAnimator : MonoBehaviour
 {
     [SerializeField, HideInInspector] private Animator animator;
-    [SerializeField] private string sceneTransitionPropertyName;
+    [FormerlySerializedAs("sceneTransitionPropertyName")] [SerializeField] 
+    private string checkpointTransitionPropertyName;
+    [SerializeField] private string loseLifeTransitionPropertyName;
 
     private void OnValidate()
     {
         animator = GetComponent<Animator>();
     }
     
-    public void SetSceneTransition(bool transitionOn)
+    public void SetCheckpointTransition(bool transitionOn)
     {
-        animator.SetBool(sceneTransitionPropertyName, transitionOn);
+        animator.SetBool(checkpointTransitionPropertyName, transitionOn);
+    }
+
+    public void SetLoseLifeTransition(bool transitionOn)
+    {
+        animator.SetBool(loseLifeTransitionPropertyName, transitionOn);
     }
 }
