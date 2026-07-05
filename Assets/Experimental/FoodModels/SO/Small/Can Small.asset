@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Can Small
   m_EditorClassIdentifier: Assembly-CSharp::FoodObject
   mesh: {fileID: 919132149155446097, guid: 72bc2dd8f8ffd6c48ab2f6b1bdbc43e1, type: 3}
-  score: 10
-  fatness: 1
+  score: 1

@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Pumpkin
   m_EditorClassIdentifier: Assembly-CSharp::FoodObject
   mesh: {fileID: 919132149155446097, guid: 51e790833970c5b4d9a112a7abe3dfda, type: 3}
-  score: 10
-  fatness: 1
+  score: 1

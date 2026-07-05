@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Donut
   m_EditorClassIdentifier: Assembly-CSharp::FoodObject
   mesh: {fileID: 919132149155446097, guid: cec8771561717bf498e446c3985fcb21, type: 3}
-  score: 10
-  fatness: 1
+  score: 1

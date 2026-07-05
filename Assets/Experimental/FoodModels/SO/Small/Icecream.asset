@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Icecream
   m_EditorClassIdentifier: Assembly-CSharp::FoodObject
   mesh: {fileID: 919132149155446097, guid: 641596c1099af874d8cdd8b7c2abceba, type: 3}
-  score: 10
-  fatness: 1
+  score: 1

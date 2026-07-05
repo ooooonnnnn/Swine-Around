@@ -58,6 +58,53 @@ MonoBehaviour:
       Data3: 263546791
       Data4: 1601685049
     Path: event:/Boar/Chew
+--- !u!1 &2090359407342134115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7177366811324395918}
+  - component: {fileID: 464770806830319761}
+  m_Layer: 0
+  m_Name: RotateAndFloat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7177366811324395918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090359407342134115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3435622544142685524}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464770806830319761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090359407342134115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd78cf8e8c847e8babc5ee3e2bd6f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingVisual
+  floatAmplitude: 0.1
+  floatSpeed: 2
+  rotationSpeed: 90
 --- !u!1 &7400903587134082405
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +142,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6660257732004417780}
+  - {fileID: 7177366811324395918}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &99008760877054746
@@ -262,5 +310,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 063310f51cbeb744a8aa0d5505ef3910, type: 2}
   - {fileID: 11400000, guid: afe771e1840dffa47921bddd438c9cdc, type: 2}
   foodScript: {fileID: 7199584007323203574}
-  root: {fileID: 3435622544142685524}
+  root: {fileID: 7177366811324395918}
   previewMeshRenderer: {fileID: 4905065292097486662}
