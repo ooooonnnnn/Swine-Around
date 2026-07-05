@@ -46,11 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuardSound
   footstepsSound:
     Guid:
-      Data1: 687408881
-      Data2: 1172311101
-      Data3: 1323728018
-      Data4: -2108712123
-    Path: event:/SFX/Footsteps Grass
+      Data1: 1290363844
+      Data2: 1274884500
+      Data3: 1850702976
+      Data4: 1167012241
+    Path: event:/Boar/Oink
   idleSound:
     Guid:
       Data1: 647610614

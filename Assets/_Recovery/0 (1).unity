@@ -1264,12 +1264,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: clips.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: 'clips.Array.data[0]'
       value: 
-      objectReference: {fileID: 32900000, guid: 512103c07cccd8045864f29603658705, type: 3}
+      objectReference: {fileID: 32900000, guid: 9df6f5c86295a524a819f747c78b6777, type: 3}
     - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: 'clips.Array.data[1]'
       value: 
@@ -1282,34 +1282,6 @@ PrefabInstance:
       propertyPath: 'clips.Array.data[3]'
       value: 
       objectReference: {fileID: 32900000, guid: 2d62387514ce5f641b94677ad5d7dddb, type: 3}
-    - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnVideoStartPlaying.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnVideoStartPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnVideoStartPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1056278486}
-    - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnVideoStartPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnVideoStartPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayHeartLossSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnVideoStartPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5201817096965549069, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
-      propertyPath: OnVideoStartPlaying.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8189255167611881977, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.31339
@@ -1689,30 +1661,67 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6866837841767617901, guid: d6d97574d7df0f14096f11e9d037a265, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1056278488}
   m_SourcePrefab: {fileID: 100100000, guid: d6d97574d7df0f14096f11e9d037a265, type: 3}
 --- !u!114 &1056278486 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1044354127555434900, guid: d6d97574d7df0f14096f11e9d037a265, type: 3}
   m_PrefabInstance: {fileID: 1056278485}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1056278487}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80f1469be6604e8e83b462b3be091f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
---- !u!114 &1056278488 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3730446898019690212, guid: d6d97574d7df0f14096f11e9d037a265, type: 3}
+--- !u!1 &1056278487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6866837841767617901, guid: d6d97574d7df0f14096f11e9d037a265, type: 3}
   m_PrefabInstance: {fileID: 1056278485}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1056278488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056278487}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3afbeff7b04ce98766ee508bedd6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SFXSounds
+  foodCollectionSound:
+    Guid:
+      Data1: 637309940
+      Data2: 1264064403
+      Data3: 1867705986
+      Data4: 985781931
+    Path: event:/SFX/ScorePop
+  defeatSound:
+    Guid:
+      Data1: -1402970013
+      Data2: 1129678902
+      Data3: 5305993
+      Data4: 1468011414
+    Path: event:/SFX/Level Failed
+  levelCompleteSound:
+    Guid:
+      Data1: -1033084580
+      Data2: 1301177963
+      Data3: -81807224
+      Data4: -450642306
+    Path: event:/SFX/Level Completed
+  wakeUpOinkSound:
+    Guid:
+      Data1: -130386063
+      Data2: 1252942473
+      Data3: 1135044245
+      Data4: -335650375
+    Path: event:/Boar/Wake Up
 --- !u!1001 &1068194003
 PrefabInstance:
   m_ObjectHideFlags: 0

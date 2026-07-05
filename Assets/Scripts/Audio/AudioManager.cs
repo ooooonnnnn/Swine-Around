@@ -9,6 +9,7 @@ public class AudioManager : PersistentSingleton<AudioManager>
     private const string BGMStartModeParameter = "BGM Start Mode";
 
     [SerializeField] private EventReference bgmSound;
+    [SerializeField] private EventReference heartCrackSound;
 
     private EventInstance bgmInstance;
 
@@ -22,14 +23,17 @@ public class AudioManager : PersistentSingleton<AudioManager>
         PlayBGMFirstTimeSound();
     }
 
-    public void PlayOneShot(EventReference sound, Vector3 worldPos)
+    public void PlayOneShot(EventReference sound, Vector3 worldPos = default)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
-
-    public void PlayBGMSound()
+    public void PlayOneShot2D(EventReference sound)
     {
-        PlayBGMFirstTimeSound();
+        RuntimeManager.PlayOneShot(sound);
+    }
+    public void PlayHeartLossSound()
+    {
+        PlayOneShot(heartCrackSound);
     }
 
     public void PlayBGMFirstTimeSound()

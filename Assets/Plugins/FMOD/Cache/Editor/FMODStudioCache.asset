@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639184446626824556
+  lastModified: 639188545579421190
   FileSizes:
   - Name: Desktop
     Value: 1700
@@ -138,7 +138,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Guard.bank
   Name: Guard
   StudioPath: bank:/Guard
-  lastModified: 639184446626709350
+  lastModified: 639188518958531665
   FileSizes:
   - Name: Desktop
     Value: 99168
@@ -212,10 +212,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639184446626844584
+  lastModified: 639188545579719306
   FileSizes:
   - Name: Desktop
-    Value: 222784
+    Value: 237184
   Exists: 1
 --- !u!114 &-3821356605105166063
 MonoBehaviour:
@@ -326,6 +326,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1043389080863890479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/HeartCrack
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/HeartCrack
+  Guid:
+    Data1: -487013602
+    Data2: 1287938016
+    Data3: 823698574
+    Data4: 1199826475
+  Banks:
+  - {fileID: -3904373659579657957}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-818310495030765189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +447,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/misc.bank
   Name: misc
   StudioPath: bank:/misc
-  lastModified: 639184446626844584
+  lastModified: 639188518962184016
   FileSizes:
   - Name: Desktop
     Value: 110304
@@ -468,6 +495,7 @@ MonoBehaviour:
   - {fileID: 480638251709225614}
   - {fileID: 1862793220744623910}
   - {fileID: 2445133491994949301}
+  - {fileID: -1043389080863890479}
   EditorParameters:
   - {fileID: -8732113522337135701}
   MasterBanks:
@@ -475,7 +503,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639184446626844584
+  cacheTime: 639188545579719306
   SerializableEventsDict:
   - key: event:/Boar/Boar Ram
     index: 0
@@ -521,6 +549,8 @@ MonoBehaviour:
     index: 20
   - key: event:/SFX/Drop On Mattress
     index: 21
+  - key: event:/SFX/HeartCrack
+    index: 22
 --- !u!114 &55758523327781745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +566,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639184446626684065
+  lastModified: 639188524181323945
   FileSizes:
   - Name: Desktop
     Value: 3099104
@@ -800,7 +830,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Boar.bank
   Name: Boar
   StudioPath: bank:/Boar
-  lastModified: 639184446626699240
+  lastModified: 639188518957576063
   FileSizes:
   - Name: Desktop
     Value: 129088
@@ -820,10 +850,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639184446626824556
+  lastModified: 639188545579421190
   FileSizes:
   - Name: Desktop
-    Value: 2176
+    Value: 2216
   Exists: 1
 --- !u!114 &7384754856144498054
 MonoBehaviour:

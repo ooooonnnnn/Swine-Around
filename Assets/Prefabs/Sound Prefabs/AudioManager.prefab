@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2798099321603538207}
   - component: {fileID: 1044354127555434900}
+  - component: {fileID: 3730446898019690212}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -51,3 +52,50 @@ MonoBehaviour:
       Data3: 1681018801
       Data4: -139671865
     Path: event:/BGM/BGM
+  heartCrackSound:
+    Guid:
+      Data1: -487013602
+      Data2: 1287938016
+      Data3: 823698574
+      Data4: 1199826475
+    Path: event:/HeartCrack
+--- !u!114 &3730446898019690212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866837841767617901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3afbeff7b04ce98766ee508bedd6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXSounds
+  foodCollectionSound:
+    Guid:
+      Data1: 637309940
+      Data2: 1264064403
+      Data3: 1867705986
+      Data4: 985781931
+    Path: event:/SFX/ScorePop
+  defeatSound:
+    Guid:
+      Data1: -1402970013
+      Data2: 1129678902
+      Data3: 5305993
+      Data4: 1468011414
+    Path: event:/SFX/Level Failed
+  levelCompleteSound:
+    Guid:
+      Data1: -1033084580
+      Data2: 1301177963
+      Data3: -81807224
+      Data4: -450642306
+    Path: event:/SFX/Level Completed
+  wakeUpOinkSound:
+    Guid:
+      Data1: -130386063
+      Data2: 1252942473
+      Data3: 1135044245
+      Data4: -335650375
+    Path: event:/Boar/Wake Up
