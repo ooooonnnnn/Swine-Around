@@ -14,7 +14,7 @@ public class AudioManager : PersistentSingleton<AudioManager>
     private EventInstance bgmInstance;
 
     protected override void Awake()
-    {
+    { 
         base.Awake();
 
         if (Instance != this)
@@ -26,10 +26,6 @@ public class AudioManager : PersistentSingleton<AudioManager>
     public void PlayOneShot(EventReference sound, Vector3 worldPos = default)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
-    }
-    public void PlayOneShot2D(EventReference sound)
-    {
-        RuntimeManager.PlayOneShot(sound);
     }
     public void PlayHeartLossSound()
     {
@@ -68,6 +64,11 @@ public class AudioManager : PersistentSingleton<AudioManager>
     public void ChangeFullnessVariable(FullnessParameters fullnessParameters)
     {
         RuntimeManager.StudioSystem.setParameterByName("fullness", fullnessParameters.currentFullness);
+    }
+    
+    public void SetIsPausedVariable(bool isPaused) // CALL THIS WHEN PAUSED
+    {
+        RuntimeManager.StudioSystem.setParameterByName("IsPaused", isPaused ? 1 : 0);
     }
     
 }
