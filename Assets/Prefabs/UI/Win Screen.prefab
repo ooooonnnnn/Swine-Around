@@ -36,6 +36,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4056553663505829525, guid: e750511d99d334e4ca10af90a5853748, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056553663505829525, guid: e750511d99d334e4ca10af90a5853748, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281649663
+      objectReference: {fileID: 0}
     - target: {fileID: 4970236468904667471, guid: e750511d99d334e4ca10af90a5853748, type: 3}
       propertyPath: m_Name
       value: Win Screen
