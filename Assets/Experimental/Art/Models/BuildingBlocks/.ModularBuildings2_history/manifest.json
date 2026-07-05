@@ -1,0 +1,18 @@
+{
+    "parent_file": "E:\\Work Stuff\\Swine-Around\\BuildingBlocks\\ModularBuildings2.blend",
+    "versions": [
+        {
+            "id": "autosave",
+            "timestamp": "2026-07-04 17:49:00",
+            "note": "Auto Save",
+            "thumbnail": "autosave/thumbnail.png",
+            "blend": "autosave/snapshot.blend_snapshot",
+            "object_count": 180,
+            "file_size": 5651208,
+            "is_protected": false,
+            "tag": "NONE"
+        }
+    ],
+    "schema_version": 1,
+    "project_uuid": "ba2c76c7-a4a7-48cd-bc17-735b6b27d335"
+}
