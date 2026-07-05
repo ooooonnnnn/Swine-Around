@@ -1642,6 +1642,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1044354127555434900, guid: d6d97574d7df0f14096f11e9d037a265, type: 3}
+      propertyPath: heartCrackSound.Path
+      value: event:/SFX/HeartCrack
+      objectReference: {fileID: 0}
     - target: {fileID: 2798099321603538207, guid: d6d97574d7df0f14096f11e9d037a265, type: 3}
       propertyPath: m_LocalPosition.x
       value: 342.2165
