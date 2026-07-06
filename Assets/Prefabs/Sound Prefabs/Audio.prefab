@@ -93,6 +93,13 @@ MonoBehaviour:
       Data3: -81807224
       Data4: -450642306
     Path: event:/SFX/Level Completed
+  wakeUpOinkSound:
+    Guid:
+      Data1: -130386063
+      Data2: 1252942473
+      Data3: 1135044245
+      Data4: -335650375
+    Path: event:/Boar/Wake Up
 --- !u!114 &2679179273550679105
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -53,11 +53,58 @@ MonoBehaviour:
     Path: event:/Boar/FoodMunch
   foodChewSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 415030459
+      Data2: 1097723567
+      Data3: 263546791
+      Data4: 1601685049
+    Path: event:/Boar/Chew
+--- !u!1 &2090359407342134115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7177366811324395918}
+  - component: {fileID: 464770806830319761}
+  m_Layer: 0
+  m_Name: RotateAndFloat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7177366811324395918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090359407342134115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3435622544142685524}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464770806830319761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090359407342134115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd78cf8e8c847e8babc5ee3e2bd6f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingVisual
+  floatAmplitude: 0.1
+  floatSpeed: 2
+  rotationSpeed: 90
 --- !u!1 &7400903587134082405
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +120,7 @@ GameObject:
   - component: {fileID: 7199584007323203574}
   - component: {fileID: 8867539414608193832}
   - component: {fileID: 5124289926228351880}
+  - component: {fileID: 6935671985465500433}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -89,11 +137,12 @@ Transform:
   m_GameObject: {fileID: 7400903587134082405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.766, z: 5.93}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6660257732004417780}
+  - {fileID: 7177366811324395918}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &99008760877054746
@@ -237,3 +286,29 @@ MonoBehaviour:
   m_IgnoreFromBuild: 1
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &6935671985465500433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400903587134082405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d7c876dbc247c498855f2036f75cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Food.FoodSetup
+  FoodScriptableObjects:
+  - {fileID: 11400000, guid: 9ecb4785add89e749b9286daf6218666, type: 2}
+  - {fileID: 11400000, guid: e56bdc638a829764796265070e80f19d, type: 2}
+  - {fileID: 11400000, guid: 43342996e1ddf0e4caefa28ba1a45254, type: 2}
+  - {fileID: 11400000, guid: 09f14fd208b3d3848b25c7d98dd8156d, type: 2}
+  - {fileID: 11400000, guid: 7344d703cdd67d7459108ffbf227a9a5, type: 2}
+  - {fileID: 11400000, guid: b355db3d4f0f1184492e79febe163681, type: 2}
+  - {fileID: 11400000, guid: d5cac651eadc35e4db91afb80bf994c4, type: 2}
+  - {fileID: 11400000, guid: 2a680ab3a26924e4e86ab56e76880278, type: 2}
+  - {fileID: 11400000, guid: 063310f51cbeb744a8aa0d5505ef3910, type: 2}
+  - {fileID: 11400000, guid: afe771e1840dffa47921bddd438c9cdc, type: 2}
+  foodScript: {fileID: 7199584007323203574}
+  root: {fileID: 7177366811324395918}
+  previewMeshRenderer: {fileID: 4905065292097486662}
