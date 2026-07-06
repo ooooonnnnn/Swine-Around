@@ -73,7 +73,7 @@ public class PlayerFoodScript : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    private void ConsumeFood(int foodValue)
+    public void ConsumeFood(int foodValue)
     {
         FoodEaten += foodValue;
 
@@ -104,6 +104,8 @@ public class PlayerFoodScript : MonoBehaviour
             FoodEaten--;
         }
     }
+    
+    public void ClearFood() => FoodEaten = 0;
 
     private void UpdateScale()
     {

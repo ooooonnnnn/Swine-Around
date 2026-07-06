@@ -31,6 +31,7 @@ public class Checkpoint : MonoBehaviour
     
     public void Activate()
     {
+        print($"Checkpoint {name} activated");
         OnCheckpointActivated.Invoke(this);
     }
 }

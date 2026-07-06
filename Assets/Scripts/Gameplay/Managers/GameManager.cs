@@ -39,6 +39,8 @@ public class GameManager : PersistentSingleton<GameManager>
 
     public void RestartMatch()
     {
+        print("RESTART MATCH Called");
+        
         if (!_canRestart) return;
         _canRestart = false;
         SceneManager.sceneLoaded += EnableRestarts;
