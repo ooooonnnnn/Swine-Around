@@ -40213,6 +40213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5333212526866889333}
   - component: {fileID: 3699489069643865654}
+  - component: {fileID: 8181733360906413160}
   m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
@@ -40251,6 +40252,28 @@ MonoBehaviour:
   animationDuration: 0.5
   lingerDuration: 10
   playerInput: {fileID: 0}
+--- !u!95 &8181733360906413160
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018203976727661913}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1156055458582305726
 PrefabInstance:
   m_ObjectHideFlags: 0
