@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639189798644249422
+  lastModified: 639189764551866905
   FileSizes:
   - Name: Desktop
     Value: 1852
@@ -138,7 +138,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Guard.bank
   Name: Guard
   StudioPath: bank:/Guard
-  lastModified: 639188518958531665
+  lastModified: 639184446626709350
   FileSizes:
   - Name: Desktop
     Value: 99168
@@ -260,7 +260,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639189798644290151
+  lastModified: 639189764551892112
   FileSizes:
   - Name: Desktop
     Value: 237184
@@ -495,7 +495,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/misc.bank
   Name: misc
   StudioPath: bank:/misc
-  lastModified: 639189798644305615
+  lastModified: 639189764551902174
   FileSizes:
   - Name: Desktop
     Value: 110304
@@ -552,7 +552,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639189798644305615
+  cacheTime: 639189764551902174
   SerializableEventsDict:
   - key: event:/Boar/Boar Ram
     index: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639189798644244382
+  lastModified: 639189764551866905
   FileSizes:
   - Name: Desktop
     Value: 3100224
@@ -879,7 +879,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Boar.bank
   Name: Boar
   StudioPath: bank:/Boar
-  lastModified: 639188518957576063
+  lastModified: 639184446626699240
   FileSizes:
   - Name: Desktop
     Value: 129088
@@ -899,7 +899,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639189798644259455
+  lastModified: 639189764551876939
   FileSizes:
   - Name: Desktop
     Value: 2256

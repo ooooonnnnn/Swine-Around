@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 2088766734818788416}
   - component: {fileID: 3197955271313148107}
   - component: {fileID: 758496001778404459}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Visual Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,6 +438,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 758496001778404459}
+        m_TargetAssemblyTypeName: PolicemanAnimatorInterface, Assembly-CSharp
+        m_MethodName: HandleStateChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7761648091162746395}
         m_TargetAssemblyTypeName: GuardSound, Assembly-CSharp
         m_MethodName: PlaySoundOnStateChange
@@ -460,7 +472,19 @@ MonoBehaviour:
   suspicion: 0
   OnSuspicionPercentage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 758496001778404459}
+        m_TargetAssemblyTypeName: PolicemanAnimatorInterface, Assembly-CSharp
+        m_MethodName: HandleSuspicionChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2637152088989992243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,18 +533,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2906433376585691505}
         m_TargetAssemblyTypeName: PrefabInstantiator, Assembly-CSharp
         m_MethodName: Instantiate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: StopBGMSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
