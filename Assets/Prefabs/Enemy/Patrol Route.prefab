@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 4349821310634742702}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19875, y: 0, z: -10.8758}
+  m_LocalPosition: {x: -21.51, y: 0, z: -10.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GizmoWaypoint
   color: {r: 0.14670122, g: 1, b: 0, a: 0.5176471}
-  radius: 0.1
+  radius: 0.5
 --- !u!1 &8015490452107286658
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 8015490452107286658}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.51125, y: 0, z: -11.685801}
+  m_LocalPosition: {x: 4.26, y: 0, z: 1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,4 +124,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GizmoWaypoint
   color: {r: 0.14670122, g: 1, b: 0, a: 0.5176471}
-  radius: 0.1
+  radius: 0.5

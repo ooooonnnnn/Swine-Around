@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639184446626824556
+  lastModified: 639189763369404832
   FileSizes:
   - Name: Desktop
     Value: 1700
@@ -212,7 +212,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639184446626844584
+  lastModified: 639189763369429866
   FileSizes:
   - Name: Desktop
     Value: 222784
@@ -420,7 +420,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/misc.bank
   Name: misc
   StudioPath: bank:/misc
-  lastModified: 639184446626844584
+  lastModified: 639189763369439926
   FileSizes:
   - Name: Desktop
     Value: 110304
@@ -475,7 +475,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639184446626844584
+  cacheTime: 639189763369439926
   SerializableEventsDict:
   - key: event:/Boar/Boar Ram
     index: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639184446626684065
+  lastModified: 639189763369394817
   FileSizes:
   - Name: Desktop
     Value: 3099104
@@ -820,7 +820,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639184446626824556
+  lastModified: 639189763369414833
   FileSizes:
   - Name: Desktop
     Value: 2176
