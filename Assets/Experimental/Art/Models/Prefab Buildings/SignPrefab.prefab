@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8360773879457413597}
   - component: {fileID: 3747961949694587743}
   - component: {fileID: 7786085509675124041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StreetSignBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,9 +136,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7166528815228096992}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.38698, y: 1.91, z: 26.06165}
-  m_LocalScale: {x: 0.21000001, y: 1.3746427, z: 2.3930242}
+  m_LocalScale: {x: 0.1555146, y: 1.0179857, z: 1.7721436}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6058907484738994145}
