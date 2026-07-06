@@ -1620,11 +1620,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4648347682642689167, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
   m_PrefabInstance: {fileID: 696148554}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &1203588817 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 3178637646241330645, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
-  m_PrefabInstance: {fileID: 1829889952}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1245285159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2488,10 +2483,6 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 758496001778404459, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
-      propertyPath: navMeshAgent
-      value: 
-      objectReference: {fileID: 1203588817}
     - target: {fileID: 2944381773543249726, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -2602,10 +2593,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8107788751557506802, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_IgnoreReversedGraphics
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8499601486846904183, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8540088424614855049, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
