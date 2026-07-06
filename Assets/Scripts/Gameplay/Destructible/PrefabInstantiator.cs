@@ -7,7 +7,7 @@ public class PrefabInstantiator : MonoBehaviour
     
     public void Instantiate()
     {
-        print("Instantiating");
+        // print("Instantiating");
         Instantiate(prefab, transform.position, transform.rotation, parentOptional);
     }
 }
