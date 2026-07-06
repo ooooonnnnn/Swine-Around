@@ -947,6 +947,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4c5cded4-4259-45d8-ac0a-4d96e6661375
     m_ActionName: 'Player/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b8fd3e35-e2e3-4315-a761-290bd7bf3018
+    m_ActionName: 'Player/Toggle Cheats Menu[/Keyboard/f12]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -2827,6 +2831,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1964574377}
   - component: {fileID: 1964574376}
+  - component: {fileID: 1964574381}
+  - component: {fileID: 1964574380}
+  - component: {fileID: 1964574379}
+  - component: {fileID: 1964574378}
   m_Layer: 0
   m_Name: Cheats Manager
   m_TagString: Untagged
@@ -2861,6 +2869,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1964574378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964574375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a5efa682a39ab4dbb154841ed32446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectButtonPress
+  button: {fileID: 2952165870334493340, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  OnButtonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1964574376}
+        m_TargetAssemblyTypeName: CheatsManager, Assembly-CSharp
+        m_MethodName: RestartCompletely
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1964574379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964574375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a5efa682a39ab4dbb154841ed32446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectButtonPress
+  button: {fileID: 3511824657992172513, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  OnButtonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1964574376}
+        m_TargetAssemblyTypeName: CheatsManager, Assembly-CSharp
+        m_MethodName: RestartFromCheckpoint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1964574380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964574375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a5efa682a39ab4dbb154841ed32446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectButtonPress
+  button: {fileID: 364400112822773794, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  OnButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1964574381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964574375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a5efa682a39ab4dbb154841ed32446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectButtonPress
+  button: {fileID: 2974425657667565312, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  OnButtonPressed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1982746609
 GameObject:
   m_ObjectHideFlags: 0
