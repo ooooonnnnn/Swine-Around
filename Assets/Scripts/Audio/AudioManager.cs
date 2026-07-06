@@ -1,10 +1,11 @@
 ﻿using System;
+using Audio;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 using Gameplay.Food;
 
-public class AudioManager : PersistentSingleton<AudioManager>
+public class AudioManager : PersistentSingleton<AudioManager>, IAudioManager
 {
     private const string BGMStartModeParameter = "BGM Start Mode";
 
