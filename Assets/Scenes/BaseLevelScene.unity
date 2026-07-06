@@ -3209,6 +3209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8181733360906413160, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c7b4a2d3cd8c6c1408131e0b300899c4, type: 2}
     - target: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
       propertyPath: OnFullnessChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
