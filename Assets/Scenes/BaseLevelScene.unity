@@ -1620,6 +1620,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4648347682642689167, guid: ac208bd0d4d1b104294be319f26a4196, type: 3}
   m_PrefabInstance: {fileID: 696148554}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &1203588817 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 3178637646241330645, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+  m_PrefabInstance: {fileID: 1829889952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1245285159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2483,6 +2488,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 758496001778404459, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: navMeshAgent
+      value: 
+      objectReference: {fileID: 1203588817}
     - target: {fileID: 2944381773543249726, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -2503,6 +2512,30 @@ PrefabInstance:
       propertyPath: 'patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1851562414}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1829889956}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HandleStateChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PolicemanAnimatorInterface, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4304286779060325001, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -2526,7 +2559,7 @@ PrefabInstance:
     - target: {fileID: 6737215260328358654, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: targetCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2421238778844309049}
     - target: {fileID: 6863445564970955771, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2636,6 +2669,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+--- !u!114 &1829889956 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 758496001778404459, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+  m_PrefabInstance: {fileID: 1829889952}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00e9d81405c62447bd1d9771968130e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1833672515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3085,6 +3129,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881c83c25c7b39248b274ffb8687ed2e, type: 3}
+--- !u!20 &2421238778844309049 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4096092763826901670, guid: 881c83c25c7b39248b274ffb8687ed2e, type: 3}
+  m_PrefabInstance: {fileID: 2421238778844309048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8167978967440196967
 PrefabInstance:
   m_ObjectHideFlags: 0
