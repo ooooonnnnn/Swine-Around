@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Stew
   m_EditorClassIdentifier: Assembly-CSharp::FoodObject
   mesh: {fileID: 919132149155446097, guid: 95f080db76cd95747b42177ef6f7f4ba, type: 3}
-  score: 50
-  fatness: 3
+  score: 5

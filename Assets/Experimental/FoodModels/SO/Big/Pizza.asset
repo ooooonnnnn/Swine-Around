@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Pizza
   m_EditorClassIdentifier: Assembly-CSharp::FoodObject
   mesh: {fileID: 1406938867226338093, guid: d5a78dc607c23be4d8eefae7e7f4d671, type: 3}
-  score: 50
-  fatness: 3
+  score: 5
