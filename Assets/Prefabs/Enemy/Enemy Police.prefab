@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00e9d81405c62447bd1d9771968130e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  navMeshAgent: {fileID: 3178637646241330645}
   animator: {fileID: 3197955271313148107}
 --- !u!1 &3048972269436688897
 GameObject:
@@ -457,6 +458,9 @@ MonoBehaviour:
   - {fileID: 0}
   currentStateName: 
   suspicion: 0
+  OnSuspicionPercentage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2637152088989992243
 MonoBehaviour:
   m_ObjectHideFlags: 0

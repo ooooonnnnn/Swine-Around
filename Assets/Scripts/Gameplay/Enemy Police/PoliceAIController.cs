@@ -31,6 +31,7 @@ public class PoliceAIController : MonoBehaviour
     public Vector3 LastKnownPlayerPosition { get; private set; }
 
     public float Suspicion => suspicion;
+    [SerializeField] private UnityEvent<float> OnSuspicionPercentage;
 
     private void Awake()
     {
@@ -69,12 +70,14 @@ public class PoliceAIController : MonoBehaviour
     {
         suspicion += config.SuspicionIncreaseSpeed * Time.deltaTime;
         suspicion = Mathf.Clamp(suspicion, 0f, config.MaxSuspicion);
+        OnSuspicionPercentage.Invoke(suspicion / config.MaxSuspicion);
     }
 
     public void DecreaseSuspicion()
     {
         suspicion -= config.SuspicionDecreaseSpeed * Time.deltaTime;
         suspicion = Mathf.Clamp(suspicion, 0f, config.MaxSuspicion);
+        OnSuspicionPercentage.Invoke(suspicion / config.MaxSuspicion);
     }
 
     public bool IsSuspicionFull()
