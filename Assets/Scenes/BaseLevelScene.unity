@@ -2517,6 +2517,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnSuspicionPercentage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1829889956}
@@ -2529,11 +2533,31 @@ PrefabInstance:
       value: HandleStateChanged
       objectReference: {fileID: 0}
     - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnSuspicionPercentage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1829889956}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnSuspicionPercentage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnSuspicionPercentage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleSuspicionChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: PolicemanAnimatorInterface, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnSuspicionPercentage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PolicemanAnimatorInterface, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: OnStateChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629970392659665057, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: OnSuspicionPercentage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4304286779060325001, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
@@ -2578,6 +2602,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8107788751557506802, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
       propertyPath: m_IgnoreReversedGraphics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499601486846904183, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8540088424614855049, guid: 2e882cdcfc04fee43b826a7bf837536a, type: 3}
