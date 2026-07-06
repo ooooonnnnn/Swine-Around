@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class CheatsManager : PersistentSingleton<CheatsManager>
 {
+    [SerializeField] private PlayerFoodScript foodScript;
+    
     [ContextMenu("Restart Completely")]
     public void RestartCompletely() => StartCoroutine(RestartCompletelyCor());
     
@@ -32,5 +34,28 @@ public class CheatsManager : PersistentSingleton<CheatsManager>
         if (!LevelStateManager.Instance) return;
         
         LevelStateManager.Instance.ResetLevel();
+    }
+
+    [ContextMenu("Add Food")]
+    public void AddFood()
+    {
+        ValidatePlayerFoodScript();
+
+        foodScript.ConsumeFood(1);
+    }
+
+    [ContextMenu("Clear Food")]
+    public void ClearFood()
+    {
+        ValidatePlayerFoodScript();
+        foodScript.ClearFood();
+    }
+
+    private void ValidatePlayerFoodScript()
+    {
+        if (!foodScript)
+        {
+            foodScript = FindFirstObjectByType<PlayerFoodScript>();
+        }
     }
 }

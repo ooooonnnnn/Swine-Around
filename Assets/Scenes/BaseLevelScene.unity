@@ -645,6 +645,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 856f3f60b1ec21e4ba040512cd88cc76, type: 3}
   m_PrefabInstance: {fileID: 458831246}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &521301511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8437296403894466295, guid: 4565a1338976f6c40891a951dc93773d, type: 3}
+  m_PrefabInstance: {fileID: 8167978967440196967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d332a68043101142be06c72464fca12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFoodScript
 --- !u!1 &549598286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2854,6 +2865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ffdaeb31e4933408b038d7182572e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  foodScript: {fileID: 521301511}
 --- !u!4 &1964574377
 Transform:
   m_ObjectHideFlags: 0
@@ -2940,7 +2952,19 @@ MonoBehaviour:
   button: {fileID: 364400112822773794, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   OnButtonPressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1964574376}
+        m_TargetAssemblyTypeName: CheatsManager, Assembly-CSharp
+        m_MethodName: ClearFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1964574381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2956,7 +2980,19 @@ MonoBehaviour:
   button: {fileID: 2974425657667565312, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   OnButtonPressed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1964574376}
+        m_TargetAssemblyTypeName: CheatsManager, Assembly-CSharp
+        m_MethodName: AddFood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1982746609
 GameObject:
   m_ObjectHideFlags: 0
