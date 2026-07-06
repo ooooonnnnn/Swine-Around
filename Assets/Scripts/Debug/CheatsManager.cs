@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Linq;
+using Gameplay;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CheatsManager : PersistentSingleton<CheatsManager>
 {
-    public bool isCheatsEnabled;
-
     [ContextMenu("Restart Completely")]
     public void RestartCompletely() => StartCoroutine(RestartCompletelyCor());
     
@@ -25,5 +24,13 @@ public class CheatsManager : PersistentSingleton<CheatsManager>
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         Destroy(gameObject);
+    }
+
+    [ContextMenu("Restart From Checkpoint")]
+    public void RestartFromCheckpoint()
+    {
+        if (!LevelStateManager.Instance) return;
+        
+        LevelStateManager.Instance.ResetLevel();
     }
 }
