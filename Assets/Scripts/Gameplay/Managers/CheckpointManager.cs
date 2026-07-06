@@ -17,6 +17,12 @@ public class CheckpointManager : PersistentSingleton<CheckpointManager>
     private void CollectChildrenCheckpoints()
     {
         checkpoints = GetComponentsInChildren<Checkpoint>();
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+
         foreach (var checkpoint in checkpoints)
         {
             checkpoint.OnCheckpointActivated.RemoveAllListeners();
@@ -30,7 +36,7 @@ public class CheckpointManager : PersistentSingleton<CheckpointManager>
 
         activeCheckpoint = checkpoint;
 
-        if (LevelStateManager.Instance != null)
+        if (LevelStateManager.Instance)
         {
             LevelStateManager.Instance.SetCheckpoint(activeCheckpoint.SleepPos);
         }

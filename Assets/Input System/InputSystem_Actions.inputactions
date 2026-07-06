@@ -32,6 +32,51 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Toggle Cheats Menu",
+                    "type": "Button",
+                    "id": "b8fd3e35-e2e3-4315-a761-290bd7bf3018",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cheat Add Food",
+                    "type": "Button",
+                    "id": "e6251f2a-7413-402d-82c3-c73a53bba750",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cheat Clear Food",
+                    "type": "Button",
+                    "id": "a6d577f9-4eed-44f8-802f-3db94c8a2030",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cheat Restart From Checkpoint",
+                    "type": "Button",
+                    "id": "3aef7318-3d7e-42de-9bf1-15ee66a79565",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cheat Restart Completely",
+                    "type": "Button",
+                    "id": "f045b6b7-c821-45c6-bc34-fb08783ca2de",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -241,6 +286,61 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f2aa467b-1bb7-407b-acf3-d6de7f021da3",
+                    "path": "<Keyboard>/f12",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Cheats Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef4a6f90-d2ff-4eed-ac75-0aabc079bce2",
+                    "path": "<Keyboard>/f1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cheat Add Food",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cf48a60-670b-4a15-942e-10de75702acf",
+                    "path": "<Keyboard>/f2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cheat Clear Food",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d52698b-d8e5-421d-873f-fcc3fb1afa45",
+                    "path": "<Keyboard>/f3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cheat Restart From Checkpoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78b5dc6c-30a0-4502-9703-a9f247f27c43",
+                    "path": "<Keyboard>/f4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cheat Restart Completely",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
