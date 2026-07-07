@@ -15,8 +15,8 @@ MonoBehaviour:
   patrolSpeed: 2
   chaseSpeed: 6
   stopDistance: 0.2
-  visionRadius: 10
-  visionAngle: 90
+  visionRadius: 7
+  visionAngle: 85
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
