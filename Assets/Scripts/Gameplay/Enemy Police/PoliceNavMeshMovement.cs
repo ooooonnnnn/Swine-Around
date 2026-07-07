@@ -40,6 +40,7 @@ public class PoliceNavMeshMovement : MonoBehaviour
 
         _agent.isStopped = true;
         _agent.ResetPath();
+        _agent.velocity = Vector3.zero;
     }
 
     public bool HasReachedDestination(float stopDistance)
