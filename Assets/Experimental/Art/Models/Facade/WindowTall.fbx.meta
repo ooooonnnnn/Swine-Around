@@ -3,7 +3,12 @@ guid: 77ed7ec5701c62c439dc8d6312f13aeb
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Blinds
+    second: {fileID: 2100000, guid: e09bb039a785fc24c997b866e15d9c34, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
