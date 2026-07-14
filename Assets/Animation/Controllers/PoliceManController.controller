@@ -129,7 +129,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 307b8d5992d6ec740bda634aa7fca0b2, type: 2}
+  m_Motion: {fileID: -5328894918516266462, guid: 00bf746357685264db6e974fb0106feb, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -171,7 +171,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 1c0a70ddd2bfd794b9be6cccc50b111f, type: 2}
+    m_Motion: {fileID: 7934196132113903457, guid: 00bf746357685264db6e974fb0106feb, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -179,7 +179,7 @@ BlendTree:
     m_DirectBlendParameter: Speed
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 1f5377509502ad144bfacf553cc40ac5, type: 2}
+    m_Motion: {fileID: 2667949614841947897, guid: 00bf746357685264db6e974fb0106feb, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -199,7 +199,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PolicemanController
+  m_Name: PoliceManController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: WalkTrigger
@@ -257,6 +257,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9154a1120809f0418a732159d95cd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1102 &1805712768296756479
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 67
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 6645649291494447711, guid: c6131c56990b09844809401b1d2da5c7, type: 3}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &2071969218554351504
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -303,7 +329,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1c0a70ddd2bfd794b9be6cccc50b111f, type: 2}
+  m_Motion: {fileID: 7934196132113903457, guid: 00bf746357685264db6e974fb0106feb, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -355,7 +381,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 307b8d5992d6ec740bda634aa7fca0b2, type: 2}
+  m_Motion: {fileID: 2667949614841947897, guid: 00bf746357685264db6e974fb0106feb, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

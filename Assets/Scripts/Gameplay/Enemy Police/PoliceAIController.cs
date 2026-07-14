@@ -31,7 +31,10 @@ public class PoliceAIController : MonoBehaviour
     public Vector3 LastKnownPlayerPosition { get; private set; }
 
     public float Suspicion => suspicion;
+    public bool IsStopped { get; private set; }
+    
     [SerializeField] private UnityEvent<float> OnSuspicionPercentage;
+    
 
     private void Awake()
     {
@@ -47,6 +50,8 @@ public class PoliceAIController : MonoBehaviour
 
     private void Update()
     {
+        if (IsStopped) return;
+        
         UpdateVisiblePlayer();
         _currentState?.Tick();
     }
@@ -111,5 +116,11 @@ public class PoliceAIController : MonoBehaviour
         _currentState.Enter();
         
         OnStateChanged.Invoke(_currentState);
+    }
+    
+    public void StopAI()
+    {
+        IsStopped = true;
+        movement.Stop();
     }
 }

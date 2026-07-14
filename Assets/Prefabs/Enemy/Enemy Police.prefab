@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3906072139348981708}
   - component: {fileID: 2906433376585691505}
   m_Layer: 0
-  m_Name: Vision Origin
+  m_Name: CaughtVFXSpawnTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 129712698291497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90,7 +90,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2944381773543249726}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 00bf746357685264db6e974fb0106feb, type: 3}
   m_Controller: {fileID: 9100000, guid: 801bb3ece84079e4c86003ec04320e08, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -192,6 +192,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3691940821150790017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5399337292939039356}
+  m_Layer: 0
+  m_Name: VisionOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5399337292939039356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691940821150790017}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8540088424614855049}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4304286779060325001
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +392,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2088766734818788416}
+  - {fileID: 5399337292939039356}
   - {fileID: 3906072139348981708}
   - {fileID: 8813968427690118304}
   - {fileID: 7329482945372477425}
@@ -512,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoliceVision
   config: {fileID: 11400000, guid: 8890fc82a8fa7944ea030af37b0c814a, type: 2}
-  visionOrigin: {fileID: 3906072139348981708}
+  visionOrigin: {fileID: 5399337292939039356}
   facingRoot: {fileID: 2088766734818788416}
 --- !u!114 &3740832675259798572
 MonoBehaviour:
@@ -697,17 +729,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2088766734818788416}
     m_Modifications:
+    - target: {fileID: -8858961121042195876, guid: aa3e420255849074898f7652ccf16663, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6167991529817989991, guid: c6131c56990b09844809401b1d2da5c7, type: 3}
     - target: {fileID: -8679921383154817045, guid: aa3e420255849074898f7652ccf16663, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.21
+      value: 0.693
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa3e420255849074898f7652ccf16663, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.21
+      value: 0.693
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa3e420255849074898f7652ccf16663, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.21
+      value: 0.693
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa3e420255849074898f7652ccf16663, type: 3}
       propertyPath: m_LocalPosition.x
@@ -749,6 +785,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aa3e420255849074898f7652ccf16663, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8331209952785901220, guid: aa3e420255849074898f7652ccf16663, type: 3}
       propertyPath: m_Name
       value: PolicemanHead
@@ -760,6 +800,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aa3e420255849074898f7652ccf16663, type: 3}
       propertyPath: m_Name
       value: Policeman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: aa3e420255849074898f7652ccf16663, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: aa3e420255849074898f7652ccf16663, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: aa3e420255849074898f7652ccf16663, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: aa3e420255849074898f7652ccf16663, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

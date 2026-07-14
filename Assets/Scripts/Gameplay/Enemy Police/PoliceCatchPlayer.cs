@@ -28,7 +28,7 @@ public class PoliceCatchPlayer : MonoBehaviour
     {
         _hasCaughtPlayer = true;
 
-        police.Movement.Stop();
+        police.StopAI();
 
         OnPlayerCaught.Invoke();
         
