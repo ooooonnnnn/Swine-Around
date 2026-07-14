@@ -5,14 +5,19 @@ public class BoarAnimatorInterface : MonoBehaviour
 {
     [SerializeField] public CharacterController characterController;
     [SerializeField] public Animator animator;
-    private static readonly int WALK_TRIGGER_ID = Animator.StringToHash("MoveTrigger");
-    private static readonly int IDLE_TRIGGER_ID = Animator.StringToHash("IdleTrigger");
+    private static readonly int WALK_BOOL_ID = Animator.StringToHash("Walk");
+    private static readonly int RAM_TRIGGER_ID = Animator.StringToHash("Ram");
 
     private void Update()
     {
         if (characterController.velocity != Vector3.zero)
-            animator.SetTrigger(WALK_TRIGGER_ID);
+            animator.SetBool(WALK_BOOL_ID, true);
         else    
-            animator.SetTrigger(IDLE_TRIGGER_ID);
+            animator.SetBool(WALK_BOOL_ID, false);
+    }
+
+    public void RamTrigger()
+    {
+        animator.SetTrigger(RAM_TRIGGER_ID);
     }
 }
