@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 6957905786486436855}
   - component: {fileID: 3064257331187801210}
   m_Layer: 0
-  m_Name: Checkpoint
+  m_Name: CheckpointOld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b54788f4759b0248883fc216d9f4b99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0b54788f4759b0248883fc216d9f4b99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -509,7 +509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0b54788f4759b0248883fc216d9f4b99, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -699,10 +699,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0421heckpointDe-Activated"
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1c947a0b2a5baf54d9db2548da397409, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: 1c947a0b2a5baf54d9db2548da397409, type: 3}
@@ -870,7 +866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 437bd88036827ea49af2b82cfc743f15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 437bd88036827ea49af2b82cfc743f15, type: 3}
       propertyPath: m_LocalPosition.z
