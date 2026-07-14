@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Gameplay;
 using Gameplay.Effects;
@@ -16,6 +17,7 @@ public class PlayerFoodScript : MonoBehaviour
     [SerializeField] private float fatnessToScaleModifier = 0.1f;
     
     [SerializeField] private int fatnessLevel = 0;
+    private Queue<int> eatenFoodValues;
 
     private int FoodEaten
     {
@@ -63,6 +65,7 @@ public class PlayerFoodScript : MonoBehaviour
     private void Start()
     {
         OnFatnessLevelChanged.Invoke(fatnessLevel);
+        eatenFoodValues = new Queue<int>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,6 +79,7 @@ public class PlayerFoodScript : MonoBehaviour
     public void ConsumeFood(int foodValue)
     {
         FoodEaten += foodValue;
+        eatenFoodValues.Enqueue(foodValue);
 
         if (fullnessDecayCoroutine != null)
             StopCoroutine(fullnessDecayCoroutine);
@@ -101,11 +105,15 @@ public class PlayerFoodScript : MonoBehaviour
     {
         if (FoodEaten > 0)
         {
-            FoodEaten--;
+            FoodEaten -= eatenFoodValues.Dequeue();
         }
     }
-    
-    public void ClearFood() => FoodEaten = 0;
+
+    public void ClearFood()
+    {
+        eatenFoodValues.Clear();
+        FoodEaten = 0;
+    }
 
     private void UpdateScale()
     {
