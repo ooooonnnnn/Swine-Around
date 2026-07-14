@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PoliceAIConfig
   m_EditorClassIdentifier: Assembly-CSharp::PoliceAIConfig
   patrolSpeed: 2
-  chaseSpeed: 6
+  chaseSpeed: 6.5
   stopDistance: 0.2
-  visionRadius: 7
-  visionAngle: 85
+  visionRadius: 8
+  visionAngle: 105
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
