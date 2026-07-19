@@ -60,7 +60,7 @@
 			<destination>{243fb9c3-bc23-4d3e-adc4-6ce98f85c723}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{56b3d772-3f4c-4f12-9bd2-3f3a814152d5}</destination>
+			<destination>{2702d5ff-5136-4761-80ea-a12224f4a07b}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{f01c95ef-e157-429c-886d-85daed32d301}">
@@ -148,7 +148,7 @@
 	</object>
 	<object class="SingleSound" id="{96c33648-acc2-42e7-b754-4f676444fe55}">
 		<property name="length">
-			<value>30</value>
+			<value>112.28570833333333</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{90b3008a-190b-4d0b-8c2b-6a8331d00a8d}</destination>
@@ -176,7 +176,7 @@
 	</object>
 	<object class="SingleSound" id="{50b075a5-dffc-45fd-97f6-498e303b48ff}">
 		<property name="length">
-			<value>30</value>
+			<value>112.28570833333333</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{90b3008a-190b-4d0b-8c2b-6a8331d00a8d}</destination>
@@ -201,7 +201,7 @@
 			<value>3.5</value>
 		</property>
 		<property name="length">
-			<value>26.5</value>
+			<value>108.78570833333333</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>6</value>
@@ -252,7 +252,7 @@
 			<value>16.285708333333332</value>
 		</property>
 		<property name="length">
-			<value>13.714291666666666</value>
+			<value>96</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{b02eda54-cb6c-4d63-8385-bb14fcad351a}</destination>
