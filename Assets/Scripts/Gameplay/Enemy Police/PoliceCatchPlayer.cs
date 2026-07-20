@@ -34,5 +34,10 @@ public class PoliceCatchPlayer : MonoBehaviour
         
         // if (LevelStateManager.Instance) LevelStateManager.Instance.ResetLevel();
         GameManager.Instance.LoseMatch();
+
+        if (ScoreManager.Instance)
+        {
+            ScoreManager.Instance.LoseLife();
+        }
     }
 }
