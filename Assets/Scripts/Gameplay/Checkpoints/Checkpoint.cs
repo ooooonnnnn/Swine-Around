@@ -1,4 +1,5 @@
 using System;
+using General;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] private Interactable interactable;
     [SerializeField] private TriggerDetector triggerDetector;
     [SerializeField] private Transform sleepPos;
+    [SerializeField] private SetActiveObjects modelSwitcher;
     public Transform SleepPos => sleepPos;
 
     private void OnValidate()
@@ -19,9 +21,17 @@ public class Checkpoint : MonoBehaviour
             triggerDetector = GetComponentInChildren<TriggerDetector>();
     }
 
-    private void OnEnable() => SetActivatable(true);
+    private void OnEnable()
+    {
+        SetActivatable(true);
+        modelSwitcher.SetActives(false);
+    }
 
-    private void OnDisable() => SetActivatable(false);
+    private void OnDisable()
+    {
+        SetActivatable(false);
+        modelSwitcher.SetActives(true);
+    }
 
     private void SetActivatable(bool state)
     {

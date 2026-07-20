@@ -79,6 +79,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Cheat Lose Game",
+                    "type": "Button",
+                    "id": "f0ed51b3-f314-475f-b78f-1154a41da29f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "32c3220e-8407-44fc-a8c8-f2a1b0cea32f",
@@ -383,6 +392,17 @@
                     "processors": "",
                     "groups": ";Gamepad;Keyboard&Mouse",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83b069fe-50bb-49b9-ae28-66479ae8eea8",
+                    "path": "<Keyboard>/f5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cheat Lose Game",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
