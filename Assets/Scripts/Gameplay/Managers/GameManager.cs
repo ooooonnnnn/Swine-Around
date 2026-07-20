@@ -11,7 +11,7 @@ public class GameManager : PersistentSingleton<GameManager>
     [SerializeField] private float delayBeforeRestart;
     [SerializeField] private UnityEvent OnLoseMatch;
     [SerializeField] private UnityEvent OnRestartMatch;
-    [SerializeField] private SceneAsset loseScene;
+    [SerializeField] private SceneAsset loseScene, winScene;
     private bool _canRestart = true;
 
     /// <summary>
@@ -45,7 +45,7 @@ public class GameManager : PersistentSingleton<GameManager>
 
     public void WinGame()
     {
-        
+        SceneManager.LoadScene(winScene.name);
     }
 
     public void RestartMatch()
