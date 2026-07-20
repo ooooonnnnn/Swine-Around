@@ -76,3 +76,4 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   loseScene: {fileID: 102900000, guid: 6eaabc9f287cead49ba3a3f900a504c4, type: 3}
+  winScene: {fileID: 102900000, guid: 0fdb8fa3354ea8842836d6051c158946, type: 3}
