@@ -11,6 +11,9 @@ public class AudioManager : PersistentSingleton<AudioManager>, IAudioManager
 
     [SerializeField] private EventReference bgmSound;
     [SerializeField] private EventReference heartCrackSound;
+    private const string MASTER_BUS_PATH = "bus:/";
+    private const string MUSIC_BUS_PATH = "bus:/Music";
+    private Bus masterBus, musicBus;
 
     private EventInstance bgmInstance;
 
@@ -22,6 +25,12 @@ public class AudioManager : PersistentSingleton<AudioManager>, IAudioManager
             return;
 
         PlayBGMFirstTimeSound();
+    }
+
+    private void Start()
+    {
+        masterBus = RuntimeManager.GetBus(MASTER_BUS_PATH);
+        musicBus = RuntimeManager.GetBus(MUSIC_BUS_PATH);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos = default)
@@ -65,6 +74,25 @@ public class AudioManager : PersistentSingleton<AudioManager>, IAudioManager
     public void ChangeFullnessVariable(FullnessParameters fullnessParameters)
     {
         RuntimeManager.StudioSystem.setParameterByName("fullness", fullnessParameters.currentFullness);
+    }
+
+    public void SetMasterVolume(float volume) => SetBusVolume(masterBus, volume);
+
+    public float GetMasterVolume() => GetBusVolume(masterBus);
+
+    public void SetMusicVolume(float volume) => SetBusVolume(musicBus, volume);
+
+    public float GetMusicVolume() => GetBusVolume(musicBus);
+
+    private void SetBusVolume(Bus bus, float volume)
+    {
+        bus.setVolume(volume);
+    }
+
+    private float GetBusVolume(Bus bus)
+    {
+        bus.getVolume(out float result);
+        return result;
     }
     
     public void SetIsPausedVariable(bool isPaused) // CALL THIS WHEN PAUSED
