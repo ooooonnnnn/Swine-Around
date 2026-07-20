@@ -22,5 +22,7 @@ public class Pauser : MonoBehaviour
             OnGameUnpaused.Invoke();
             Time.timeScale = 1.0f;
         }
+        if(AudioManager.Instance)
+            AudioManager.Instance.TogglePauseMenuMusic(_isPaused);
     }
 }

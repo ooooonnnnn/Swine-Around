@@ -63,10 +63,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639200970305413025
+  lastModified: 639201689678669330
   FileSizes:
   - Name: Desktop
-    Value: 1998
+    Value: 1706
   Exists: 1
 --- !u!114 &-7647750154095146581
 MonoBehaviour:
@@ -138,7 +138,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Guard.bank
   Name: Guard
   StudioPath: bank:/Guard
-  lastModified: 639184446626709350
+  lastModified: 639201689678558491
   FileSizes:
   - Name: Desktop
     Value: 99168
@@ -260,7 +260,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639189830936660831
+  lastModified: 639201689679599423
   FileSizes:
   - Name: Desktop
     Value: 237184
@@ -495,7 +495,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/misc.bank
   Name: misc
   StudioPath: bank:/misc
-  lastModified: 639189830936675869
+  lastModified: 639201689679027549
   FileSizes:
   - Name: Desktop
     Value: 110304
@@ -552,7 +552,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7139416210000240261}
   cacheVersion: 131860
-  cacheTime: 639200970305483181
+  cacheTime: 639201689679599423
   SerializableEventsDict:
   - key: event:/Boar/Boar Ram
     index: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 639200970305327871
+  lastModified: 639200574996001177
   FileSizes:
   - Name: Desktop
     Value: 3100224
@@ -879,7 +879,7 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Boar.bank
   Name: Boar
   StudioPath: bank:/Boar
-  lastModified: 639184446626699240
+  lastModified: 639201689678210818
   FileSizes:
   - Name: Desktop
     Value: 129088
@@ -899,10 +899,10 @@ MonoBehaviour:
   Path: FMODProject/SwineAroundAudio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639200970305483181
+  lastModified: 639201689678669330
   FileSizes:
   - Name: Desktop
-    Value: 2292
+    Value: 2220
   Exists: 1
 --- !u!114 &7384754856144498054
 MonoBehaviour:
