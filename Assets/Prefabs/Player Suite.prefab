@@ -5489,7 +5489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac356b6971ee174886010409f648a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrefabInstantiator
-  prefab: {fileID: 6710139492206580332, guid: 7b01b1dfe9527d940a30b9a538476016, type: 3}
+  prefab: {fileID: 8620588918006998808, guid: 58e516b180950d344849de504630cc96, type: 3}
   parentOptional: {fileID: 193719314296681112}
 --- !u!1 &6402077274846049766
 GameObject:
