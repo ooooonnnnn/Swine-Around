@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9030595637986569652}
+  - component: {fileID: 2671250182414686954}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -34,6 +35,22 @@ Transform:
   - {fileID: 2314156322208354059}
   m_Father: {fileID: 6957905786486436855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2671250182414686954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486902505472584888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f209e887388466f91a8f842b9cb6a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::General.SetActiveObjects
+  objectsToSetActive:
+  - {fileID: 3317100992595364275}
+  - {fileID: 6178835946767612180}
+  initialStates: 0001
 --- !u!1 &1664915052314658906
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +365,7 @@ MonoBehaviour:
   interactable: {fileID: 1901961814326643156}
   triggerDetector: {fileID: 6337083081954335049}
   sleepPos: {fileID: 2684213536262159758}
+  modelSwitcher: {fileID: 2671250182414686954}
 --- !u!1 &5403774727056913738
 GameObject:
   m_ObjectHideFlags: 0
