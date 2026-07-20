@@ -1,29 +1,54 @@
 using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-/// <summary>
-/// Displays a number with a specified format
-/// </summary>
 public class NumberDisplay : MonoBehaviour
 {
     [SerializeField] private string format;
     [SerializeField] private float number;
-    [SerializeField] private TMP_Text text;
+    [SerializeField] private TMP_Text numberText;
+
+    [Header("Count Animation")]
+    public float countDuration = 4.0f;
+    public Ease countEase = Ease.OutCubic;
+
+    private float displayedNumber;
+    private bool hasNumber;
+    private Vector3 startingScale;
+    private Tween countTween;
+    private Tween shakeTween;
+
+    private void Start()
+    {
+        SetNumber(number);
+    }
 
     public void SetNumber(float number)
     {
-        this.number = number;
-        UpdateDisplay();
-    }
+        if (!hasNumber)
+        {
+            displayedNumber = number;
+            numberText.text = $"{displayedNumber}";
+            hasNumber = true;
+            return;
+        }
 
-    public void UpdateDisplay()
-    {
-        text.text = string.Format(format, number);
-    }
+        if (number == displayedNumber)
+            return;
 
-    private void OnValidate()
-    {
-        UpdateDisplay();
+
+        countTween?.Kill();
+        countTween = DOTween.To(
+                () => displayedNumber,
+                value =>
+                {
+                    displayedNumber = value;
+                    numberText.text = $"{displayedNumber}";
+                },
+                number,
+                countDuration)
+            .SetEase(countEase)
+            .SetLink(gameObject);
     }
 }
