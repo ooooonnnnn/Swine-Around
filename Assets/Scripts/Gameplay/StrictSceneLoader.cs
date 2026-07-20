@@ -8,19 +8,14 @@ public class StrictSceneLoader : MonoBehaviour
 {
     public void LoadAndDestroyPersistents(SceneAsset sceneAsset)
     {
-        var persistentObj = GameObject.Find("~DontDestroyOnLoad");
-        if (persistentObj)
+        GameObject dummyDDOL = new GameObject("");
+        DontDestroyOnLoad(dummyDDOL);
+        var scene = dummyDDOL.scene;
+        var persistentObjects = scene.GetRootGameObjects();
+        
+        foreach (var persistentObject in persistentObjects)
         {
-            var persistentObjects = persistentObj.scene.GetRootGameObjects();
-            
-            foreach (var persistentObject in persistentObjects)
-            {
-                Destroy(persistentObject);
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No dontdestroyonload scene found");
+            Destroy(persistentObject);
         }
         
         SceneManager.LoadScene(sceneAsset.name);

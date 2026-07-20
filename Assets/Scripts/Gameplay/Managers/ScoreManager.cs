@@ -16,6 +16,7 @@ public class ScoreManager : PersistentSingleton<ScoreManager>, IScoreManager
 
     [Header("Events")]
     [SerializeField] private IntEvent scoreChanged = new();
+    [SerializeField] private UnityEvent OnNoLivesLeft;
 
     public int CurrentScore { get; private set; }
     public int FoodEaten { get; private set; }
@@ -59,6 +60,8 @@ public class ScoreManager : PersistentSingleton<ScoreManager>, IScoreManager
 
         LivesLeft--;
         LivesLost++;
+        
+        if (LivesLeft <= 0) OnNoLivesLeft.Invoke();
     }
 
     public int GetScoreFromFood(FullnessParameters parameters)

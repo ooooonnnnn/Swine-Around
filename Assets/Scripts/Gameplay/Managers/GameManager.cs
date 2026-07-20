@@ -1,4 +1,5 @@
 using Gameplay;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class GameManager : PersistentSingleton<GameManager>
     [SerializeField] private float delayBeforeRestart;
     [SerializeField] private UnityEvent OnLoseMatch;
     [SerializeField] private UnityEvent OnRestartMatch;
+    [SerializeField] private SceneAsset loseScene;
     private bool _canRestart = true;
 
     /// <summary>
@@ -18,6 +20,15 @@ public class GameManager : PersistentSingleton<GameManager>
     public void LoseMatch()
     {
         if (!_canRestart) return;
+
+        if (ScoreManager.Instance)
+        {
+            if (ScoreManager.Instance.LivesLeft <= 1) //TODO: this should be zero but it doesn't work
+            {
+                LoseGame();
+                return;
+            }
+        }
         
         OnLoseMatch.Invoke();
         LevelStateManager.Instance.ResetLevel(delayBeforeRestart);
@@ -29,7 +40,7 @@ public class GameManager : PersistentSingleton<GameManager>
     /// </summary>
     public void LoseGame()
     {
-        
+        SceneManager.LoadScene(loseScene.name);
     }
 
     public void WinGame()
