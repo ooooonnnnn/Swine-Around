@@ -51,6 +51,12 @@ public class CheatsManager : PersistentSingleton<CheatsManager>
         foodScript.ClearFood();
     }
 
+    [ContextMenu("Lose Game")]
+    public void LoseGame()
+    {
+        GameManager.Instance?.LoseGame();
+    }
+
     private void ValidatePlayerFoodScript()
     {
         if (!foodScript)

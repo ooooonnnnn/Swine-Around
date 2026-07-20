@@ -903,6 +903,7 @@ GameObject:
   - component: {fileID: 4624175730592573100}
   - component: {fileID: 3224653783656095201}
   - component: {fileID: 8085560290844143365}
+  - component: {fileID: 4127069282801762169}
   m_Layer: 5
   m_Name: Lose Screen
   m_TagString: Untagged
@@ -1026,6 +1027,20 @@ MonoBehaviour:
   format: '{0:0} Kg'
   number: 9999
   text: {fileID: 5783549573679257414}
+--- !u!114 &4127069282801762169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970236468904667471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4145543b9a5396a45aeff2f338fa95bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  scoreDisplay: {fileID: 3224653783656095201}
+  foodDisplay: {fileID: 8085560290844143365}
 --- !u!1 &7600525709255262869
 GameObject:
   m_ObjectHideFlags: 0
