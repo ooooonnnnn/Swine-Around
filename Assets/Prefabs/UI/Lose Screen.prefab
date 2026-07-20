@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1386,7 +1386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5266303672672856200, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5266303672672856200, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1407,10 +1407,14 @@ PrefabInstance:
     - target: {fileID: 5266303672672856200, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 102900000, guid: 4782e6db80762824aba26985deb92557, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266303672672856200, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5266303672672856200, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEditor.SceneAsset, UnityEditor.CoreModule
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7749708133269976559, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_Pivot.x
@@ -1422,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7749708133269976559, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7749708133269976559, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1430,7 +1434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7749708133269976559, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7749708133269976559, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1474,7 +1478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7749708133269976559, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 665
+      value: -296
       objectReference: {fileID: 0}
     - target: {fileID: 7749708133269976559, guid: 6775b5c65b6c9254bb55702493854e90, type: 3}
       propertyPath: m_AnchoredPosition.y

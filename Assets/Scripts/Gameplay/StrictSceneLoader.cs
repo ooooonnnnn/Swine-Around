@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StrictSceneLoader : MonoBehaviour
 {
-    public void LoadAndDestroyPersistents(SceneAsset sceneAsset)
+    public void LoadAndDestroyPersistents(string sceneName)
     {
         GameObject dummyDDOL = new GameObject("");
         DontDestroyOnLoad(dummyDDOL);
@@ -18,6 +18,6 @@ public class StrictSceneLoader : MonoBehaviour
             Destroy(persistentObject);
         }
         
-        SceneManager.LoadScene(sceneAsset.name);
+        SceneManager.LoadScene(sceneName);
     }
 }
