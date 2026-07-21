@@ -13,7 +13,8 @@ public class AudioManager : PersistentSingleton<AudioManager>, IAudioManager
     [SerializeField] private EventReference heartCrackSound;
     private const string MASTER_BUS_PATH = "bus:/";
     private const string MUSIC_BUS_PATH = "bus:/Music";
-    private Bus masterBus, musicBus;
+    private const string SFX_BUS_PATH = "bus:/SFX";
+    private Bus masterBus, musicBus, sfxBus;
 
     private EventInstance bgmInstance;
 
@@ -31,6 +32,7 @@ public class AudioManager : PersistentSingleton<AudioManager>, IAudioManager
     {
         masterBus = RuntimeManager.GetBus(MASTER_BUS_PATH);
         musicBus = RuntimeManager.GetBus(MUSIC_BUS_PATH);
+        sfxBus = RuntimeManager.GetBus(SFX_BUS_PATH);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos = default)
@@ -74,6 +76,11 @@ public class AudioManager : PersistentSingleton<AudioManager>, IAudioManager
     public void ChangeFullnessVariable(FullnessParameters fullnessParameters)
     {
         RuntimeManager.StudioSystem.setParameterByName("fullness", fullnessParameters.currentFullness);
+    }
+    public void TogglePauseMenuMusic(bool isPaused)
+    {
+        RuntimeManager.StudioSystem.setParameterByName("IsPaused", isPaused ? 1 : 0);
+        sfxBus.setPaused(isPaused);
     }
 
     public void SetMasterVolume(float volume) => SetBusVolume(masterBus, volume);
