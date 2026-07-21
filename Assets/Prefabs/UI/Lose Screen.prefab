@@ -1056,7 +1056,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NumberDisplay
   format: '{0:0}'
   number: 99999
-  text: {fileID: 4056553663505829525}
+  numberText: {fileID: 5783549573679257414}
+  countDuration: 4
+  countEase: 3
 --- !u!114 &8085560290844143365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,7 +1073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NumberDisplay
   format: '{0:0} Kg'
   number: 9999
-  text: {fileID: 5783549573679257414}
+  numberText: {fileID: 4056553663505829525}
+  countDuration: 4
+  countEase: 3
 --- !u!114 &4127069282801762169
 MonoBehaviour:
   m_ObjectHideFlags: 0
